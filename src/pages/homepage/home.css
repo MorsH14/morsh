@@ -1,0 +1,193 @@
+.homeBodyContainer{
+    animation: animationIn .7s ease-in-out;
+
+}
+
+.homeMainContainer {
+    min-height: 100vh;
+    background-image: url(/public/assets/bi.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.homeMainContainer h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 60px;
+}
+.homeText{
+    font-size: 20px;
+}
+.homeFooterSec{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.linkTag{
+    color: white;
+}
+.engContainer{
+    transform: rotate(90deg);
+    font-size: 12px;
+    margin: 20px;
+    color: gray;
+}
+.homeIcon{
+    margin: 10px 0px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+}
+.iconImgHome{
+    color: gray;
+    cursor: pointer;
+}
+.iconImgHome:hover{
+    color: green;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: transparent;
+    width: 95%;
+    position: relative
+}
+
+nav h1{
+    cursor: pointer;
+}
+ul li {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+ul li:hover {
+    color: gray;
+}
+.listIcon{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+}
+
+.swiper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all 1s ease;
+    animation-name: swipeUp;
+    animation-iteration-count: 1;
+    background: rgb(20,20,20);
+    transform: translateY(-300%);
+    z-index: 99898473;
+    animation-duration: 3s;
+}
+
+.swiper2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all 1s ease;
+    animation-name: swipeDown;
+    animation-iteration-count: 1;
+    background: rgb(20,20,20);
+    transform: translateY(300%);
+    animation-duration: 3s;
+    z-index: 99898473;
+}
+
+@keyframes swipeDown {
+    from{
+        transform: translateY(300%);
+        /* opacity: 1; */
+    }
+    to{
+        transform: translateY(-300%);
+        /* opacity: 0; */
+    }
+}
+
+
+@media screen and (max-width:800px) {
+   
+    .listIcon{
+        display: grid;
+        cursor: pointer;
+    }
+    .homeMainContainer h1{
+        font-size: 40px;
+    }
+
+    .homeText{
+        font-size: 15px;
+    }
+    .homeFooterSec{
+        width: 80%;
+    }
+
+    .navContainer{
+        display: grid;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        right: 8%;
+        background: rgba(20,20,20);
+        width: 220px;
+        padding: 20px;
+        transform: translateY(-300%);
+        transition: all .3s ease-in-out;
+    }
+    .navMedia{
+        display: grid;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        right: 8%;
+        background: rgba(20,20,20);
+        width: 220px;
+        padding: 20px;
+        gap: 20px;
+        transform: translateY(0);
+        transition: all .5s ease-in-out;
+    }
+    .navContainer li:hover{
+        transition: all .3s ease-in-out;
+        color: gray;
+    }
+   
+}
+
+
+
+@keyframes animationIn {
+    from{
+      opacity: 0;
+      transform: translateX(-100deg);
+    }
+    
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

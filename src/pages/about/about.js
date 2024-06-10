@@ -1,0 +1,287 @@
+import React from 'react'
+import "./about.css"
+import { ImCancelCircle } from "react-icons/im";
+import { FaTwitter } from "react-icons/fa6";
+import { FaSquareFacebook } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { ImHtmlFive2 } from "react-icons/im";
+import { DiJavascript } from "react-icons/di";
+import { FaReact } from "react-icons/fa6";
+import { FaNodeJs } from "react-icons/fa";
+import { SiMysql } from "react-icons/si";
+import { SiWebflow } from "react-icons/si";
+import { GiBoxingGloveSurprise } from "react-icons/gi";
+import Marquee from "react-fast-marquee";
+
+
+
+
+
+const About = ({ setAbout }) => {
+
+    const hideModal = () => {
+        setAbout(false)
+    }
+
+    return (
+        <div className="aboutSection">
+
+            <div className='existX' onClick={hideModal}>
+                <ImCancelCircle size={25} color='gray' />
+            </div>
+
+            <div className='aboutContainer flex-center flex-column gap-10'>
+                <div>
+                    <h1>About Me</h1>
+                </div>
+                <div className='hrLine'></div>
+            </div>
+
+            <div className='aboutImgContainer'>
+
+                <div className='aboutImgSec'>
+
+                </div>
+
+                <div className='textSection'>
+                    <div className='aboutText'>
+                        <h3>My name is Olamide Alade, a Web developer and a UI/UX</h3>
+
+                        <p>As a professional Fullstack Developer based in the Nigeria, I specialize in creating user-friendly and visually-appealing websites that meet the latest design standards. Drawing from my years of experience, I take pride in transforming ideas into innovative and practical solutions. My expertise in product evolution allows me to effectively prioritize tasks, work quickly, and deliver high-quality results in a timely manner.</p>
+                    </div>
+
+                    <a href='/assets/myres.docx'><button>Download CV</button></a>
+
+                    <div className='iconFlex gap-20'>
+
+                        <div className='homeIcon'>
+                            <a href='https://x.com/__morsh' className='iconImgHome'> < FaTwitter size={17} /></a>
+                        </div>
+                        <div className='homeIcon'>
+                            <a href='https://web.facebook.com/profile.php?id=100080568897119' className='iconImgHome'><FaSquareFacebook size={17} /></a>
+                        </div>
+                        <div className='homeIcon'>
+                            <a href='https://www.linkedin.com/in/alade-olamide-b45b51309/' className='iconImgHome'>< FaLinkedin size={17} /></a>
+                        </div>
+
+                        <div className='homeIcon'>
+                            <a href='https://www.instagram.com/__morsh/' className='iconImgHome'>< FaInstagram size={17} /></a>
+                        </div>
+                        <div className='homeIcon'>
+                            <a href='https://github.com/MorsH14' className='iconImgHome'> < FaGithub size={17} /></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div className=' flex-center flex-column'>
+
+                <div className='servicesSection'>
+                    <h1>My Services</h1>
+                </div>
+
+
+                <div className='servicesSection'>
+
+                    <div className='servicesTextSection'>
+                        <ImHtmlFive2 className="myServiceIcon" size={50} />
+
+                        <h3>Front-end development</h3>
+                        <p>Building the user-facing part of websites using HTML, CSS, JAVASCRIPT and REACT. Ensuring that they are attractive and easy to use.</p>
+
+                    </div>
+                    <div className='servicesTextSection'>
+                        < DiJavascript className="myServiceIcon" size={50} />
+
+                        <h3>UI/UX design</h3>
+                        <p>Creating intuitive and visually appealing user interfaces that provide an optimal user experience.</p>
+
+                    </div>
+                    <div className='servicesTextSection'>
+                        < FaReact className="myServiceIcon" size={50} />
+
+                        <h3>Responsive Web Design</h3>
+                        <p>Ensuring that websites are optimized for all screen sizes, from desktop to mobile.</p>
+
+                    </div>
+                </div>
+                <div className='servicesSection'>
+
+                    <div className='servicesTextSection'>
+                        <SiWebflow className="myServiceIcon" size={50} />
+
+                        <h3>Back-end development</h3>
+                        <p>Developing the server-side of websites, ensuring that they are functional and secure. I work with NODE.JS and MYSQL for the server side</p>
+
+                    </div>
+                    <div className='servicesTextSection'>
+                        <FaNodeJs className="myServiceIcon" size={50} />
+
+                        <h3>API's</h3>
+                        <p>Server-side development with Node.js, including building back-end APIs, web applications, and microservices.</p>
+
+                    </div>
+                    <div className='servicesTextSection'>
+                        < SiMysql className="myServiceIcon" size={50} />
+
+                        <h3> Database management</h3>
+                        <p>Managing and optimizing databases for websites, ensuring that data is stored and retrieved efficiently.</p>
+
+                    </div>
+                </div>
+
+
+
+                <div className='testimonialSection'>
+                    <div className='testText flex-center'>
+                        <h1>Testimonial</h1>
+                    </div>
+
+                    <Marquee>
+                        <div className='mainTextContainer gap-30'>
+
+                            <div className='flex-between'>
+                                <div className='testimonialImgSec'>
+                                    <div className='TextNameSection'>
+                                        <div className='flexTextImg'>
+                                            <img src='/assets/bi.webp' alt='' className='testImg' />
+                                            <div className='textSectionTestimonial'>
+                                                <h5>John Herson</h5>
+                                                <p>Entrepreneur</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
+                                        </div>
+                                    </div>
+
+                                    <div className='pTagTest'>
+                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='flex-between'>
+                                <div className='testimonialImgSec'>
+                                    <div className='TextNameSection'>
+                                        <div className='flexTextImg'>
+                                            <img src='/assets/bi.webp' alt='' className='testImg' />
+                                            <div className='textSectionTestimonial'>
+                                                <h5>John Herson</h5>
+                                                <p>Entrepreneur</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
+                                        </div>
+                                    </div>
+
+                                    <div className='pTagTest'>
+                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='flex-between'>
+                                <div className='testimonialImgSec'>
+                                    <div className='TextNameSection'>
+                                        <div className='flexTextImg'>
+                                            <img src='/assets/bi.webp' alt='' className='testImg' />
+                                            <div className='textSectionTestimonial'>
+                                                <h5>John Herson</h5>
+                                                <p>Entrepreneur</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
+                                        </div>
+                                    </div>
+
+                                    <div className='pTagTest'>
+                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='flex-between'>
+                                <div className='testimonialImgSec'>
+                                    <div className='TextNameSection'>
+                                        <div className='flexTextImg'>
+                                            <img src='/assets/bi.webp' alt='' className='testImg' />
+                                            <div className='textSectionTestimonial'>
+                                                <h5>John Herson</h5>
+                                                <p>Entrepreneur</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
+                                        </div>
+                                    </div>
+
+                                    <div className='pTagTest'>
+                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='flex-between'>
+                                <div className='testimonialImgSec'>
+                                    <div className='TextNameSection'>
+                                        <div className='flexTextImg'>
+                                            <img src='/assets/bi.webp' alt='' className='testImg' />
+                                            <div className='textSectionTestimonial'>
+                                                <h5>John Herson</h5>
+                                                <p>Entrepreneur</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
+                                        </div>
+                                    </div>
+
+                                    <div className='pTagTest'>
+                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div className='flex-between'>
+                                <div className='testimonialImgSec'>
+                                    <div className='TextNameSection'>
+                                        <div className='flexTextImg'>
+                                            <img src='/assets/bi.webp' alt='' className='testImg' />
+                                            <div className='textSectionTestimonial'>
+                                                <h5>John Herson</h5>
+                                                <p>Entrepreneur</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
+                                        </div>
+                                    </div>
+
+                                    <div className='pTagTest'>
+                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Marquee>
+
+                </div>
+            </div>
+
+
+        </div >
+    )
+}
+
+export default About

@@ -1,0 +1,205 @@
+.aboutSection{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    animation: animationIn .7s ease-in-out;
+}
+
+.existX{
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    position: fixed;
+    cursor: pointer;
+}
+.aboutContainer h1{
+    font-size: 37px;
+    font-weight: bold;
+    padding-top: 100px;
+}
+.hrLine{
+    width: 80px;
+    height: 5px;
+    background: rgb(55, 100, 55);
+}
+.aboutImgContainer{
+    margin: 50px 0px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.aboutImgSec{
+    background-image: url(/public/assets/oll.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+}
+.aboutText h3{
+    font-size: 23px;
+    font-weight: bold;
+    width: 500px;
+    padding-bottom: 20px ;
+}
+.aboutText p{
+    width: 500px;
+    color: gray;
+    font-size: 12px;
+}
+.iconFlex{
+    display: flex;
+}
+.aboutText{
+    border-bottom: .5px solid gray;
+    padding-bottom: 50px;
+}
+.textSection button{
+    padding: 10px 20px;
+    margin: 50px 0px;
+    background: rgb(55, 100, 55);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.textSection button:hover {
+    background-color: rgba(55, 100, 55, 0.762);
+}
+.homeIcon1{
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.homeIcon1:hover{
+    color: rgba(55, 100, 55, 0.762);
+}
+.servicesSection{
+    width: 80%;
+    padding: 20px 0px;
+}
+.servicesSection h1{
+    font-weight: bold;
+}
+
+.servicesTextSection{
+    background: rgba(20,20,20);
+    box-shadow: 4px 4px 4px rgba(20, 20, 20, 0.762);
+    padding: 30px;
+    border-bottom: 2px solid transparent;
+}
+.servicesTextSection:hover{
+    border-bottom: 2px solid rgba(55, 100, 55, 0.762);
+    transition: all .3s ease-in-out;
+}
+.servicesTextSection h3{
+   padding: 20px 0px;
+   font-size: 18px;
+   transition: all .2s ease-in-out;
+
+}
+.servicesTextSection p{
+    font-size: 10px;
+    width: 250px;
+    color: gray;
+}
+.servicesSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.myServiceIcon{
+    color: rgb(55, 100, 55);
+}
+.testimonialImgSec{
+    background: rgba(20,20,20);
+    padding: 20px 20px;
+    width: 450px;
+}
+.testText h1{
+    margin: 50px;
+    font-weight: bold;
+}
+.testImg{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.textSectionTestimonial p{
+    color: gray;
+    font-size: 10px;
+}
+.TextNameSection{
+    display: flex;
+    justify-content: space-between;
+}
+.flexTextImg{
+    display: flex;
+    gap: 10px;
+}
+.pTagTest p{
+    font-size: 11px;
+    padding: 20px 0px 10px 0px;
+    color: gray;
+}
+.mainTextContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 10px;
+    margin-bottom: 50px;
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    .aboutContainer h1{
+         font-size: 30px;
+    }
+    .hrLine{
+        width: 50px;
+    }
+
+    .aboutImgSec{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+    .aboutText h3{
+        font-size: 18px;
+        width: 250px;
+    }
+    .aboutText p{
+        width: 250px;
+    }
+
+    .servicesTextSection{
+        width: 350px;
+    }
+    .servicesTextSection p{
+        width: 200px;
+    }
+    .testimonialImgSec{
+        width: 200px;
+    }
+}
+
+@keyframes animationIn {
+    from{
+      opacity: 0;
+      transform: translateX(-100deg);
+    }
+    
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

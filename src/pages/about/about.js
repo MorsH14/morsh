@@ -47,7 +47,7 @@ const About = ({ setAbout }) => {
 
                 <div className='textSection'>
                     <div className='aboutText'>
-                        <h3>My name is Olamide Alade, a Web developer and a UI/UX</h3>
+                        <h3>My name is Olamide Alade, a Web developer and a UI/UX Designer</h3>
 
                         <p>As a professional Fullstack Developer based in Nigeria, I specialize in creating user-friendly and visually-appealing websites that meet the latest design standards. Drawing from my years of experience, I take pride in transforming ideas into innovative and practical solutions. My expertise in product evolution allows me to effectively prioritize tasks, work quickly, and deliver high-quality results in a timely manner.</p>
                     </div>

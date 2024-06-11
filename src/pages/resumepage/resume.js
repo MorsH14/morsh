@@ -56,8 +56,8 @@ const Resume = ({ setResume }) => {
 
                         <div className='resumeText'>
                             <h4>Computer Science</h4>
-                            <h6>Elite University/ 2018 - 2022</h6>
-                            <p>I enrolled at Elite university as a computer science student. where i had the knowledgr of operating the system and further therein</p>
+                            <h6>Elite University / 2018 - 2022</h6>
+                            <p>I enrolled at Elite university as a computer science student. where i had the knowledge of operating the system and further therein</p>
                         </div>
                         <div className='resumeText'>
                             <h4>SSCE</h4>

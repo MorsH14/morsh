@@ -49,7 +49,7 @@ const About = ({ setAbout }) => {
                     <div className='aboutText'>
                         <h3>My name is Olamide Alade, a Web developer and a UI/UX</h3>
 
-                        <p>As a professional Fullstack Developer based in the Nigeria, I specialize in creating user-friendly and visually-appealing websites that meet the latest design standards. Drawing from my years of experience, I take pride in transforming ideas into innovative and practical solutions. My expertise in product evolution allows me to effectively prioritize tasks, work quickly, and deliver high-quality results in a timely manner.</p>
+                        <p>As a professional Fullstack Developer based in Nigeria, I specialize in creating user-friendly and visually-appealing websites that meet the latest design standards. Drawing from my years of experience, I take pride in transforming ideas into innovative and practical solutions. My expertise in product evolution allows me to effectively prioritize tasks, work quickly, and deliver high-quality results in a timely manner.</p>
                     </div>
 
                     <a href='/assets/myres.docx'><button>Download CV</button></a>
@@ -148,7 +148,7 @@ const About = ({ setAbout }) => {
                                 <div className='testimonialImgSec'>
                                     <div className='TextNameSection'>
                                         <div className='flexTextImg'>
-                                            <img src='/assets/bi.webp' alt='' className='testImg' />
+                                            <img src='/assets/r1.jpeg' alt='' className='testImg' />
                                             <div className='textSectionTestimonial'>
                                                 <h5>John Herson</h5>
                                                 <p>Entrepreneur</p>
@@ -161,10 +161,97 @@ const About = ({ setAbout }) => {
                                     </div>
 
                                     <div className='pTagTest'>
-                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
+                                        <p>John's technical skills are solid, and he delivered a well-coded website. However, his communication could use some improvement. There were times when it was difficult to get timely updates on the project's progress.</p>
                                     </div>
                                 </div>
                             </div>
+                            <div className='flex-between'>
+                                <div className='testimonialImgSec'>
+                                    <div className='TextNameSection'>
+                                        <div className='flexTextImg'>
+                                            <img src='/assets/r2.jpeg' alt='' className='testImg' />
+                                            <div className='textSectionTestimonial'>
+                                                <h5>John Herson</h5>
+                                                <p>Entrepreneur</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
+                                        </div>
+                                    </div>
+
+                                    <div className='pTagTest'>
+                                        <p>Olamide exceeded our expectations with her web development skills. She created a sleek, modern site that performs exceptionally well. Her innovative approach and proactive problem-solving were impressive. We couldn't be happier with the results.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='flex-between'>
+                                <div className='testimonialImgSec'>
+                                    <div className='TextNameSection'>
+                                        <div className='flexTextImg'>
+                                            <img src='/assets/r3.jpeg' alt='' className='testImg' />
+                                            <div className='textSectionTestimonial'>
+                                                <h5>John Herson</h5>
+                                                <p>Entrepreneur</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
+                                        </div>
+                                    </div>
+
+                                    <div className='pTagTest'>
+                                        <p>Alade is a talented developer with a knack for creating responsive and engaging websites. He was easy to work with and communicated well throughout the project. There were minor issues post-launch, but she was quick to fix them</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='flex-between'>
+                                <div className='testimonialImgSec'>
+                                    <div className='TextNameSection'>
+                                        <div className='flexTextImg'>
+                                            <img src='/assets/r4.jpeg' alt='' className='testImg' />
+                                            <div className='textSectionTestimonial'>
+                                                <h5>John Herson</h5>
+                                                <p>Entrepreneur</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
+                                        </div>
+                                    </div>
+
+                                    <div className='pTagTest'>
+                                        <p>Olamide did a great job on our e-commerce platform. The new features he implemented increased our sales and improved user experience. There were a few delays in the project, but overall, we are very satisfied with the outcome.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='flex-between'>
+                                <div className='testimonialImgSec'>
+                                    <div className='TextNameSection'>
+                                        <div className='flexTextImg'>
+                                            <img src='/assets/r5.jpeg' alt='' className='testImg' />
+                                            <div className='textSectionTestimonial'>
+                                                <h5>John Herson</h5>
+                                                <p>Entrepreneur</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
+                                        </div>
+                                    </div>
+
+                                    <div className='pTagTest'>
+                                        <p>Olamide did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
                             <div className='flex-between'>
                                 <div className='testimonialImgSec'>
                                     <div className='TextNameSection'>
@@ -182,94 +269,7 @@ const About = ({ setAbout }) => {
                                     </div>
 
                                     <div className='pTagTest'>
-                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='flex-between'>
-                                <div className='testimonialImgSec'>
-                                    <div className='TextNameSection'>
-                                        <div className='flexTextImg'>
-                                            <img src='/assets/bi.webp' alt='' className='testImg' />
-                                            <div className='textSectionTestimonial'>
-                                                <h5>John Herson</h5>
-                                                <p>Entrepreneur</p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
-                                        </div>
-                                    </div>
-
-                                    <div className='pTagTest'>
-                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='flex-between'>
-                                <div className='testimonialImgSec'>
-                                    <div className='TextNameSection'>
-                                        <div className='flexTextImg'>
-                                            <img src='/assets/bi.webp' alt='' className='testImg' />
-                                            <div className='textSectionTestimonial'>
-                                                <h5>John Herson</h5>
-                                                <p>Entrepreneur</p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
-                                        </div>
-                                    </div>
-
-                                    <div className='pTagTest'>
-                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='flex-between'>
-                                <div className='testimonialImgSec'>
-                                    <div className='TextNameSection'>
-                                        <div className='flexTextImg'>
-                                            <img src='/assets/bi.webp' alt='' className='testImg' />
-                                            <div className='textSectionTestimonial'>
-                                                <h5>John Herson</h5>
-                                                <p>Entrepreneur</p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
-                                        </div>
-                                    </div>
-
-                                    <div className='pTagTest'>
-                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <div className='flex-between'>
-                                <div className='testimonialImgSec'>
-                                    <div className='TextNameSection'>
-                                        <div className='flexTextImg'>
-                                            <img src='/assets/bi.webp' alt='' className='testImg' />
-                                            <div className='textSectionTestimonial'>
-                                                <h5>John Herson</h5>
-                                                <p>Entrepreneur</p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
-                                        </div>
-                                    </div>
-
-                                    <div className='pTagTest'>
-                                        <p>Emma did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes or edits when they arose. She worked with us the entire way. Highly recommended.</p>
+                                        <p>Olamide is an exceptional web developer. He redesigned our entire website, making it not only visually appealing but also highly functional. His attention to detail and ability to understand our requirements made the project a success. Highly recommend!</p>
                                     </div>
                                 </div>
                             </div>

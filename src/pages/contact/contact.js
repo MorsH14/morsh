@@ -33,7 +33,7 @@ const Contact = ({ setContact }) => {
         } else {
             setIsLoading(true)
             try {
-                const response = await axios.post(`https://morshb.onrender.com`, { name, message, email, subject })
+                const response = await axios.post(`https://morshb.onrender.com/sendmail/`, { name, message, email, subject })
                 console.log(response)
                 if (response.status === 200) {
                     toast.success("message sent")

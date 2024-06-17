@@ -2,7 +2,6 @@ import React from 'react'
 import "./port.css"
 import { ImCancelCircle } from "react-icons/im";
 import { FaArrowCircleRight } from "react-icons/fa";
-import { Toaster, toast } from 'sonner';
 
 
 const Portfolio = ({ setPortfolio }) => {
@@ -11,14 +10,10 @@ const Portfolio = ({ setPortfolio }) => {
     setPortfolio(false)
   }
 
-  const alertClick = () => {
-    toast.success('This website is still under construction, coming soon!')
-  }
-
 
   return (
     <div className='portfolioSection'>
-      < Toaster position='top-left' richColors/>
+      
       <div className='existX' onClick={hideModal}>
         <ImCancelCircle size={25} color='gray' />
       </div>
@@ -44,27 +39,13 @@ const Portfolio = ({ setPortfolio }) => {
 
             <div className='websiteSingleContainer'>
               <div className='imgPortSection'>
-                <img src='/assets/ht.png' alt='' />
+                <img src='/assets/e.png' alt='e-commerce website Img' />
 
-              </div>
-              <div className='textP flex-between pad-20'>
-                <p>Hotel Website</p>
-                <div className='webIcon flex-center' onClick={alertClick} >
-                  < FaArrowCircleRight size={20} />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='websiteSection'>
-
-            <div className='websiteSingleContainer'>
-              <div className='imgPortSection'>
-                <img src='/assets/wt.png' alt='' />
               </div>
               <div className='textP flex-between pad-20'>
                 <p>E-commerce Website</p>
-                <div className='webIcon flex-center' onClick={alertClick} >
-                  < FaArrowCircleRight size={20} />
+                <div className='webIcon flex-center' >
+                <a href='https://e-commerce-omega-ashy.vercel.app/' className='linkTag'>< FaArrowCircleRight size={20} /></a> 
                 </div>
               </div>
             </div>
@@ -73,12 +54,26 @@ const Portfolio = ({ setPortfolio }) => {
 
             <div className='websiteSingleContainer'>
               <div className='imgPortSection'>
-                <img src='/assets/pi.jpg' alt='' />
+                <img src='/assets/b.png' alt='blog website Img' />
               </div>
               <div className='textP flex-between pad-20'>
-                <p>Fashion Website</p>
-                <div className='webIcon flex-center' onClick={alertClick} >
-                  < FaArrowCircleRight size={20} />
+                <p>Blog Website</p>
+                <div className='webIcon flex-center' >
+                <a href='https://blog-qvghkd4v8-morshs-projects.vercel.app/' className='linkTag'> < FaArrowCircleRight size={20} /></a> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='websiteSection'>
+
+            <div className='websiteSingleContainer'>
+              <div className='imgPortSection'>
+                <img src='/assets/c.png' alt='' />
+              </div>
+              <div className='textP flex-between pad-20'>
+                <p>Car Rentals Website</p>
+                <div className='webIcon flex-center' >
+                <a href='https://sparecar.vercel.app/' className='linkTag'> < FaArrowCircleRight size={20} /></a> 
                 </div>
               </div>
             </div>

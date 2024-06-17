@@ -36,13 +36,13 @@ const Resume = ({ setResume }) => {
 
                         <div className='resumeText'>
                             <h4>Femtech IT Training</h4>
-                            <h6>Web Designer  / 10/2023 - Current</h6>
-                            <p>Used HTML, CSS, JAVASCRIPT AND REACT.JS for the Fronted, NODE.JS for server side and MYSQL for database in building a website</p>
+                            <h6>Web Developer  / 10/2023 - Current</h6>
+                            <p>Used HTML, CSS, JAVASCRIPT AND REACT.JS for the Fronted, NODE.JS for server side and MYSQL for database in building a website.</p>
                         </div>
                         <div className='resumeText'>
                             <h4>ShowTech</h4>
-                            <h6>Fronted Developer / 09/2023 - 10/2023</h6>
-                            <p>Designed user interfaces using HTML, CSS, and JavaScript to create seamless interactions and visually appealing layouts</p>
+                            <h6>Front-end Developer / 09/2023 - 10/2023</h6>
+                            <p>Designed user interfaces using HTML, CSS, and JavaScript to create seamless interactions and visually appealing layouts.</p>
                         </div>
 
                     </div>
@@ -57,12 +57,12 @@ const Resume = ({ setResume }) => {
                         <div className='resumeText'>
                             <h4>Computer Science</h4>
                             <h6>Elite University / 2018 - 2022</h6>
-                            <p>I enrolled at Elite university as a computer science student. where i had the knowledge of operating the system and further therein</p>
+                            <p>I enrolled at Elite university as a computer science student. where i had the knowledge of operating the system and further therein.</p>
                         </div>
                         <div className='resumeText'>
                             <h4>SSCE</h4>
                             <h6>BMHS/ 2016 - 2018</h6>
-                            <p>I graduated from baptist modeel high school, based in Nigeria Kwara State</p>
+                            <p>I graduated from baptist modeel high school, based in Nigeria Kwara State.</p>
                         </div>
 
 

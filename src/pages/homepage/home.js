@@ -51,7 +51,7 @@ const Homepage = () => {
 
       <div className='homeMainContainer'>
         <nav>
-          <div>MorsH</div>
+          <div className='navName'>MorsH</div>
 
           <ul className={showNav ? "navMedia" : 'navContainer flex-around gap-20'}>
             <li onClick={openAbout}>About</li>
@@ -66,7 +66,7 @@ const Homepage = () => {
         <div className=' flex-center flex-column'>
           <h1>Olamide Alade</h1>
           <div className='homeText'>
-            <p>I am a Fullstack Developer!</p>
+            <p>I am a Front-end Developer!</p>
           </div>
         </div>
 

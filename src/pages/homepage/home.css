@@ -34,10 +34,12 @@
 .linkTag{
     color: white;
 }
+.linkTag:hover{
+    color: green;
+}
 .engContainer{
-    transform: rotate(90deg);
     font-size: 12px;
-    margin: 20px;
+    margin: 10px;
     color: gray;
 }
 .homeIcon{

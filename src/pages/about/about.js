@@ -47,9 +47,9 @@ const About = ({ setAbout }) => {
 
                 <div className='textSection'>
                     <div className='aboutText'>
-                        <h3>My name is Olamide Alade, a Web developer and a UI/UX Designer</h3>
+                        <h3>My name is Olamide Alade, a Frontend developer.</h3>
 
-                        <p>As a professional Fullstack Developer based in Nigeria, I specialize in creating user-friendly and visually-appealing websites that meet the latest design standards. Drawing from my years of experience, I take pride in transforming ideas into innovative and practical solutions. My expertise in product evolution allows me to effectively prioritize tasks, work quickly, and deliver high-quality results in a timely manner.</p>
+                        <p>As a professional Frontend Developer based in Nigeria, I specialize in creating user-friendly and visually-appealing websites that meet the latest design standards. Drawing from my years of experience, I take pride in transforming ideas into innovative and practical solutions. My expertise in product evolution allows me to effectively prioritize tasks, work quickly, and deliver high-quality results in a timely manner.</p>
                     </div>
 
                     <a href='/assets/myres.docx'><button>Download CV</button></a>
@@ -115,7 +115,7 @@ const About = ({ setAbout }) => {
                         <SiWebflow className="myServiceIcon" size={50} />
 
                         <h3>Back-end development</h3>
-                        <p>Developing the server-side of websites, ensuring that they are functional and secure. I work with NODE.JS and MYSQL for the server side</p>
+                        <p>Developing the server-side of websites, ensuring that they are functional and secure. I work with NODE.JS and MYSQL for the server side.</p>
 
                     </div>
                     <div className='servicesTextSection'>
@@ -128,7 +128,7 @@ const About = ({ setAbout }) => {
                     <div className='servicesTextSection'>
                         < SiMysql className="myServiceIcon" size={50} />
 
-                        <h3> Database management</h3>
+                        <h3> Database   Management</h3>
                         <p>Managing and optimizing databases for websites, ensuring that data is stored and retrieved efficiently.</p>
 
                     </div>
@@ -150,8 +150,8 @@ const About = ({ setAbout }) => {
                                         <div className='flexTextImg'>
                                             <img src='/assets/r1.jpeg' alt='' className='testImg' />
                                             <div className='textSectionTestimonial'>
-                                                <h5>John Herson</h5>
-                                                <p>Entrepreneur</p>
+                                                <h5>Mary Herson</h5>
+                                                <p>United state</p>
                                             </div>
                                         </div>
 
@@ -161,7 +161,7 @@ const About = ({ setAbout }) => {
                                     </div>
 
                                     <div className='pTagTest'>
-                                        <p>John's technical skills are solid, and he delivered a well-coded website. However, his communication could use some improvement. There were times when it was difficult to get timely updates on the project's progress.</p>
+                                        <p>Alade technical skills are solid, and he delivered a well-coded website. However, his communication could use some improvement. There were times when it was difficult to get timely updates on the project's progress.</p>
                                     </div>
                                 </div>
                             </div>
@@ -171,8 +171,8 @@ const About = ({ setAbout }) => {
                                         <div className='flexTextImg'>
                                             <img src='/assets/r2.jpeg' alt='' className='testImg' />
                                             <div className='textSectionTestimonial'>
-                                                <h5>John Herson</h5>
-                                                <p>Entrepreneur</p>
+                                                <h5>David H.</h5>
+                                                <p>United State</p>
                                             </div>
                                         </div>
 
@@ -192,8 +192,8 @@ const About = ({ setAbout }) => {
                                         <div className='flexTextImg'>
                                             <img src='/assets/r3.jpeg' alt='' className='testImg' />
                                             <div className='textSectionTestimonial'>
-                                                <h5>John Herson</h5>
-                                                <p>Entrepreneur</p>
+                                                <h5>Fred Scott</h5>
+                                                <p>New York</p>
                                             </div>
                                         </div>
 
@@ -203,7 +203,7 @@ const About = ({ setAbout }) => {
                                     </div>
 
                                     <div className='pTagTest'>
-                                        <p>Alade is a talented developer with a knack for creating responsive and engaging websites. He was easy to work with and communicated well throughout the project. There were minor issues post-launch, but she was quick to fix them</p>
+                                        <p>Alade is a talented developer with a knack for creating responsive and engaging websites. He was easy to work with and communicated well throughout the project. There were minor issues post-launch, but she was quick to fix them.</p>
                                     </div>
                                 </div>
                             </div>
@@ -213,8 +213,8 @@ const About = ({ setAbout }) => {
                                         <div className='flexTextImg'>
                                             <img src='/assets/r4.jpeg' alt='' className='testImg' />
                                             <div className='textSectionTestimonial'>
-                                                <h5>John Herson</h5>
-                                                <p>Entrepreneur</p>
+                                                <h5>Adebisi Susan</h5>
+                                                <p>Nigeria</p>
                                             </div>
                                         </div>
 
@@ -234,8 +234,8 @@ const About = ({ setAbout }) => {
                                         <div className='flexTextImg'>
                                             <img src='/assets/r5.jpeg' alt='' className='testImg' />
                                             <div className='textSectionTestimonial'>
-                                                <h5>John Herson</h5>
-                                                <p>Entrepreneur</p>
+                                                <h5>Kate Gat.</h5>
+                                                <p>South Africa</p>
                                             </div>
                                         </div>
 
@@ -252,14 +252,14 @@ const About = ({ setAbout }) => {
 
 
 
-                            <div className='flex-between'>
+                            {/* <div className='flex-between'>
                                 <div className='testimonialImgSec'>
                                     <div className='TextNameSection'>
                                         <div className='flexTextImg'>
                                             <img src='/assets/bi.webp' alt='' className='testImg' />
                                             <div className='textSectionTestimonial'>
                                                 <h5>John Herson</h5>
-                                                <p>Entrepreneur</p>
+                                                <p></p>
                                             </div>
                                         </div>
 
@@ -272,7 +272,7 @@ const About = ({ setAbout }) => {
                                         <p>Olamide is an exceptional web developer. He redesigned our entire website, making it not only visually appealing but also highly functional. His attention to detail and ability to understand our requirements made the project a success. Highly recommend!</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </Marquee>
 

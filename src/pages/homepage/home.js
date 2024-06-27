@@ -89,7 +89,7 @@ const Homepage = () => {
             </div>
 
             <div className='homeIcon'>
-            <a href='https://www.instagram.com/__morshdev/' className='iconImgHome'>< FaInstagram size={17} /></a>
+            <a href='https://www.instagram.com/morshdev/' className='iconImgHome'>< FaInstagram size={17} /></a>
             </div>
             <div className='homeIcon'>
             <a href='https://github.com/MorsH14' className='iconImgHome'> < FaGithub size={17} /></a>

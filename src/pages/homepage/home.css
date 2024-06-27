@@ -73,6 +73,9 @@ nav{
 nav h1{
     cursor: pointer;
 }
+.navName{
+    cursor: pointer;
+}
 ul li {
     cursor: pointer;
     transition: all .3s ease;

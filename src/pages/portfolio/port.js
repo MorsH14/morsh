@@ -52,17 +52,7 @@ const Portfolio = ({ setPortfolio }) => {
           </div>
           <div className='websiteSection'>
 
-            <div className='websiteSingleContainer'>
-              <div className='imgPortSection'>
-                <img src='/assets/b.png' alt='blog website Img' />
-              </div>
-              <div className='textP flex-between pad-20'>
-                <p>Blog Website</p>
-                <div className='webIcon flex-center' >
-                <a href='https://blog-qvghkd4v8-morshs-projects.vercel.app/' className='linkTag'> < FaArrowCircleRight size={20} /></a> 
-                </div>
-              </div>
-            </div>
+            
           </div>
           <div className='websiteSection'>
 

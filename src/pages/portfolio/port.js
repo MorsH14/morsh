@@ -20,7 +20,7 @@ const Portfolio = ({ setPortfolio }) => {
 
       <div className='aboutContainer flex-center flex-column gap-10'>
         <div>
-          <h1>Portfolio</h1>
+          <h1>Projects Done!</h1>
         </div>
         <div className='hrLine'></div>
       </div>

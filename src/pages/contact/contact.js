@@ -33,7 +33,7 @@ const Contact = ({ setContact }) => {
         } else {
             setIsLoading(true)
             try {
-                const response = await axios.post(`https://morshb.onrender.com/sendmail/`, { name, message, email, subject })
+                const response = await axios.post(`http://localhost:5000/submit`, { name, message, email, subject })
                 console.log(response)
                 if (response.status === 200) {
                     toast.success("message sent")
@@ -68,15 +68,15 @@ const Contact = ({ setContact }) => {
                 <Toaster position='top-left' richColors />
                 <form onSubmit={handleSubmit}>
                     <div className='messageTextName'>
-                        <input type='text' className='inputText1' value={msg.name} name='name' placeholder='Name' onChange={handleChange} />
-                        <input type='email' className='inputText1' value={msg.email} name='email' placeholder='Email' onChange={handleChange} />
+                        <input type='text' className='inputText1' value={msg.name} name='name' placeholder='Name' required onChange={handleChange} />
+                        <input type='email' className='inputText1' value={msg.email} name='email' placeholder='Email' required onChange={handleChange} />
                     </div>
 
                     <div>
-                        <input type='text' className='inputText' value={msg.subject} name='subject' placeholder='Subject' onChange={handleChange} />
+                        <input type='text' className='inputText' value={msg.subject} name='subject' placeholder='Subject' required onChange={handleChange} />
                     </div>
                     <div>
-                        <textarea type='text' className='inputTextarea' value={msg.message} name='message' placeholder='Message' onChange={handleChange} />
+                        <textarea type='text' className='inputTextarea' value={msg.message} name='message' placeholder='Message' required onChange={handleChange} />
                     </div>
 
                     <div className='flex-center'>

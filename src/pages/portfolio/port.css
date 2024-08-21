@@ -25,10 +25,9 @@
   width: 70%;
 }
 .imgPortSection{
-  width: 250px;
-  height: 300px;
   border-radius: 10px ;
   overflow: hidden;
+  object-fit: contain;
 }
 .websiteSection{
   display: flex;
@@ -37,7 +36,6 @@
   flex-wrap: wrap;
   background: rgb(20,20,20);
   border-radius: 20px;
-  margin: 30px 0px;
 }
 
 .websiteSingleContainer{
@@ -60,6 +58,12 @@
   
   .wehH3{
     font-size: 15px;
+  }
+  .imgPortSection{
+    width: 300px;
+  }
+  .img{
+    width: 100%;
   }
 }
 

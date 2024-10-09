@@ -10,6 +10,7 @@ import About from '../about/about';
 import Contact from '../contact/contact';
 import Resume from '../resumepage/resume';
 import Portfolio from '../portfolio/port';
+import 'animate.css';
 
 
 
@@ -50,7 +51,7 @@ const Homepage = () => {
 
 
       <div className='homeMainContainer'>
-        <nav>
+        <nav class="animate__animated animate__fadeInDown">
           <div className='navName'>MorsH</div>
 
           <ul className={showNav ? "navMedia" : 'navContainer flex-around gap-20'}>
@@ -64,9 +65,9 @@ const Homepage = () => {
         </nav>
 
         <div className=' flex-center flex-column'>
-          <h1>Olamide Alade</h1>
+          <h1 class="animate__animated animate__fadeInDown">Olamide Alade</h1>
           <div className='homeText'>
-            <p>I am a Front-end Developer!</p>
+            <p class="animate__animated animate__bounceInLeft">I am a Website Developer!</p>
           </div>
         </div>
 
@@ -76,7 +77,7 @@ const Homepage = () => {
             <p>ENG</p>
           </div>
 
-          <div className=' '>
+          <div class="animate__animated animate__fadeInRight">
 
             <div className='homeIcon '>
               <a href='https://x.com/__morsh' className='iconImgHome'> < FaTwitter size={17} /></a>

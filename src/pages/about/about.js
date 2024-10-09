@@ -14,6 +14,8 @@ import { SiMysql } from "react-icons/si";
 import { SiWebflow } from "react-icons/si";
 import { GiBoxingGloveSurprise } from "react-icons/gi";
 import Marquee from "react-fast-marquee";
+import { Fade } from "react-awesome-reveal";
+
 
 const About = ({ setAbout }) => {
   const hideModal = () => {
@@ -28,19 +30,20 @@ const About = ({ setAbout }) => {
 
       <div className="aboutContainer flex-center flex-column gap-10">
         <div>
-          <h1>About Me</h1>
+          <h1 class="animate__animated animate__bounceInDown">About Me</h1>
         </div>
-        <div className="hrLine"></div>
+        <div className="hrLine animate__animated animate__fadeInLeft"></div>
       </div>
 
       <div className="aboutImgContainer">
-        <div className="aboutImgSec"></div>
+      <Fade direction="left"> <div className="aboutImgSec"></div> </Fade>
 
         <div className="textSection">
+        <Fade direction="right">
           <div className="aboutText">
-            <h3>My name is Olamide Alade, a Frontend developer.</h3>
+            <h3 class="animate__animated animate__bounce">My name is Olamide Alade, a Website developer.</h3>
 
-            <p>
+           <p>
               As a professional Frontend Developer based in Nigeria, I
               specialize in creating user-friendly and visually-appealing
               websites that meet the latest design standards. Drawing from my
@@ -49,12 +52,15 @@ const About = ({ setAbout }) => {
               evolution allows me to effectively prioritize tasks, work quickly,
               and deliver high-quality results in a timely manner.
             </p>
+            
           </div>
+          </Fade>
 
           <a href="/assets/OlamideAlade_Resume.docx">
             <button>Download CV</button>
           </a>
 
+          <Fade direction="down">
           <div className="iconFlex gap-20">
             <div className="homeIcon">
               <a href="https://x.com/__morsh" className="iconImgHome">
@@ -71,7 +77,7 @@ const About = ({ setAbout }) => {
 
             <div className="homeIcon">
               <a
-                href="https://www.instagram.com/__morsh/"
+                href="https://www.instagram.com/morshdev/"
                 className="iconImgHome"
               >
                 <FaInstagram size={17} />
@@ -84,6 +90,7 @@ const About = ({ setAbout }) => {
               </a>
             </div>
           </div>
+          </Fade>
         </div>
       </div>
 
@@ -93,7 +100,7 @@ const About = ({ setAbout }) => {
         </div>
 
         <div className="servicesSection">
-          <div className="servicesTextSection">
+          <Fade direction="left"><div className="servicesTextSection">
             <ImHtmlFive2 className="myServiceIcon" size={50} />
 
             <h3>Front-end development</h3>
@@ -103,7 +110,8 @@ const About = ({ setAbout }) => {
               to use.
             </p>
           </div>
-          <div className="servicesTextSection">
+          </Fade>
+          <Fade direction="top"><div className="servicesTextSection">
             <DiJavascript className="myServiceIcon" size={50} />
 
             <h3>UI/UX design</h3>
@@ -112,7 +120,8 @@ const About = ({ setAbout }) => {
               provide an optimal user experience.
             </p>
           </div>
-          <div className="servicesTextSection">
+          </Fade>
+          <Fade direction="right"><div className="servicesTextSection">
             <FaReact className="myServiceIcon" size={50} />
 
             <h3>Responsive Web Design</h3>
@@ -121,9 +130,11 @@ const About = ({ setAbout }) => {
               desktop to mobile.
             </p>
           </div>
+          </Fade>
         </div>
+        
         <div className="servicesSection">
-          <div className="servicesTextSection">
+          <Fade direction="left"><div className="servicesTextSection">
             <SiWebflow className="myServiceIcon" size={50} />
 
             <h3>Back-end development</h3>
@@ -133,7 +144,8 @@ const About = ({ setAbout }) => {
               server side.
             </p>
           </div>
-          <div className="servicesTextSection">
+          </Fade>
+          <Fade direction="bottom"><div className="servicesTextSection">
             <FaNodeJs className="myServiceIcon" size={50} />
 
             <h3>API's</h3>
@@ -141,8 +153,8 @@ const About = ({ setAbout }) => {
               Server-side development with Node.js, including building back-end
               APIs, web applications, and microservices.
             </p>
-          </div>
-          <div className="servicesTextSection">
+          </div>  </Fade>
+          <Fade direction="right"><div className="servicesTextSection">
             <SiMysql className="myServiceIcon" size={50} />
 
             <h3> Database Management</h3>
@@ -150,7 +162,7 @@ const About = ({ setAbout }) => {
               Managing and optimizing databases for websites, ensuring that data
               is stored and retrieved efficiently.
             </p>
-          </div>
+          </div>  </Fade>
         </div>
 
         <div className="">
@@ -158,9 +170,9 @@ const About = ({ setAbout }) => {
             <h1>Certification</h1>
           </div>
 
-          <div>
+          <Fade direction="bottom"> <div>
             <img src="assets/certificate_fiti.jpg" alt="" width={300}/>
-        </div>
+        </div></Fade>
         </div>
 
         <div className="testimonialSection">

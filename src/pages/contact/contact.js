@@ -8,10 +8,10 @@ import axios from 'axios';
 const Contact = ({ setContact }) => {
 
     const [msg, setMsg] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+        name: ' ',
+        email: ' ',
+        subject: ' ',
+        message: ' '
     })
     const [isLoading, setIsLoading] = useState(false)
 
@@ -28,7 +28,7 @@ const Contact = ({ setContact }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (msg.name.trim() === "" || msg.email.trim() === "" || msg.subject.trim() === "" || msg.message.trim() === "") {
+        if (msg.name.trim() === " " || msg.email.trim() === " " || msg.subject.trim() === " " || msg.message.trim() === " ") {
             toast.error("fill all fields")
         } else {
             setIsLoading(true)

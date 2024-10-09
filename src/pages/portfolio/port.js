@@ -2,6 +2,7 @@ import React from "react";
 import "./port.css";
 import { ImCancelCircle } from "react-icons/im";
 import { FaArrowCircleRight } from "react-icons/fa";
+import { Fade } from "react-awesome-reveal";
 
 const Portfolio = ({ setPortfolio }) => {
   const hideModal = () => {
@@ -16,18 +17,18 @@ const Portfolio = ({ setPortfolio }) => {
 
       <div className="aboutContainer flex-center flex-column gap-10">
         <div>
-          <h1>Projects Done!</h1>
+          <h1 class="animate__animated animate__bounceInDown">Projects Done!</h1>
         </div>
         <div className="hrLine"></div>
       </div>
 
       <div className=" flex-center flex-column">
         <div className="wehH3 pad-20">
-          <h3>Here are some of the website i've worked on! </h3>
+          <h3 class="animate__animated animate__fadeInRight">Here are some of the website i've worked on! </h3>
         </div>
 
         <div className="websiteFatherSection">
-          <div className="websiteSection">
+        <Fade direction="left"><div className="websiteSection">
             <div className="websiteSingleContainer">
               <div className="imgPortSection">
                 <img
@@ -50,7 +51,8 @@ const Portfolio = ({ setPortfolio }) => {
               </div>
             </div>
           </div>
-          <div className="websiteSection">
+          </Fade>
+          <Fade direction="right"><div className="websiteSection">
             <div className="websiteSingleContainer">
               <div className="imgPortSection">
                 <img
@@ -73,7 +75,8 @@ const Portfolio = ({ setPortfolio }) => {
               </div>
             </div>
           </div>
-          <div className="websiteSection">
+         </Fade>
+         <Fade direction="left"><div className="websiteSection">
             <div className="websiteSingleContainer">
               <div className="imgPortSection">
                 <img src="/assets/bb.png" alt="" width={700} className="img" />
@@ -92,6 +95,7 @@ const Portfolio = ({ setPortfolio }) => {
               </div>
             </div>
           </div>
+          </Fade>
         </div>
       </div>
     </div>

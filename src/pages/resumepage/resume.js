@@ -1,6 +1,7 @@
 import React from 'react'
 import "./resume.css"
 import { ImCancelCircle } from "react-icons/im";
+import { Fade } from 'react-awesome-reveal';
 
 
 const Resume = ({ setResume }) => {
@@ -28,7 +29,7 @@ const Resume = ({ setResume }) => {
 
                 <div className='resumeFlex'>
 
-
+                <Fade direction="left">
                     <div className='experienceFlex'>
                         <div className='resumeHeader'>
                             <h3>Experience</h3>
@@ -46,8 +47,9 @@ const Resume = ({ setResume }) => {
                         </div>
 
                     </div>
+                    </Fade>
 
-
+                    <Fade direction="right">
                     <div className='educationFlex'>
 
                         <div className='resumeHeader'>
@@ -67,6 +69,7 @@ const Resume = ({ setResume }) => {
 
 
                     </div>
+                    </Fade>
                 </div>
             </div>
 
@@ -80,14 +83,15 @@ const Resume = ({ setResume }) => {
                 <div className=' flex-center'>
 
                     <div className='resumeFlex'>
-
+                    <Fade direction="left">
                         <div className='experienceFlex'>
                             <h3 className='skillsText'>HTML</h3>
                             <h3 className='skillsText'>CSS</h3>
                             <h3 className='skillsText'>JAVASCRIPT</h3>
                             <h3 className='skillsText'>REACT</h3>
                         </div>
-
+                        </Fade>
+                        <Fade direction="right">
                         <div className='educationFlex'>
 
                             <h3 className='skillsText'>BOOTSTRAP</h3>
@@ -95,6 +99,7 @@ const Resume = ({ setResume }) => {
                             <h3 className='skillsText'>NODE.JS</h3>
                             <h3 className='skillsText'>MYSQL</h3>
                         </div>
+                        </Fade>
                     </div>
 
                 </div>

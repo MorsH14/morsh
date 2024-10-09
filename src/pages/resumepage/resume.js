@@ -42,7 +42,7 @@ const Resume = ({ setResume }) => {
                         </div>
                         <div className='resumeText'>
                             <h4>ShowTech</h4>
-                            <h6>Front-end Developer / 09/2023 - 10/2023</h6>
+                            <h6>Junior Web Developer / 09/2023 - 10/2023</h6>
                             <p>Designed user interfaces using HTML, CSS, and JavaScript to create seamless interactions and visually appealing layouts.</p>
                         </div>
 

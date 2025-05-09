@@ -10,7 +10,7 @@ import { FaInstagram } from "react-icons/fa";
 import { VscListSelection } from "react-icons/vsc";
 import About from '../about/about';
 import Contact from '../contact/contact';
-import Resume from '../resumepage/resume';
+// import Resume from '../resumepage/resume';
 import Portfolio from '../portfolio/port';
 import 'animate.css';
 import { SiExpress, SiMui, SiTypescript } from 'react-icons/si';
@@ -23,7 +23,7 @@ const Homepage = () => {
 
 
   const [about, setAbout] = useState(false)
-  const [resume, setResume] = useState(false)
+  // const [resume, setResume] = useState(false)
   const [portfolio, setPortfolio] = useState(false)
   const [contact, setContact] = useState(false)
   const [showNav, setShowNav] = useState(false)
@@ -32,9 +32,9 @@ const Homepage = () => {
   const openAbout = ()=>{
       setAbout(true)
   }
-  const openResume = ()=>{
-    setResume(true)
-  }
+  // const openResume = ()=>{
+  //   setResume(true)
+  // }
   const openPortfolio = ()=>{
     setPortfolio(true)
   }
@@ -57,17 +57,19 @@ const Homepage = () => {
         <nav class="animate__animated animate__fadeInDown">
           <div className='navName'>MorsH</div>
 
+          <div className='listWrapper'>
           <ul className={showNav ? "navMedia" : 'navContainer flex-around gap-20'}>
             <li onClick={openAbout}>About</li>
-            <li onClick={openResume}>Resume</li>
+            {/* <li onClick={openResume}>Resume</li> */}
             <li onClick={openPortfolio}>Projects</li>
             <li onClick={openContact}>Contact</li>
           </ul>
+          </div>
 
           < VscListSelection color='white' size={30} className='listIcon' onClick={handleClick}/>
         </nav>
 
-        <div className=' flex-center flex-column'>
+        <div className='centerWraper flex-center flex-column'>
           <h1 class="animate__animated animate__fadeInDown">Olamide Alade</h1>
           <div className='homeText'>
             <p class="animate__animated animate__bounceInLeft">I am a Website Developer!</p>
@@ -145,7 +147,7 @@ const Homepage = () => {
       {about ? <About setAbout={setAbout} /> : null}
       {contact ? <Contact setContact={setContact}/> : null}
       {portfolio ? <Portfolio setPortfolio={setPortfolio} /> : null}
-     { resume ? <Resume setResume={setResume}/> : null}
+     {/* { resume ? <Resume setResume={setResume}/> : null} */}
 
     </div>
   )

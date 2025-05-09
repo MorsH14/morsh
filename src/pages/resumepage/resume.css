@@ -64,7 +64,7 @@
 .skillsText{
     padding: 20px;
     background: rgba(20,20,20);
-    margin: 20px 0px;
+    margin: 20px 0;
     font-weight: bold;
     transition: all .3s linear;
     border-bottom: 2px solid transparent;
@@ -75,6 +75,13 @@
     border-bottom: 2px solid rgb(55, 100, 55);
     box-shadow: none;
 }
+.skillWrapper{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    flex-wrap: wrap;
+    margin: 30px;
+}
 
 
 
@@ -84,7 +91,19 @@
         display: flex;
         gap: 20px;
     }
-    
+}
+@media screen and (max-width: 515px) {
+
+    .skillWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .skillsText{
+        max-width: 200px;
+        flex: 1;
+    }
 }
 
 @keyframes animationIn {

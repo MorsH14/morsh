@@ -24,6 +24,17 @@
 .homeText{
     font-size: 20px;
 }
+
+.iconWrapper{
+    width: 100%;
+    margin: 0 20px;
+    margin-top: 40px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .homeFooterSec{
     width: 95%;
     display: flex;

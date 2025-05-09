@@ -58,7 +58,7 @@ const Resume = ({ setResume }) => {
 
                         <div className='resumeText'>
                             <h4>Computer Science</h4>
-                            <h6>Ekiti State University / 2018 - 2022</h6>
+                            <h6>Ladoke Akintola University / 2018 - 2022</h6>
                             <p>I enrolled at Elite university as a computer science student. where i had the knowledge of operating the system and further therein.</p>
                         </div>
                         <div className='resumeText'>
@@ -82,7 +82,7 @@ const Resume = ({ setResume }) => {
 
                 <div className=' flex-center'>
 
-                    <div className='resumeFlex'>
+                    <div className='skillWrapper '>
                     <Fade direction="left">
                         <div className='experienceFlex'>
                             <h3 className='skillsText'>HTML</h3>

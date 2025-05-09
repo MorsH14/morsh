@@ -3,7 +3,7 @@ import "./about.css";
 import { ImCancelCircle } from "react-icons/im";
 import { FaTwitter } from "react-icons/fa6";
 // import { FaSquareFacebook } from "react-icons/fa6";
-// import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { ImHtmlFive2 } from "react-icons/im";
@@ -41,7 +41,7 @@ const About = ({ setAbout }) => {
         <div className="textSection">
         <Fade direction="right">
           <div className="aboutText">
-            <h3 class="animate__animated animate__bounce">My name is Olamide Alade, a Website developer.</h3>
+            <h3 class="animate__animated animate__bounce">My name is Olamide Alade, a Frontend Engineer.</h3>
 
            <p>
               As a professional Frontend Developer based in Nigeria, I
@@ -63,7 +63,7 @@ const About = ({ setAbout }) => {
           <Fade direction="down">
           <div className="iconFlex gap-20">
             <div className="homeIcon">
-              <a href="https://x.com/__morsh" className="iconImgHome">
+              <a href="https://x.com/midemorsh" className="iconImgHome">
                 {" "}
                 <FaTwitter size={17} />
               </a>
@@ -71,13 +71,13 @@ const About = ({ setAbout }) => {
             {/* <div className='homeIcon'>
                             <a href='https://web.facebook.com/profile.php?id=100080568897119' className='iconImgHome'><FaSquareFacebook size={17} /></a>
                         </div> */}
-            {/* <div className='homeIcon'>
-                            <a href='https://www.linkedin.com/in/alade-olamide-b45b51309/' className='iconImgHome'>< FaLinkedin size={17} /></a>
-                        </div> */}
+            <div className='homeIcon'>
+                            <a href='https://www.linkedin.com/in/alade-olamide-a86304360?' className='iconImgHome'>< FaLinkedin size={17} /></a>
+                        </div>
 
             <div className="homeIcon">
               <a
-                href="https://www.instagram.com/morshdev/"
+                href="https://www.instagram.com/_midemorsh/"
                 className="iconImgHome"
               >
                 <FaInstagram size={17} />

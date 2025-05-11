@@ -28,7 +28,33 @@ const Portfolio = ({ setPortfolio }) => {
         </div>
 
         <div className="websiteFatherSection">
-        <Fade direction="left"><div className="websiteSection">
+      
+          <Fade direction="right"><div className="websiteSection">
+            <div className="websiteSingleContainer">
+              <div className="imgPortSection">
+                <img
+                  src="/assets/1159.png"
+                  alt="Real Estate website Img"
+                  width={700}
+                  className="img"
+                />
+              </div>
+              <div className="textP flex-between pad-20">
+                <p>Real Estate Website</p>
+                <div className="webIcon flex-center">
+                  <a
+                    href="https://1159website.vercel.app"
+                    className="linkTag"
+                  >
+                    <FaArrowCircleRight size={20} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+         </Fade>
+
+         <Fade direction="left"><div className="websiteSection">
             <div className="websiteSingleContainer">
               <div className="imgPortSection">
                 <img
@@ -52,30 +78,7 @@ const Portfolio = ({ setPortfolio }) => {
             </div>
           </div>
           </Fade>
-          <Fade direction="right"><div className="websiteSection">
-            <div className="websiteSingleContainer">
-              <div className="imgPortSection">
-                <img
-                  src="/assets/du.png"
-                  alt="Photography website Img"
-                  width={700}
-                  className="img"
-                />
-              </div>
-              <div className="textP flex-between pad-20">
-                <p>Photography Website</p>
-                <div className="webIcon flex-center">
-                  <a
-                    href="https://dunsinsgraphy.vercel.app/"
-                    className="linkTag"
-                  >
-                    <FaArrowCircleRight size={20} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-         </Fade>
+          
          <Fade direction="left"><div className="websiteSection">
             <div className="websiteSingleContainer">
               <div className="imgPortSection">

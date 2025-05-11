@@ -72,7 +72,7 @@ const Homepage = () => {
         <div className='centerWraper flex-center flex-column'>
           <h1 class="animate__animated animate__fadeInDown">Olamide Alade</h1>
           <div className='homeText'>
-            <p class="animate__animated animate__bounceInLeft">I am a Website Developer!</p>
+            <p class="animate__animated animate__bounceInLeft">I am a Front-end Developer</p>
           </div>
 
           <div className='iconWrapper  animate__animated animate__fadeInDown'>

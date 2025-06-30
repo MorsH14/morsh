@@ -179,7 +179,7 @@ const Portfolio = ({ setPortfolio }) => {
                       Used for demo projects and freelance showcases.
                     </p>
                     <a
-                      // href="#"
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="visitBtn"

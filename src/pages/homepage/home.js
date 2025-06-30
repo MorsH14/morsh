@@ -72,7 +72,7 @@ const Homepage = () => {
         <div className='centerWraper flex-center flex-column'>
           <h1 class="animate__animated animate__fadeInDown">Olamide Alade</h1>
           <div className='homeText'>
-            <p class="animate__animated animate__bounceInLeft">I am a Front-end Developer</p>
+            <p class="animate__animated animate__bounceInLeft">I am a Front-End Developer</p>
           </div>
 
           <div className='iconWrapper  animate__animated animate__fadeInDown'>
@@ -123,20 +123,20 @@ const Homepage = () => {
           <div class="animate__animated animate__fadeInRight">
 
             <div className='homeIcon '>
-              <a href='https://x.com/midemorsh' className='iconImgHome'> < FaTwitter size={17} /></a>
+              <a href='https://x.com/midemorsh' className='iconImgHome'> < FaTwitter size={20} /></a>
             </div>
             {/* <div className='homeIcon'>
             <a href='https://web.facebook.com/profile.php?id=100080568897119' className='iconImgHome'><FaSquareFacebook size={17} /></a>
             </div> */}
             <div className='homeIcon'>
-            <a href='https://www.linkedin.com/in/alade-olamide-a86304360?' className='iconImgHome'>< FaLinkedin size={17} /></a>
+            <a href='https://www.linkedin.com/in/alade-olamide-a86304360?' className='iconImgHome'>< FaLinkedin size={20} /></a>
             </div>
 
             <div className='homeIcon'>
-            <a href='https://www.instagram.com/_midemorsh/' className='iconImgHome'>< FaInstagram size={17} /></a>
+            <a href='https://www.instagram.com/_midemorsh/' className='iconImgHome'>< FaInstagram size={20} /></a>
             </div>
             <div className='homeIcon'>
-            <a href='https://github.com/MorsH14' className='iconImgHome'> < FaGithub size={17} /></a>
+            <a href='https://github.com/MorsH14' className='iconImgHome'> < FaGithub size={20} /></a>
             </div>
 
           </div>

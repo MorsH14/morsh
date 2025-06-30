@@ -16,7 +16,6 @@ import { GiBoxingGloveSurprise } from "react-icons/gi";
 import Marquee from "react-fast-marquee";
 import { Fade } from "react-awesome-reveal";
 
-
 const About = ({ setAbout }) => {
   const hideModal = () => {
     setAbout(false);
@@ -36,24 +35,31 @@ const About = ({ setAbout }) => {
       </div>
 
       <div className="aboutImgContainer">
-      <Fade direction="left"> <div className="aboutImgSec"></div> </Fade>
+        <Fade direction="left">
+          {" "}
+          <div className="aboutImgSec"></div>{" "}
+        </Fade>
 
         <div className="textSection">
-        <Fade direction="right">
-          <div className="aboutText">
-            <h3 class="animate__animated animate__bounce">My name is Olamide Alade, a Frontend Engineer.</h3>
+          <Fade direction="right">
+            <div className="aboutText">
+              <h3 class="animate__animated animate__bounce">
+                My name is Olamide Alade, a Frontend Engineer.
+              </h3>
 
-           <p>
-              As a professional Frontend Developer based in Nigeria, I
-              specialize in creating user-friendly and visually-appealing
-              websites that meet the latest design standards. Drawing from my
-              years of experience, I take pride in transforming ideas into
-              innovative and practical solutions. My expertise in product
-              evolution allows me to effectively prioritize tasks, work quickly,
-              and deliver high-quality results in a timely manner.
-            </p>
-            
-          </div>
+              <p>
+                I’m a creative and detail-oriented Front-End Developer based in
+                Nigeria, with a solid foundation in building scalable,
+                SEO-optimized, and responsive web applications. Over the last 3+
+                years, I’ve worked on real-world projects across industries like
+                real estate, job search platforms, and fashion portfolios. I’m
+                passionate about delivering clean code and smooth user
+                experiences using tools like React, Next.js, Tailwind, and MUI.
+                I enjoy turning complex problems into clean, user-friendly
+                designs, and I’m constantly seeking ways to improve my craft.
+                Let’s work together and bring your ideas to life.
+              </p>
+            </div>
           </Fade>
 
           <a href="/assets/OlamideAlade_Resume.docx">
@@ -61,35 +67,40 @@ const About = ({ setAbout }) => {
           </a>
 
           <Fade direction="down">
-          <div className="iconFlex gap-20">
-            <div className="homeIcon">
-              <a href="https://x.com/midemorsh" className="iconImgHome">
-                {" "}
-                <FaTwitter size={17} />
-              </a>
-            </div>
-            {/* <div className='homeIcon'>
-                            <a href='https://web.facebook.com/profile.php?id=100080568897119' className='iconImgHome'><FaSquareFacebook size={17} /></a>
+            <div className="iconFlex gap-20">
+              <div className="homeIcon">
+                <a href="https://x.com/midemorsh" className="iconImgHome">
+                  {" "}
+                  <FaTwitter size={20} />
+                </a>
+              </div>
+              {/* <div className='homeIcon'>
+                            <a href='https://web.facebook.com/profile.php?id=100080568897119' className='iconImgHome'><FaSquareFacebook size={20} /></a>
                         </div> */}
-            <div className='homeIcon'>
-                            <a href='https://www.linkedin.com/in/alade-olamide-a86304360?' className='iconImgHome'>< FaLinkedin size={17} /></a>
-                        </div>
+              <div className="homeIcon">
+                <a
+                  href="https://www.linkedin.com/in/alade-olamide-a86304360?"
+                  className="iconImgHome"
+                >
+                  <FaLinkedin size={20} />
+                </a>
+              </div>
 
-            <div className="homeIcon">
-              <a
-                href="https://www.instagram.com/_midemorsh/"
-                className="iconImgHome"
-              >
-                <FaInstagram size={17} />
-              </a>
+              <div className="homeIcon">
+                <a
+                  href="https://www.instagram.com/_midemorsh/"
+                  className="iconImgHome"
+                >
+                  <FaInstagram size={20} />
+                </a>
+              </div>
+              <div className="homeIcon">
+                <a href="https://github.com/MorsH14" className="iconImgHome">
+                  {" "}
+                  <FaGithub size={20} />
+                </a>
+              </div>
             </div>
-            <div className="homeIcon">
-              <a href="https://github.com/MorsH14" className="iconImgHome">
-                {" "}
-                <FaGithub size={17} />
-              </a>
-            </div>
-          </div>
           </Fade>
         </div>
       </div>
@@ -100,69 +111,77 @@ const About = ({ setAbout }) => {
         </div>
 
         <div className="servicesSection">
-          <Fade direction="left"><div className="servicesTextSection">
-            <ImHtmlFive2 className="myServiceIcon" size={50} />
+          <Fade direction="left">
+            <div className="servicesTextSection">
+              <ImHtmlFive2 className="myServiceIcon" size={50} />
 
-            <h3>Front-end development</h3>
-            <p>
-              Building the user-facing part of websites using HTML, CSS,
-              JAVASCRIPT and REACT. Ensuring that they are attractive and easy
-              to use.
-            </p>
-          </div>
+              <h3>Front-end development</h3>
+              <p>
+                Building the user-facing part of websites using HTML, CSS,
+                JAVASCRIPT and REACT. Ensuring that they are attractive and easy
+                to use.
+              </p>
+            </div>
           </Fade>
-          <Fade direction="top"><div className="servicesTextSection">
-            <DiJavascript className="myServiceIcon" size={50} />
+          <Fade direction="top">
+            <div className="servicesTextSection">
+              <DiJavascript className="myServiceIcon" size={50} />
 
-            <h3>UI/UX design</h3>
-            <p>
-              Creating intuitive and visually appealing user interfaces that
-              provide an optimal user experience.
-            </p>
-          </div>
+              <h3>UI/UX design</h3>
+              <p>
+                Creating intuitive and visually appealing user interfaces that
+                provide an optimal user experience.
+              </p>
+            </div>
           </Fade>
-          <Fade direction="right"><div className="servicesTextSection">
-            <FaReact className="myServiceIcon" size={50} />
+          <Fade direction="right">
+            <div className="servicesTextSection">
+              <FaReact className="myServiceIcon" size={50} />
 
-            <h3>Responsive Web Design</h3>
-            <p>
-              Ensuring that websites are optimized for all screen sizes, from
-              desktop to mobile.
-            </p>
-          </div>
+              <h3>Responsive Web Design</h3>
+              <p>
+                Ensuring that websites are optimized for all screen sizes, from
+                desktop to mobile.
+              </p>
+            </div>
           </Fade>
         </div>
-        
+
         <div className="servicesSection">
-          <Fade direction="left"><div className="servicesTextSection">
-            <SiWebflow className="myServiceIcon" size={50} />
+          <Fade direction="left">
+            <div className="servicesTextSection">
+              <SiWebflow className="myServiceIcon" size={50} />
 
-            <h3>Back-end development</h3>
-            <p>
-              Developing the server-side of websites, ensuring that they are
-              functional and secure. I work with NODE.JS and MYSQL for the
-              server side.
-            </p>
-          </div>
+              <h3>Back-end development</h3>
+              <p>
+                Developing the server-side of websites, ensuring that they are
+                functional and secure. I work with NODE.JS and MYSQL for the
+                server side.
+              </p>
+            </div>
           </Fade>
-          <Fade direction="bottom"><div className="servicesTextSection">
-            <FaNodeJs className="myServiceIcon" size={50} />
+          <Fade direction="bottom">
+            <div className="servicesTextSection">
+              <FaNodeJs className="myServiceIcon" size={50} />
 
-            <h3>API's</h3>
-            <p>
-              Server-side development with Node.js, including building back-end
-              APIs, web applications, and microservices.
-            </p>
-          </div>  </Fade>
-          <Fade direction="right"><div className="servicesTextSection">
-            <SiMysql className="myServiceIcon" size={50} />
+              <h3>API's</h3>
+              <p>
+                Server-side development with Node.js, including building
+                back-end APIs, web applications, and microservices.
+              </p>
+            </div>{" "}
+          </Fade>
+          <Fade direction="right">
+            <div className="servicesTextSection">
+              <SiMysql className="myServiceIcon" size={50} />
 
-            <h3> Database Management</h3>
-            <p>
-              Managing and optimizing databases for websites, ensuring that data
-              is stored and retrieved efficiently.
-            </p>
-          </div>  </Fade>
+              <h3> Database Management</h3>
+              <p>
+                Managing and optimizing databases for websites, ensuring that
+                data is stored and retrieved efficiently.
+              </p>
+            </div>{" "}
+          </Fade>
         </div>
 
         <div className="">
@@ -170,9 +189,12 @@ const About = ({ setAbout }) => {
             <h1>Certification</h1>
           </div>
 
-          <Fade direction="bottom"> <div>
-            <img src="assets/certificate_fiti.jpg" alt="" width={300}/>
-        </div></Fade>
+          <Fade direction="bottom">
+            {" "}
+            <div>
+              <img src="assets/certificate_fiti.jpg" alt="" width={300} />
+            </div>
+          </Fade>
         </div>
 
         <div className="testimonialSection">
@@ -360,4 +382,4 @@ const About = ({ setAbout }) => {
   );
 };
 
-export default About
+export default About;

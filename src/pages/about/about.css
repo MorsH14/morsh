@@ -35,10 +35,10 @@
     gap: 50px;
 }
 .aboutImgSec{
-    background-image: url(/public/assets/mm1.jpg);
-    background-position: center;
+    background-image: url(/public/assets/me.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: contain;
     width: 400px;
     height: 400px;
 }

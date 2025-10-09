@@ -62,7 +62,7 @@ const Portfolio = ({ setPortfolio }) => {
                       Focus: performance, intuitive UX, clean UI.
                     </p>
                     <a
-                      href="https://app.1159realty.com"
+                      href="https://www.1159realty.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="visitBtn"

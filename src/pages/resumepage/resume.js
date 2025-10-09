@@ -29,7 +29,7 @@ const Resume = ({ setResume }) => {
 
                 <div className='resumeFlex'>
 
-                <Fade direction="left">
+                {/* <Fade direction="left">
                     <div className='experienceFlex'>
                         <div className='resumeHeader'>
                             <h3>Experience</h3>
@@ -47,7 +47,7 @@ const Resume = ({ setResume }) => {
                         </div>
 
                     </div>
-                    </Fade>
+                    </Fade> */}
 
                     <Fade direction="right">
                     <div className='educationFlex'>
@@ -59,12 +59,12 @@ const Resume = ({ setResume }) => {
                         <div className='resumeText'>
                             <h4>Computer Science</h4>
                             <h6>Ladoke Akintola University / 2018 - 2022</h6>
-                            <p>I enrolled at Elite university as a computer science student. where i had the knowledge of operating the system and further therein.</p>
+                            <p>I'm enrolled  as a computer science student. where i had the knowledge of operating the system and further therein.</p>
                         </div>
                         <div className='resumeText'>
                             <h4>SSCE</h4>
                             <h6>BMHS/ 2016 - 2018</h6>
-                            <p>I graduated from baptist modeel high school, based in Nigeria Kwara State.</p>
+                            <p>I graduated from Baptist Model High School, based in Nigeria Kwara State.</p>
                         </div>
 
 

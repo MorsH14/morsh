@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./port.css";
 import { ImCancelCircle } from "react-icons/im";
 import { FaArrowCircleRight } from "react-icons/fa";

@@ -62,7 +62,7 @@ const About = ({ setAbout }) => {
             </div>
           </Fade>
 
-          <a href="/assets/OlamideAlade_Resume.docx">
+          <a href="/assets/Olamide_Alade_Resume.docx">
             <button>Download CV</button>
           </a>
 

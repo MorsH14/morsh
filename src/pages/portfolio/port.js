@@ -179,10 +179,11 @@ const Portfolio = ({ setPortfolio }) => {
                       Used for demo projects and freelance showcases.
                     </p>
                     <a
-                      href="#"
+                      href="https://example.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="visitBtn"
+                      aria-label="Open startup landing demo in a new tab"
                     >
                       See Demo
                     </a>

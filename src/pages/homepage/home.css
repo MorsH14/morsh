@@ -30,6 +30,10 @@
 
 .homeMainContainer > * {
   position: relative;
+  z-index: 2;
+}
+
+.homeMainContainer > canvas {
   z-index: 1;
 }
 

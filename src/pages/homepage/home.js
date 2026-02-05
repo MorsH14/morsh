@@ -16,6 +16,7 @@ import { FaGithub } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { SiExpress, SiMui, SiTypescript } from "react-icons/si";
+import ParticleCanvas from "../../components/ParticleCanvas";
 
 const navLinks = [
   { to: "/about", label: "About" },
@@ -89,6 +90,7 @@ const Homepage = () => {
       variants={containerVariants}
     >
       <div className="homeMainContainer">
+        <ParticleCanvas />
         {/* Navigation */}
         <motion.nav variants={itemVariants}>
           <Link to="/" className="navName">

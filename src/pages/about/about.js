@@ -7,45 +7,54 @@ import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
-import { ImHtmlFive2 } from "react-icons/im";
-import { DiJavascript } from "react-icons/di";
 import { FaReact } from "react-icons/fa6";
-import { FaNodeJs } from "react-icons/fa";
-import { SiMysql } from "react-icons/si";
-import { SiWebflow } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { HiOutlineCode, HiOutlineLightningBolt, HiOutlineDeviceMobile } from "react-icons/hi";
+import { FiLayers, FiServer } from "react-icons/fi";
 import Marquee from "react-fast-marquee";
 import AnimatedPage from "../../components/AnimatedPage";
 
 const services = [
   {
-    Icon: ImHtmlFive2,
-    title: "Front-end Development",
-    desc: "Building the user-facing part of websites using HTML, CSS, JavaScript and React. Ensuring that they are attractive and easy to use.",
-  },
-  {
-    Icon: DiJavascript,
-    title: "UI/UX Design",
-    desc: "Creating intuitive and visually appealing user interfaces that provide an optimal user experience.",
-  },
-  {
     Icon: FaReact,
-    title: "Responsive Web Design",
-    desc: "Ensuring that websites are optimized for all screen sizes, from desktop to mobile.",
+    title: "Frontend Architecture",
+    desc: "Designing and building scalable frontend systems with React and Next.js — component libraries, state management patterns, and code-split architectures that keep large apps maintainable.",
   },
   {
-    Icon: SiWebflow,
-    title: "Back-end Development",
-    desc: "Developing the server-side of websites, ensuring that they are functional and secure. I work with Node.js and MySQL.",
+    Icon: FiLayers,
+    title: "UI/UX Engineering",
+    desc: "Translating complex designs into pixel-perfect, accessible interfaces. Deep focus on interaction design, micro-animations, and creating experiences that feel intuitive at every breakpoint.",
   },
   {
-    Icon: FaNodeJs,
-    title: "API Development",
-    desc: "Server-side development with Node.js, including building back-end APIs, web applications, and microservices.",
+    Icon: HiOutlineDeviceMobile,
+    title: "Responsive & Mobile-First",
+    desc: "Engineering fluid layouts and adaptive experiences across every device. Progressive enhancement, touch optimization, and performance budgets tailored for mobile networks.",
   },
   {
-    Icon: SiMysql,
-    title: "Database Management",
-    desc: "Managing and optimizing databases for websites, ensuring that data is stored and retrieved efficiently.",
+    Icon: FiServer,
+    title: "Full-Stack Development",
+    desc: "End-to-end development with Node.js, Express, and MySQL. RESTful APIs, authentication flows, server-side rendering, and database schema design built for production workloads.",
+  },
+  {
+    Icon: SiTypescript,
+    title: "TypeScript & Code Quality",
+    desc: "Strongly typed codebases with TypeScript, enforced linting, and structured code reviews. Writing code that's not just functional, but readable, testable, and easy to onboard into.",
+  },
+  {
+    Icon: HiOutlineLightningBolt,
+    title: "Performance Optimization",
+    desc: "Auditing and eliminating bottlenecks — lazy loading, bundle analysis, image optimization, caching strategies, and Core Web Vitals tuning to ship fast experiences.",
+  },
+  {
+    Icon: TbBrandNextjs,
+    title: "Next.js & SSR/SSG",
+    desc: "Leveraging Next.js for server-side rendering, static generation, and ISR. SEO-optimized builds with dynamic routing, API routes, and seamless deployment pipelines.",
+  },
+  {
+    Icon: HiOutlineCode,
+    title: "Technical Consulting",
+    desc: "Advising teams on architecture decisions, tech stack selection, and development workflows. Code audits, migration strategies, and mentoring junior developers to level up.",
   },
 ];
 

@@ -8,36 +8,6 @@
 }
 
 /* ========================================
-   BACK BUTTON (shared across pages)
-   ======================================== */
-.backBtn {
-  position: fixed;
-  top: var(--space-8);
-  right: var(--space-10);
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  background: var(--color-bg-glass);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  color: var(--color-text-secondary);
-  font-size: var(--text-sm);
-  font-family: inherit;
-  cursor: pointer;
-  z-index: 100;
-  transition: all var(--transition-normal) var(--ease-out-expo);
-}
-
-.backBtn:hover {
-  color: var(--color-text);
-  border-color: var(--color-border-hover);
-  background: var(--color-bg-elevated);
-}
-
-/* ========================================
    SECTION HEADER
    ======================================== */
 .section-header {
@@ -143,9 +113,9 @@
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
-  max-width: 1000px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -268,7 +238,7 @@
 /* ========================================
    RESPONSIVE
    ======================================== */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .servicesGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -281,11 +251,6 @@
 
   .aboutText h3 {
     font-size: var(--text-lg);
-  }
-
-  .backBtn {
-    top: var(--space-4);
-    right: var(--space-4);
   }
 }
 

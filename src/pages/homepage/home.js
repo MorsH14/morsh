@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./home.css";
@@ -73,6 +73,14 @@ const itemVariants = {
 const Homepage = () => {
   const [showNav, setShowNav] = useState(false);
 
+  const closeNav = useCallback(() => setShowNav(false), []);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = showNav ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [showNav]);
+
   return (
     <motion.div
       className="homeBodyContainer"
@@ -88,10 +96,15 @@ const Homepage = () => {
           </Link>
 
           <div className="listWrapper">
+            {/* Backdrop overlay */}
+            <div
+              className={`nav-overlay ${showNav ? "active" : ""}`}
+              onClick={closeNav}
+            />
             <ul className={`navContainer ${showNav ? "navMedia" : ""}`}>
               {navLinks.map(({ to, label }) => (
                 <li key={to}>
-                  <Link to={to} className="nav-link">
+                  <Link to={to} className="nav-link" onClick={closeNav}>
                     {label}
                   </Link>
                 </li>

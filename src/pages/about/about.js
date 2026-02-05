@@ -126,14 +126,14 @@ const About = () => {
   return (
     <AnimatedPage className="aboutSection">
       {/* Back Button */}
-      {/* <button
+      <button
         className="backBtn"
         onClick={() => navigate(-1)}
         aria-label="Go back"
       >
         <IoArrowBack size={22} />
         <span>Back</span>
-      </button> */}
+      </button>
 
       {/* Header */}
       <motion.div

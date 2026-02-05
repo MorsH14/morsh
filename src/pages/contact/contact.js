@@ -77,14 +77,14 @@ const Contact = () => {
 
   return (
     <AnimatedPage className="contactSection">
-      {/* <button
+      <button
         className="backBtn"
         onClick={() => navigate(-1)}
         aria-label="Go back"
       >
         <IoArrowBack size={22} />
         <span>Back</span>
-      </button> */}
+      </button>
 
       <Toaster position="top-center" richColors />
 

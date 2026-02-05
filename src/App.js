@@ -30,7 +30,6 @@ function App() {
 
   return (
     <>
-      <Navbar />
       <AnimatePresence mode="wait">
         <Suspense fallback={<PageLoader />}>
           <Routes location={location} key={location.pathname}>

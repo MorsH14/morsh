@@ -148,37 +148,33 @@ const Contact = () => {
           >
             <div className="form-row">
               <div className="form-group">
+                <label htmlFor="name" className="form-label">Name</label>
                 <input
                   type="text"
                   id="name"
                   className="form-input"
                   name="name"
-                  placeholder=" "
+                  placeholder="Your name"
                   value={msg.name}
                   onChange={handleChange}
                   required
                   aria-required="true"
                 />
-                <label htmlFor="name" className="form-label">
-                  Name
-                </label>
               </div>
 
               <div className="form-group">
+                <label htmlFor="email" className="form-label">Email</label>
                 <input
                   type="email"
                   id="email"
                   className="form-input"
                   name="email"
-                  placeholder=" "
+                  placeholder="you@example.com"
                   value={msg.email}
                   onChange={handleChange}
                   required
                   aria-required="true"
                 />
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
                 <ValidationError
                   prefix="Email"
                   field="email"
@@ -188,36 +184,32 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
+              <label htmlFor="subject" className="form-label">Subject</label>
               <input
                 type="text"
                 id="subject"
                 className="form-input"
                 name="subject"
-                placeholder=" "
+                placeholder="What's this about?"
                 value={msg.subject}
                 onChange={handleChange}
                 required
                 aria-required="true"
               />
-              <label htmlFor="subject" className="form-label">
-                Subject
-              </label>
             </div>
 
             <div className="form-group">
+              <label htmlFor="message" className="form-label">Message</label>
               <textarea
                 id="message"
                 className="form-input form-textarea"
                 name="message"
-                placeholder=" "
+                placeholder="Tell me about your project..."
                 value={msg.message}
                 onChange={handleChange}
                 required
                 aria-required="true"
               />
-              <label htmlFor="message" className="form-label">
-                Message
-              </label>
               <ValidationError
                 prefix="Message"
                 field="message"

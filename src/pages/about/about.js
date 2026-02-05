@@ -84,14 +84,26 @@ const testimonials = [
 
 const socialLinks = [
   { href: "https://x.com/midemorsh", Icon: FaTwitter, label: "Twitter" },
-  { href: "https://www.linkedin.com/in/alade-olamide-a86304360?", Icon: FaLinkedin, label: "LinkedIn" },
-  { href: "https://www.instagram.com/_midemorsh/", Icon: FaInstagram, label: "Instagram" },
+  {
+    href: "https://www.linkedin.com/in/olamide-alade-a86304360",
+    Icon: FaLinkedin,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://www.instagram.com/_midemorsh/",
+    Icon: FaInstagram,
+    label: "Instagram",
+  },
   { href: "https://github.com/MorsH14", Icon: FaGithub, label: "GitHub" },
 ];
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
 };
 
 const staggerContainer = {
@@ -105,7 +117,11 @@ const About = () => {
   return (
     <AnimatedPage className="aboutSection">
       {/* Back Button */}
-      <button className="backBtn" onClick={() => navigate(-1)} aria-label="Go back">
+      <button
+        className="backBtn"
+        onClick={() => navigate(-1)}
+        aria-label="Go back"
+      >
         <IoArrowBack size={22} />
         <span>Back</span>
       </button>
@@ -140,18 +156,17 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           >
-            <h3>My name is Olamide Alade, a Frontend Engineer.</h3>
+            <h3>
+              Frontend Engineer building scalable, high-performance web
+              applications.
+            </h3>
             <p>
-              I'm a creative and detail-oriented Front-End Developer based in
-              Nigeria, with a solid foundation in building scalable,
-              SEO-optimized, and responsive web applications. Over the last 3+
-              years, I've worked on real-world projects across industries like
-              real estate, job search platforms, and fashion portfolios. I'm
-              passionate about delivering clean code and smooth user
-              experiences using tools like React, Next.js, Tailwind, and MUI.
-              I enjoy turning complex problems into clean, user-friendly
-              designs, and I'm constantly seeking ways to improve my craft.
-              Let's work together and bring your ideas to life.
+              I build fast, scalable web apps that don’t just work, they feel
+              good to use. Frontend Engineer crafting clean React & Next.js
+              experiences with performance, SEO, and great UI at the core. And a
+              slightly more playful alt: Turning ideas into smooth,
+              high-performance web experiences. Frontend Engineer obsessed with
+              React, Next.js, and making the web feel effortless.
             </p>
           </motion.div>
 
@@ -202,7 +217,11 @@ const About = () => {
 
         <div className="servicesGrid">
           {services.map(({ Icon, title, desc }, i) => (
-            <motion.div key={i} className="serviceCard card" variants={sectionVariants}>
+            <motion.div
+              key={i}
+              className="serviceCard card"
+              variants={sectionVariants}
+            >
               <Icon className="serviceIcon" size={40} />
               <h3>{title}</h3>
               <p>{desc}</p>
@@ -240,7 +259,12 @@ const About = () => {
               <div key={i} className="testimonialCard card-glass">
                 <div className="testimonialHeader">
                   <div className="testimonialAuthor">
-                    <img src={img} alt={name} className="testImg" loading="lazy" />
+                    <img
+                      src={img}
+                      alt={name}
+                      className="testImg"
+                      loading="lazy"
+                    />
                     <div>
                       <h5>{name}</h5>
                       <span>{location}</span>

@@ -1,8 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./about.css";
-import { ImCancelCircle } from "react-icons/im";
+import { IoArrowBack } from "react-icons/io5";
 import { FaTwitter } from "react-icons/fa6";
-// import { FaSquareFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
@@ -12,373 +13,247 @@ import { FaReact } from "react-icons/fa6";
 import { FaNodeJs } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 import { SiWebflow } from "react-icons/si";
-import { GiBoxingGloveSurprise } from "react-icons/gi";
 import Marquee from "react-fast-marquee";
-import { Fade } from "react-awesome-reveal";
+import AnimatedPage from "../../components/AnimatedPage";
 
-const About = ({ setAbout }) => {
-  const hideModal = () => {
-    setAbout(false);
-  };
+const services = [
+  {
+    Icon: ImHtmlFive2,
+    title: "Front-end Development",
+    desc: "Building the user-facing part of websites using HTML, CSS, JavaScript and React. Ensuring that they are attractive and easy to use.",
+  },
+  {
+    Icon: DiJavascript,
+    title: "UI/UX Design",
+    desc: "Creating intuitive and visually appealing user interfaces that provide an optimal user experience.",
+  },
+  {
+    Icon: FaReact,
+    title: "Responsive Web Design",
+    desc: "Ensuring that websites are optimized for all screen sizes, from desktop to mobile.",
+  },
+  {
+    Icon: SiWebflow,
+    title: "Back-end Development",
+    desc: "Developing the server-side of websites, ensuring that they are functional and secure. I work with Node.js and MySQL.",
+  },
+  {
+    Icon: FaNodeJs,
+    title: "API Development",
+    desc: "Server-side development with Node.js, including building back-end APIs, web applications, and microservices.",
+  },
+  {
+    Icon: SiMysql,
+    title: "Database Management",
+    desc: "Managing and optimizing databases for websites, ensuring that data is stored and retrieved efficiently.",
+  },
+];
+
+const testimonials = [
+  {
+    name: "Mary Herson",
+    location: "United States",
+    img: "/assets/r1.jpeg",
+    text: "Alade's technical skills are solid, and he delivered a well-coded website. However, his communication could use some improvement. There were times when it was difficult to get timely updates on the project's progress.",
+  },
+  {
+    name: "David H.",
+    location: "United States",
+    img: "/assets/r2.jpeg",
+    text: "Olamide exceeded our expectations with her web development skills. She created a sleek, modern site that performs exceptionally well. Her innovative approach and proactive problem-solving were impressive.",
+  },
+  {
+    name: "Fred Scott",
+    location: "New York",
+    img: "/assets/r3.jpeg",
+    text: "Alade is a talented developer with a knack for creating responsive and engaging websites. He was easy to work with and communicated well throughout the project.",
+  },
+  {
+    name: "Adebisi Susan",
+    location: "Nigeria",
+    img: "/assets/r4.jpeg",
+    text: "Olamide did a great job on our e-commerce platform. The new features he implemented increased our sales and improved user experience. We are very satisfied with the outcome.",
+  },
+  {
+    name: "Kate Gat.",
+    location: "South Africa",
+    img: "/assets/r5.jpeg",
+    text: "Olamide did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes. Highly recommended.",
+  },
+];
+
+const socialLinks = [
+  { href: "https://x.com/midemorsh", Icon: FaTwitter, label: "Twitter" },
+  { href: "https://www.linkedin.com/in/alade-olamide-a86304360?", Icon: FaLinkedin, label: "LinkedIn" },
+  { href: "https://www.instagram.com/_midemorsh/", Icon: FaInstagram, label: "Instagram" },
+  { href: "https://github.com/MorsH14", Icon: FaGithub, label: "GitHub" },
+];
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+};
+
+const About = () => {
+  const navigate = useNavigate();
 
   return (
-    <div className="aboutSection">
-      <div className="existX" onClick={hideModal}>
-        <ImCancelCircle size={25} color="gray" />
-      </div>
+    <AnimatedPage className="aboutSection">
+      {/* Back Button */}
+      <button className="backBtn" onClick={() => navigate(-1)} aria-label="Go back">
+        <IoArrowBack size={22} />
+        <span>Back</span>
+      </button>
 
-      <div className="aboutContainer flex-center flex-column gap-10">
-        <div>
-          <h1 class="animate__animated animate__bounceInDown">About Me</h1>
-        </div>
-        <div className="hrLine animate__animated animate__fadeInLeft"></div>
-      </div>
+      {/* Header */}
+      <motion.div
+        className="section-header flex-center flex-column"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}
+      >
+        <h1 className="heading-2">About Me</h1>
+        <div className="hrLine"></div>
+      </motion.div>
 
+      {/* Profile Section */}
       <div className="aboutImgContainer">
-        <Fade direction="left">
-          {" "}
-          <div className="aboutImgSec"></div>{" "}
-        </Fade>
+        <motion.div
+          className="aboutImgSec"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        />
 
         <div className="textSection">
-          <Fade direction="right">
-            <div className="aboutText">
-              <h3 class="animate__animated animate__bounce">
-                My name is Olamide Alade, a Frontend Engineer.
-              </h3>
+          <motion.div
+            className="aboutText"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+          >
+            <h3>My name is Olamide Alade, a Frontend Engineer.</h3>
+            <p>
+              I'm a creative and detail-oriented Front-End Developer based in
+              Nigeria, with a solid foundation in building scalable,
+              SEO-optimized, and responsive web applications. Over the last 3+
+              years, I've worked on real-world projects across industries like
+              real estate, job search platforms, and fashion portfolios. I'm
+              passionate about delivering clean code and smooth user
+              experiences using tools like React, Next.js, Tailwind, and MUI.
+              I enjoy turning complex problems into clean, user-friendly
+              designs, and I'm constantly seeking ways to improve my craft.
+              Let's work together and bring your ideas to life.
+            </p>
+          </motion.div>
 
-              <p>
-                I’m a creative and detail-oriented Front-End Developer based in
-                Nigeria, with a solid foundation in building scalable,
-                SEO-optimized, and responsive web applications. Over the last 3+
-                years, I’ve worked on real-world projects across industries like
-                real estate, job search platforms, and fashion portfolios. I’m
-                passionate about delivering clean code and smooth user
-                experiences using tools like React, Next.js, Tailwind, and MUI.
-                I enjoy turning complex problems into clean, user-friendly
-                designs, and I’m constantly seeking ways to improve my craft.
-                Let’s work together and bring your ideas to life.
-              </p>
-            </div>
-          </Fade>
+          <motion.a
+            href="/assets/Olamide_Alade_Resume.docx"
+            className="btn btn-primary"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            Download CV
+          </motion.a>
 
-          <a href="/assets/Olamide_Alade_Resume.docx">
-            <button>Download CV</button>
-          </a>
-
-          <Fade direction="down">
-            <div className="iconFlex gap-20">
-              <div className="homeIcon">
-                <a href="https://x.com/midemorsh" className="iconImgHome">
-                  {" "}
-                  <FaTwitter size={20} />
-                </a>
-              </div>
-              {/* <div className='homeIcon'>
-                            <a href='https://web.facebook.com/profile.php?id=100080568897119' className='iconImgHome'><FaSquareFacebook size={20} /></a>
-                        </div> */}
-              <div className="homeIcon">
-                <a
-                  href="https://www.linkedin.com/in/alade-olamide-a86304360?"
-                  className="iconImgHome"
-                >
-                  <FaLinkedin size={20} />
-                </a>
-              </div>
-
-              <div className="homeIcon">
-                <a
-                  href="https://www.instagram.com/_midemorsh/"
-                  className="iconImgHome"
-                >
-                  <FaInstagram size={20} />
-                </a>
-              </div>
-              <div className="homeIcon">
-                <a href="https://github.com/MorsH14" className="iconImgHome">
-                  {" "}
-                  <FaGithub size={20} />
-                </a>
-              </div>
-            </div>
-          </Fade>
+          <motion.div
+            className="iconFlex"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {socialLinks.map(({ href, Icon, label }) => (
+              <motion.a
+                key={label}
+                href={href}
+                className="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                variants={sectionVariants}
+              >
+                <Icon size={18} />
+              </motion.a>
+            ))}
+          </motion.div>
         </div>
       </div>
 
-      <div className=" flex-center flex-column">
-        <div className="servicesSection">
-          <h1>My Services</h1>
+      {/* Services */}
+      <motion.div
+        className="services-container"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={staggerContainer}
+      >
+        <h1 className="heading-2 section-title">My Services</h1>
+
+        <div className="servicesGrid">
+          {services.map(({ Icon, title, desc }, i) => (
+            <motion.div key={i} className="serviceCard card" variants={sectionVariants}>
+              <Icon className="serviceIcon" size={40} />
+              <h3>{title}</h3>
+              <p>{desc}</p>
+            </motion.div>
+          ))}
         </div>
+      </motion.div>
 
-        <div className="servicesSection">
-          <Fade direction="left">
-            <div className="servicesTextSection">
-              <ImHtmlFive2 className="myServiceIcon" size={50} />
-
-              <h3>Front-end development</h3>
-              <p>
-                Building the user-facing part of websites using HTML, CSS,
-                JAVASCRIPT and REACT. Ensuring that they are attractive and easy
-                to use.
-              </p>
-            </div>
-          </Fade>
-          <Fade direction="top">
-            <div className="servicesTextSection">
-              <DiJavascript className="myServiceIcon" size={50} />
-
-              <h3>UI/UX design</h3>
-              <p>
-                Creating intuitive and visually appealing user interfaces that
-                provide an optimal user experience.
-              </p>
-            </div>
-          </Fade>
-          <Fade direction="right">
-            <div className="servicesTextSection">
-              <FaReact className="myServiceIcon" size={50} />
-
-              <h3>Responsive Web Design</h3>
-              <p>
-                Ensuring that websites are optimized for all screen sizes, from
-                desktop to mobile.
-              </p>
-            </div>
-          </Fade>
+      {/* Certification */}
+      <motion.div
+        className="cert-section"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}
+      >
+        <h1 className="heading-2 section-title">Certification</h1>
+        <div className="cert-image-wrapper">
+          <img
+            src="assets/certificate_fiti.jpg"
+            alt="FITI Certificate"
+            loading="lazy"
+            width={300}
+          />
         </div>
+      </motion.div>
 
-        <div className="servicesSection">
-          <Fade direction="left">
-            <div className="servicesTextSection">
-              <SiWebflow className="myServiceIcon" size={50} />
+      {/* Testimonials */}
+      <div className="testimonialSection">
+        <h1 className="heading-2 section-title">Testimonials</h1>
 
-              <h3>Back-end development</h3>
-              <p>
-                Developing the server-side of websites, ensuring that they are
-                functional and secure. I work with NODE.JS and MYSQL for the
-                server side.
-              </p>
-            </div>
-          </Fade>
-          <Fade direction="bottom">
-            <div className="servicesTextSection">
-              <FaNodeJs className="myServiceIcon" size={50} />
-
-              <h3>API's</h3>
-              <p>
-                Server-side development with Node.js, including building
-                back-end APIs, web applications, and microservices.
-              </p>
-            </div>{" "}
-          </Fade>
-          <Fade direction="right">
-            <div className="servicesTextSection">
-              <SiMysql className="myServiceIcon" size={50} />
-
-              <h3> Database Management</h3>
-              <p>
-                Managing and optimizing databases for websites, ensuring that
-                data is stored and retrieved efficiently.
-              </p>
-            </div>{" "}
-          </Fade>
-        </div>
-
-        <div className="">
-          <div className="testText flex-center">
-            <h1>Certification</h1>
+        <Marquee pauseOnHover speed={40} gradient={false}>
+          <div className="testimonialTrack">
+            {testimonials.map(({ name, location, img, text }, i) => (
+              <div key={i} className="testimonialCard card-glass">
+                <div className="testimonialHeader">
+                  <div className="testimonialAuthor">
+                    <img src={img} alt={name} className="testImg" loading="lazy" />
+                    <div>
+                      <h5>{name}</h5>
+                      <span>{location}</span>
+                    </div>
+                  </div>
+                </div>
+                <p className="testimonialText">{text}</p>
+              </div>
+            ))}
           </div>
-
-          <Fade direction="bottom">
-            {" "}
-            <div>
-              <img src="assets/certificate_fiti.jpg" alt="" width={300} />
-            </div>
-          </Fade>
-        </div>
-
-        <div className="testimonialSection">
-          <div className="testText flex-center">
-            <h1>Testimonial</h1>
-          </div>
-
-          <Marquee>
-            <div className="mainTextContainer gap-30">
-              <div className="flex-between">
-                <div className="testimonialImgSec">
-                  <div className="TextNameSection">
-                    <div className="flexTextImg">
-                      <img src="/assets/r1.jpeg" alt="" className="testImg" />
-                      <div className="textSectionTestimonial">
-                        <h5>Mary Herson</h5>
-                        <p>United state</p>
-                      </div>
-                    </div>
-
-                    <div>
-                      <GiBoxingGloveSurprise
-                        className="myServiceIcon"
-                        size={30}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="pTagTest">
-                    <p>
-                      Alade technical skills are solid, and he delivered a
-                      well-coded website. However, his communication could use
-                      some improvement. There were times when it was difficult
-                      to get timely updates on the project's progress.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex-between">
-                <div className="testimonialImgSec">
-                  <div className="TextNameSection">
-                    <div className="flexTextImg">
-                      <img src="/assets/r2.jpeg" alt="" className="testImg" />
-                      <div className="textSectionTestimonial">
-                        <h5>David H.</h5>
-                        <p>United State</p>
-                      </div>
-                    </div>
-
-                    <div>
-                      <GiBoxingGloveSurprise
-                        className="myServiceIcon"
-                        size={30}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="pTagTest">
-                    <p>
-                      Olamide exceeded our expectations with her web development
-                      skills. She created a sleek, modern site that performs
-                      exceptionally well. Her innovative approach and proactive
-                      problem-solving were impressive. We couldn't be happier
-                      with the results.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex-between">
-                <div className="testimonialImgSec">
-                  <div className="TextNameSection">
-                    <div className="flexTextImg">
-                      <img src="/assets/r3.jpeg" alt="" className="testImg" />
-                      <div className="textSectionTestimonial">
-                        <h5>Fred Scott</h5>
-                        <p>New York</p>
-                      </div>
-                    </div>
-
-                    <div>
-                      <GiBoxingGloveSurprise
-                        className="myServiceIcon"
-                        size={30}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="pTagTest">
-                    <p>
-                      Alade is a talented developer with a knack for creating
-                      responsive and engaging websites. He was easy to work with
-                      and communicated well throughout the project. There were
-                      minor issues post-launch, but she was quick to fix them.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex-between">
-                <div className="testimonialImgSec">
-                  <div className="TextNameSection">
-                    <div className="flexTextImg">
-                      <img src="/assets/r4.jpeg" alt="" className="testImg" />
-                      <div className="textSectionTestimonial">
-                        <h5>Adebisi Susan</h5>
-                        <p>Nigeria</p>
-                      </div>
-                    </div>
-
-                    <div>
-                      <GiBoxingGloveSurprise
-                        className="myServiceIcon"
-                        size={30}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="pTagTest">
-                    <p>
-                      Olamide did a great job on our e-commerce platform. The
-                      new features he implemented increased our sales and
-                      improved user experience. There were a few delays in the
-                      project, but overall, we are very satisfied with the
-                      outcome.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex-between">
-                <div className="testimonialImgSec">
-                  <div className="TextNameSection">
-                    <div className="flexTextImg">
-                      <img src="/assets/r5.jpeg" alt="" className="testImg" />
-                      <div className="textSectionTestimonial">
-                        <h5>Kate Gat.</h5>
-                        <p>South Africa</p>
-                      </div>
-                    </div>
-
-                    <div>
-                      <GiBoxingGloveSurprise
-                        className="myServiceIcon"
-                        size={30}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="pTagTest">
-                    <p>
-                      Olamide did an excellent creative job, addressing our
-                      request quickly, and also providing her own graphic
-                      insight, being open to feedback and changes or edits when
-                      they arose. She worked with us the entire way. Highly
-                      recommended.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* <div className='flex-between'>
-                                <div className='testimonialImgSec'>
-                                    <div className='TextNameSection'>
-                                        <div className='flexTextImg'>
-                                            <img src='/assets/bi.webp' alt='' className='testImg' />
-                                            <div className='textSectionTestimonial'>
-                                                <h5>John Herson</h5>
-                                                <p></p>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            < GiBoxingGloveSurprise className='myServiceIcon' size={30} />
-                                        </div>
-                                    </div>
-
-                                    <div className='pTagTest'>
-                                        <p>Olamide is an exceptional web developer. He redesigned our entire website, making it not only visually appealing but also highly functional. His attention to detail and ability to understand our requirements made the project a success. Highly recommend!</p>
-                                    </div>
-                                </div>
-                            </div> */}
-            </div>
-          </Marquee>
-        </div>
+        </Marquee>
       </div>
-    </div>
+    </AnimatedPage>
   );
 };
 

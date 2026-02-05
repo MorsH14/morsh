@@ -1,156 +1,140 @@
-import React, { useState } from 'react'
-import "./home.css"
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import "./home.css";
 import { FaCss3Alt, FaHtml5, FaNodeJs, FaReact, FaTwitter } from "react-icons/fa6";
 import { TbBrandMysql, TbBrandNextjs } from "react-icons/tb";
 import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io5";
-// import { FaSquareFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
-import { VscListSelection } from "react-icons/vsc";
-import About from '../about/about';
-import Contact from '../contact/contact';
-// import Resume from '../resumepage/resume';
-import Portfolio from '../portfolio/port';
-import 'animate.css';
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { SiExpress, SiMui, SiTypescript } from 'react-icons/si';
 
+const navLinks = [
+  { to: '/about', label: 'About' },
+  { to: '/portfolio', label: 'Projects' },
+  { to: '/resume', label: 'Resume' },
+  { to: '/contact', label: 'Contact' },
+];
 
+const techIcons = [
+  { Icon: FaHtml5, label: 'HTML5' },
+  { Icon: FaCss3Alt, label: 'CSS3' },
+  { Icon: IoLogoJavascript, label: 'JavaScript' },
+  { Icon: FaReact, label: 'React' },
+  { Icon: SiMui, label: 'MUI' },
+  { Icon: FaNodeJs, label: 'Node.js' },
+  { Icon: TbBrandNextjs, label: 'Next.js' },
+  { Icon: TbBrandMysql, label: 'MySQL' },
+  { Icon: IoLogoNodejs, label: 'Node' },
+  { Icon: SiExpress, label: 'Express' },
+  { Icon: SiTypescript, label: 'TypeScript' },
+];
 
+const socialLinks = [
+  { href: 'https://x.com/midemorsh', Icon: FaTwitter, label: 'Twitter' },
+  { href: 'https://www.linkedin.com/in/alade-olamide-a86304360?', Icon: FaLinkedin, label: 'LinkedIn' },
+  { href: 'https://www.instagram.com/_midemorsh/', Icon: FaInstagram, label: 'Instagram' },
+  { href: 'https://github.com/MorsH14', Icon: FaGithub, label: 'GitHub' },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08, delayChildren: 0.2 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
+};
 
 const Homepage = () => {
-
-
-
-  const [about, setAbout] = useState(false)
-  // const [resume, setResume] = useState(false)
-  const [portfolio, setPortfolio] = useState(false)
-  const [contact, setContact] = useState(false)
-  const [showNav, setShowNav] = useState(false)
-
-
-  const openAbout = ()=>{
-      setAbout(true)
-  }
-  // const openResume = ()=>{
-  //   setResume(true)
-  // }
-  const openPortfolio = ()=>{
-    setPortfolio(true)
-  }
-
-  const openContact = ()=>{
-    setContact(true)
-  }
-
-
-  const handleClick = () => {
-    setShowNav(!showNav)
-  }
+  const [showNav, setShowNav] = useState(false);
 
   return (
+    <motion.div
+      className="homeBodyContainer"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <div className="homeMainContainer">
+        {/* Navigation */}
+        <motion.nav variants={itemVariants}>
+          <Link to="/" className="navName">MorsH</Link>
 
-    <div className='homeBodyContainer'>
-
-
-      <div className='homeMainContainer'>
-        <nav class="animate__animated animate__fadeInDown">
-          <div className='navName'>MorsH</div>
-
-          <div className='listWrapper'>
-          <ul className={showNav ? "navMedia" : 'navContainer flex-around gap-20'}>
-            <li onClick={openAbout}>About</li>
-            {/* <li onClick={openResume}>Resume</li> */}
-            <li onClick={openPortfolio}>Projects</li>
-            <li onClick={openContact}>Contact</li>
-          </ul>
+          <div className="listWrapper">
+            <ul className={`navContainer ${showNav ? 'navMedia' : ''}`}>
+              {navLinks.map(({ to, label }) => (
+                <li key={to}>
+                  <Link to={to} className="nav-link">{label}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          < VscListSelection color='white' size={30} className='listIcon' onClick={handleClick}/>
-        </nav>
+          <button
+            className="menuToggle"
+            onClick={() => setShowNav(!showNav)}
+            aria-label={showNav ? 'Close menu' : 'Open menu'}
+          >
+            {showNav ? <HiX size={28} /> : <HiMenuAlt3 size={28} />}
+          </button>
+        </motion.nav>
 
-        <div className='centerWraper flex-center flex-column'>
-          <h1 class="animate__animated animate__fadeInDown">Olamide Alade</h1>
-          <div className='homeText'>
-            <p class="animate__animated animate__bounceInLeft">I am a Front-End Developer</p>
-          </div>
+        {/* Hero Content */}
+        <div className="centerWrapper flex-center flex-column">
+          <motion.h1 variants={itemVariants} className="hero-title">
+            Olamide Alade
+          </motion.h1>
 
-          <div className='iconWrapper  animate__animated animate__fadeInDown'>
-            <div>
-            <FaHtml5  size={40} color='rgb(55, 100, 55)'/>
-            </div>
-            <div>
-            < FaCss3Alt size={40} color='rgb(55, 100, 55)'/>
-            </div>
-            <div>
-            < IoLogoJavascript size={40} color='rgb(55, 100, 55)'/>
-            </div>
-            <div>
-            < FaReact size={40} color='rgb(55, 100, 55)'/>
-            </div>
-            <div>
-            < SiMui size={40} color='rgb(55, 100, 55)'/>
-            </div>
-            <div>
-            < FaNodeJs size={40} color='rgb(55, 100, 55)'/>
-            </div>
-            <div>
-            < TbBrandNextjs size={40} color='rgb(55, 100, 55)'/>
-            </div>
-            <div>
-            < TbBrandMysql size={40} color='rgb(55, 100, 55)'/>
-            </div>
-            <div>
-            < IoLogoNodejs size={40} color='rgb(55, 100, 55)'/>
-            </div>
-            <div>
-            < SiExpress size={40} color='rgb(55, 100, 55)'/>
-            </div>
-            <div>
-            < SiTypescript size={40} color='rgb(55, 100, 55)'/>
-            </div>
+          <motion.div className="homeText" variants={itemVariants}>
+            <p>I am a <span className="text-gradient">Front-End Developer</span></p>
+          </motion.div>
+
+          <motion.div className="iconWrapper" variants={containerVariants}>
+            {techIcons.map(({ Icon, label }) => (
+              <motion.div
+                key={label}
+                className="tech-icon-wrapper"
+                variants={itemVariants}
+                whileHover={{ y: -4, scale: 1.1 }}
+                title={label}
+              >
+                <Icon size={36} />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
 
-        </div>
-
-       
-        <div className='homeFooterSec'>
-
-          <div className='engContainer'>
+        {/* Footer */}
+        <motion.div className="homeFooterSec" variants={itemVariants}>
+          <div className="engContainer">
             <p>ENG</p>
           </div>
 
-          <div class="animate__animated animate__fadeInRight">
-
-            <div className='homeIcon '>
-              <a href='https://x.com/midemorsh' className='iconImgHome'> < FaTwitter size={20} /></a>
-            </div>
-            {/* <div className='homeIcon'>
-            <a href='https://web.facebook.com/profile.php?id=100080568897119' className='iconImgHome'><FaSquareFacebook size={17} /></a>
-            </div> */}
-            <div className='homeIcon'>
-            <a href='https://www.linkedin.com/in/alade-olamide-a86304360?' className='iconImgHome'>< FaLinkedin size={20} /></a>
-            </div>
-
-            <div className='homeIcon'>
-            <a href='https://www.instagram.com/_midemorsh/' className='iconImgHome'>< FaInstagram size={20} /></a>
-            </div>
-            <div className='homeIcon'>
-            <a href='https://github.com/MorsH14' className='iconImgHome'> < FaGithub size={20} /></a>
-            </div>
-
+          <div className="socialIcons">
+            {socialLinks.map(({ href, Icon, label }) => (
+              <a
+                key={label}
+                href={href}
+                className="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+              >
+                <Icon size={18} />
+              </a>
+            ))}
           </div>
-        </div>
+        </motion.div>
       </div>
+    </motion.div>
+  );
+};
 
-
-      {about ? <About setAbout={setAbout} /> : null}
-      {contact ? <Contact setContact={setContact}/> : null}
-      {portfolio ? <Portfolio setPortfolio={setPortfolio} /> : null}
-     {/* { resume ? <Resume setResume={setResume}/> : null} */}
-
-    </div>
-  )
-}
-
-export default Homepage
+export default Homepage;

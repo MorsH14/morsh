@@ -1,113 +1,156 @@
-import React from 'react'
-import "./resume.css"
-import { ImCancelCircle } from "react-icons/im";
-import { Fade } from 'react-awesome-reveal';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import "./resume.css";
+import { IoArrowBack } from "react-icons/io5";
+import AnimatedPage from '../../components/AnimatedPage';
 
+const education = [
+  {
+    title: "Computer Science",
+    institution: "Ladoke Akintola University",
+    period: "2018 - 2022",
+    desc: "Enrolled as a computer science student where I gained foundational knowledge of systems and software development.",
+  },
+  {
+    title: "SSCE",
+    institution: "BMHS",
+    period: "2016 - 2018",
+    desc: "Graduated from Baptist Model High School, based in Nigeria, Kwara State.",
+  },
+];
 
-const Resume = ({ setResume }) => {
+const experience = [
+  {
+    title: "Femtech IT Training",
+    role: "Web Developer",
+    period: "10/2023 - Current",
+    desc: "Used HTML, CSS, JavaScript and React.js for the Frontend, Node.js for server side and MySQL for database in building websites.",
+  },
+  {
+    title: "ShowTech",
+    role: "Junior Web Developer",
+    period: "09/2023 - 10/2023",
+    desc: "Designed user interfaces using HTML, CSS, and JavaScript to create seamless interactions and visually appealing layouts.",
+  },
+];
 
+const skills = [
+  { name: "HTML", level: 95 },
+  { name: "CSS", level: 90 },
+  { name: "JavaScript", level: 85 },
+  { name: "React", level: 85 },
+  { name: "Next.js", level: 75 },
+  { name: "Node.js", level: 70 },
+  { name: "Express", level: 70 },
+  { name: "MySQL", level: 65 },
+];
 
+const sectionVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+};
 
-    const hideModal = () => {
-        setResume(false)
-    }
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
+};
 
-    return (
-        <div className='resumeSection'>
+const Resume = () => {
+  const navigate = useNavigate();
 
-            <div className='existX' onClick={hideModal}>
-                <ImCancelCircle size={25} color='gray' />
-            </div>
+  return (
+    <AnimatedPage className="resumeSection">
+      <button className="backBtn" onClick={() => navigate(-1)} aria-label="Go back">
+        <IoArrowBack size={22} />
+        <span>Back</span>
+      </button>
 
-            <div className=' flex-center flex-column'>
-                <h1 className='resumeHeaderText'>Resume</h1>
-                <div className='hrLine'></div>
+      <motion.div
+        className="section-header flex-center flex-column"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1 className="heading-2">Resume</h1>
+        <div className="hrLine"></div>
+      </motion.div>
 
-            </div>
+      <div className="resume-content">
+        {/* Experience & Education Grid */}
+        <div className="resume-grid">
+          {/* Experience */}
+          <motion.div
+            className="resume-column"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <h2 className="resume-column-title">Experience</h2>
+            {experience.map((item, i) => (
+              <motion.div key={i} className="timeline-item card" variants={sectionVariants}>
+                <div className="timeline-dot"></div>
+                <h4>{item.title}</h4>
+                <span className="timeline-meta">{item.role} / {item.period}</span>
+                <p>{item.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
 
-            <div className=' flex-center'>
-
-                <div className='resumeFlex'>
-
-                {/* <Fade direction="left">
-                    <div className='experienceFlex'>
-                        <div className='resumeHeader'>
-                            <h3>Experience</h3>
-                        </div>
-
-                        <div className='resumeText'>
-                            <h4>Femtech IT Training</h4>
-                            <h6>Web Developer  / 10/2023 - Current</h6>
-                            <p>Used HTML, CSS, JAVASCRIPT AND REACT.JS for the Fronted, NODE.JS for server side and MYSQL for database in building a website.</p>
-                        </div>
-                        <div className='resumeText'>
-                            <h4>ShowTech</h4>
-                            <h6>Junior Web Developer / 09/2023 - 10/2023</h6>
-                            <p>Designed user interfaces using HTML, CSS, and JavaScript to create seamless interactions and visually appealing layouts.</p>
-                        </div>
-
-                    </div>
-                    </Fade> */}
-
-                    <Fade direction="right">
-                    <div className='educationFlex'>
-
-                        <div className='resumeHeader'>
-                            <h3>Education</h3>
-                        </div>
-
-                        <div className='resumeText'>
-                            <h4>Computer Science</h4>
-                            <h6>Ladoke Akintola University / 2018 - 2022</h6>
-                            <p>I'm enrolled  as a computer science student. where i had the knowledge of operating the system and further therein.</p>
-                        </div>
-                        <div className='resumeText'>
-                            <h4>SSCE</h4>
-                            <h6>BMHS/ 2016 - 2018</h6>
-                            <p>I graduated from Baptist Model High School, based in Nigeria Kwara State.</p>
-                        </div>
-
-
-                    </div>
-                    </Fade>
-                </div>
-            </div>
-
-
-            <div className=''>
-
-                <div className=' flex-center mar-20'>
-                    <h1>My Skills</h1>
-                </div>
-
-                <div className=' flex-center'>
-
-                    <div className='skillWrapper '>
-                    <Fade direction="left">
-                        <div className='experienceFlex'>
-                            <h3 className='skillsText'>HTML</h3>
-                            <h3 className='skillsText'>CSS</h3>
-                            <h3 className='skillsText'>JAVASCRIPT</h3>
-                            <h3 className='skillsText'>REACT</h3>
-                        </div>
-                        </Fade>
-                        <Fade direction="right">
-                        <div className='educationFlex'>
-
-                            <h3 className='skillsText'>BOOTSTRAP</h3>
-                            <h3 className='skillsText'>EXPRESS</h3>
-                            <h3 className='skillsText'>NODE.JS</h3>
-                            <h3 className='skillsText'>MYSQL</h3>
-                        </div>
-                        </Fade>
-                    </div>
-
-                </div>
-            </div>
-
-
+          {/* Education */}
+          <motion.div
+            className="resume-column"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <h2 className="resume-column-title">Education</h2>
+            {education.map((item, i) => (
+              <motion.div key={i} className="timeline-item card" variants={sectionVariants}>
+                <div className="timeline-dot"></div>
+                <h4>{item.title}</h4>
+                <span className="timeline-meta">{item.institution} / {item.period}</span>
+                <p>{item.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-    )
-}
 
-export default Resume
+        {/* Skills */}
+        <motion.div
+          className="skills-section"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <h2 className="heading-2 section-title">Skills</h2>
+
+          <div className="skills-grid">
+            {skills.map(({ name, level }, i) => (
+              <motion.div key={name} className="skill-item" variants={sectionVariants}>
+                <div className="skill-header">
+                  <span className="skill-name">{name}</span>
+                  <span className="skill-percent">{level}%</span>
+                </div>
+                <div className="skill-bar">
+                  <motion.div
+                    className="skill-fill"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${level}%` }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: i * 0.05 }}
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </AnimatedPage>
+  );
+};
+
+export default Resume;

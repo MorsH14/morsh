@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./contact.css";
-import { ImCancelCircle } from "react-icons/im";
+import { IoArrowBack } from "react-icons/io5";
 import { Toaster, toast } from "sonner";
 import { useForm, ValidationError } from "@formspree/react";
+import AnimatedPage from "../../components/AnimatedPage";
 
-const Contact = ({ setContact }) => {
+const Contact = () => {
+  const navigate = useNavigate();
   const [state, handleSubmit] = useForm("xanjvppd");
   const [msg, setMsg] = useState({
     name: "",
@@ -12,8 +16,6 @@ const Contact = ({ setContact }) => {
     subject: "",
     message: "",
   });
-
-  const hideModal = () => setContact(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,88 +41,109 @@ const Contact = ({ setContact }) => {
   };
 
   return (
-    <div className="contactSection">
-      <div className="existX" onClick={hideModal}>
-        <ImCancelCircle size={25} color="gray" />
-      </div>
+    <AnimatedPage className="contactSection">
+      <button className="backBtn" onClick={() => navigate(-1)} aria-label="Go back">
+        <IoArrowBack size={22} />
+        <span>Back</span>
+      </button>
 
-      <div className="aboutContainer flex-center flex-column gap-10">
-        <div>
-          <h1>Contact Me</h1>
-        </div>
+      <motion.div
+        className="section-header flex-center flex-column"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1 className="heading-2">Contact Me</h1>
         <div className="hrLine"></div>
-      </div>
+      </motion.div>
 
-      <div className="flex-center flex-column">
-        <h3 className="messagemeText">Message Me</h3>
-        <Toaster position="top-left" richColors />
+      <motion.div
+        className="contact-content"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+      >
+        <h3 className="contact-subtitle">Let's work together</h3>
+        <p className="contact-desc">
+          Have a project in mind or want to collaborate? Send me a message and I'll get back to you.
+        </p>
 
-        <form onSubmit={customSubmit}>
-          <div className="messageTextName">
-            <input
-              type="text"
-              className="inputText1"
-              name="name"
-              placeholder="Name"
-              value={msg.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              className="inputText1"
-              name="email"
-              placeholder="Email"
-              value={msg.email}
-              onChange={handleChange}
-              required
-            />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
+        <Toaster position="top-center" richColors />
+
+        <form onSubmit={customSubmit} className="contactForm" aria-label="Contact form">
+          <div className="form-row">
+            <div className="form-group">
+              <input
+                type="text"
+                id="name"
+                className="form-input"
+                name="name"
+                placeholder=" "
+                value={msg.name}
+                onChange={handleChange}
+                required
+                aria-required="true"
+              />
+              <label htmlFor="name" className="form-label">Name</label>
+            </div>
+
+            <div className="form-group">
+              <input
+                type="email"
+                id="email"
+                className="form-input"
+                name="email"
+                placeholder=" "
+                value={msg.email}
+                onChange={handleChange}
+                required
+                aria-required="true"
+              />
+              <label htmlFor="email" className="form-label">Email</label>
+              <ValidationError prefix="Email" field="email" errors={state.errors} />
+            </div>
           </div>
 
-          <div>
+          <div className="form-group">
             <input
               type="text"
-              className="inputText"
+              id="subject"
+              className="form-input"
               name="subject"
-              placeholder="Subject"
+              placeholder=" "
               value={msg.subject}
               onChange={handleChange}
               required
+              aria-required="true"
             />
+            <label htmlFor="subject" className="form-label">Subject</label>
           </div>
 
-          <div>
+          <div className="form-group">
             <textarea
-              className="inputTextarea"
+              id="message"
+              className="form-input form-textarea"
               name="message"
-              placeholder="Message"
+              placeholder=" "
               value={msg.message}
               onChange={handleChange}
               required
+              aria-required="true"
             />
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
+            <label htmlFor="message" className="form-label">Message</label>
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
           </div>
 
-          <div className="flex-center">
-            <input
-              type="submit"
-              className="submitBtn"
-              value={state.submitting ? "Sending..." : "Send Message"}
-              disabled={state.submitting}
-            />
-          </div>
+          <button
+            type="submit"
+            className="btn btn-primary submit-btn"
+            disabled={state.submitting}
+          >
+            {state.submitting ? "Sending..." : "Send Message"}
+          </button>
         </form>
-      </div>
-    </div>
+      </motion.div>
+    </AnimatedPage>
   );
 };
 

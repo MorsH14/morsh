@@ -1,212 +1,304 @@
-.homeBodyContainer{
-    animation: animationIn .7s ease-in-out;
+/* ========================================
+   HOMEPAGE STYLES
+   ======================================== */
+
+.homeBodyContainer {
+  min-height: 100vh;
 }
 
 .homeMainContainer {
-    min-height: 100vh;
-    background-image: url(/public/assets/bi.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-
+  min-height: 100vh;
+  background-image: url(/public/assets/bi.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 
-.centerWraper{
-    margin-top: 150px;
+/* Dark overlay on background */
+.homeMainContainer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
 }
 
-.homeMainContainer h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: bold;
-    font-size: 60px;
-}
-.homeText{
-    font-size: 20px;
+.homeMainContainer > * {
+  position: relative;
+  z-index: 1;
 }
 
-.iconWrapper{
-    width: 100%;
-    margin: 0 20px;
-    margin-top: 40px;
-    gap: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.homeFooterSec{
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-.linkTag{
-    color: white;
-}
-.linkTag:hover{
-    color: green;
-}
-.engContainer{
-    font-size: 12px;
-    margin: 10px;
-    color: gray;
-}
-.homeIcon{
-    margin: 20px 0px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .5s ease;
-}
-.iconImgHome{
-    color: gray;
-    cursor: pointer;
-}
-.iconImgHome:hover{
-    color: green;
+/* ========================================
+   NAVIGATION
+   ======================================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-6) var(--space-10);
+  background: transparent;
+  width: 100%;
+  max-width: 1200px;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: transparent;
-    width: 95%;
-    position: relative
+.navName {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
-nav h1{
-    cursor: pointer;
-}
-.navName{
-    cursor: pointer;
-}
-ul li {
-    cursor: pointer;
-    transition: all .3s ease;
-}
-ul li:hover {
-    color: gray;
-}
-.listIcon{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: none;
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  list-style: none;
 }
 
-.swiper{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    transition: all 1s ease;
-    animation-name: swipeUp;
-    animation-iteration-count: 1;
-    background: rgb(20,20,20);
-    transform: translateY(-300%);
-    z-index: 99898473;
-    animation-duration: 3s;
+.navContainer li {
+  cursor: pointer;
 }
 
-.swiper2{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    transition: all 1s ease;
-    animation-name: swipeDown;
-    animation-iteration-count: 1;
-    background: rgb(20,20,20);
-    transform: translateY(300%);
-    animation-duration: 3s;
-    z-index: 99898473;
+.nav-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  letter-spacing: 0.5px;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  position: relative;
 }
 
-@keyframes swipeDown {
-    from{
-        transform: translateY(300%);
-        /* opacity: 1; */
-    }
-    to{
-        transform: translateY(-300%);
-        /* opacity: 0; */
-    }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary-gradient);
+  transition: all var(--transition-normal) var(--ease-out-expo);
+  transform: translateX(-50%);
 }
 
-
-@media screen and (max-width:800px) {
-   
-    .listIcon{
-        display: grid;
-        cursor: pointer;
-    }
-    .homeMainContainer h1{
-        font-size: 40px;
-    }
-
-    .homeText{
-        font-size: 15px;
-    }
-    .homeFooterSec{
-        width: 80%;
-    }
-
-    .navContainer{
-        display: grid;
-        justify-content: flex-start;
-        align-items: center;
-        position: absolute;
-        top: 100%;
-        right: 8%;
-        background: rgba(20,20,20);
-        width: 220px;
-        padding: 20px;
-        transform: translateY(-300%);
-        transition: all .3s ease-in-out;
-    }
-    .navMedia{
-        display: grid;
-        justify-content: flex-start;
-        align-items: center;
-        position: absolute;
-        top: 80%;
-        right: 8%;
-        background: rgba(20,20,20);
-        width: 220px;
-        padding: 20px;
-        gap: 20px;
-        transform: translateY(0);
-        transition: all .5s ease-in-out;
-    }
-    .navContainer li:hover{
-        transition: all .3s ease-in-out;
-        color: gray;
-    }
-   
+.nav-link:hover {
+  color: var(--color-text);
 }
 
+.nav-link:hover::after {
+  width: 100%;
+}
 
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: var(--space-2);
+  z-index: 1001;
+}
 
-@keyframes animationIn {
-    from{
-      opacity: 0;
-      transform: translateX(-100deg);
-    }
-    
-    to{
-      opacity: 1;
-      transform: translateX(0);
-    }
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.centerWrapper {
+  flex: 1;
+  padding: var(--space-8);
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, var(--text-5xl));
+  font-weight: var(--font-bold);
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.homeText {
+  font-size: clamp(var(--text-base), 3vw, var(--text-xl));
+  color: var(--color-text-secondary);
+  margin-top: var(--space-3);
+}
+
+/* ========================================
+   TECH ICONS
+   ======================================== */
+.iconWrapper {
+  width: 100%;
+  max-width: 600px;
+  margin-top: var(--space-12);
+  gap: var(--space-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tech-icon-wrapper {
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+  cursor: default;
+  transition: all var(--transition-normal) var(--ease-out-expo);
+}
+
+.tech-icon-wrapper:hover {
+  background: var(--color-primary-light);
+}
+
+/* ========================================
+   FOOTER / SOCIAL
+   ======================================== */
+.homeFooterSec {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-6) var(--space-10);
+}
+
+.engContainer {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: all var(--transition-normal) var(--ease-out-expo);
+}
+
+.social-link:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   LOADING DOTS (App.js)
+   ======================================== */
+.page-loader {
+  display: flex;
+  gap: 8px;
+}
+
+.loader-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  animation: loaderBounce 1.2s ease-in-out infinite;
+}
+
+.loader-dot:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loader-dot:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes loaderBounce {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
   }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+   ======================================== */
+@media screen and (max-width: 768px) {
+  nav {
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .menuToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-10);
+    transform: translateX(100%);
+    transition: transform 0.4s var(--ease-out-expo);
+    z-index: 1000;
+  }
+
+  .navContainer.navMedia {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    font-size: var(--text-xl);
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .homeText {
+    font-size: var(--text-base);
+  }
+
+  .homeFooterSec {
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .iconWrapper {
+    gap: var(--space-3);
+  }
+
+  .tech-icon-wrapper svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .socialIcons {
+    gap: 0;
+  }
+}

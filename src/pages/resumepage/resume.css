@@ -1,119 +1,146 @@
-.resumeSection{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: black;
-    animation: animationIn .7s ease-in-out;
+/* ========================================
+   RESUME PAGE
+   ======================================== */
+.resumeSection {
+  background: var(--color-bg);
+  padding-bottom: var(--space-16);
+  overflow-y: auto;
 }
 
-.resumeHeaderText{
-    margin: 60px 0px 20px 0px;
-    font-weight: bold;
+.resume-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--space-8);
 }
 
-.resumeFlex{
-    width: 70%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    flex-wrap: wrap;
-    margin: 30px;
-}
-.experienceFlex{
-    width: 90%;
-}
-.educationFlex{
-    width: 90%;
-}
-.resumeHeader h3{
-    padding: 10px 0px;
-}
-.resumeText{
-    width: 100%;
-    height: 150px;
-    padding: 20px;
-    background: rgba(20,20,20);
-    border-left: 2px solid rgb(55, 100, 55);
-    border-bottom: .1px solid rgba(128, 128, 128, 0.13);
-    flex-wrap: wrap;
-}
-.resumeText h4{
-    font-size: 13px;
-}
-.resumeText h6{
-    font-size: 11px;
-    color: gray;
-    padding: 2px 0px;
-}
-.resumeText p{
-    font-size: 10px;
-    color: gray;
-    width: 90%;
-    padding-top: 10px ;
-}
-.hrLineBackground{
-    width: rgba(20,20,20);
-}
-.htmlTag{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background: green;
-}
-.skillsText{
-    padding: 20px;
-    background: rgba(20,20,20);
-    margin: 20px 0;
-    font-weight: bold;
-    transition: all .3s linear;
-    border-bottom: 2px solid transparent;
-    color: gray;
+/* ========================================
+   EXPERIENCE & EDUCATION GRID
+   ======================================== */
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+  margin-top: var(--space-10);
 }
 
-.skillsText:hover{
-    border-bottom: 2px solid rgb(55, 100, 55);
-    box-shadow: none;
-}
-.skillWrapper{
-    width: 70%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    flex-wrap: wrap;
-    margin: 30px;
+.resume-column-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
 }
 
-
-
-@media screen and (max-width: 900px) {
-
-    .resumeFlex{
-        display: flex;
-        gap: 20px;
-    }
-}
-@media screen and (max-width: 515px) {
-
-    .skillWrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .skillsText{
-        max-width: 200px;
-        flex: 1;
-    }
+/* ========================================
+   TIMELINE ITEMS
+   ======================================== */
+.timeline-item {
+  padding: var(--space-6);
+  margin-bottom: var(--space-4);
+  position: relative;
+  padding-left: var(--space-8);
+  border-left: 2px solid var(--color-primary);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
 }
 
-@keyframes animationIn {
-    from{
-      opacity: 0;
-      transform: translateX(-100deg);
-    }
-    
-    to{
-      opacity: 1;
-      transform: translateX(0);
-    }
+.timeline-item:hover {
+  transform: translateX(4px);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -7px;
+  top: var(--space-6);
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-gradient);
+  border: 2px solid var(--color-bg);
+}
+
+.timeline-item h4 {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-1);
+}
+
+.timeline-meta {
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  font-weight: var(--font-medium);
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.timeline-item p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ========================================
+   SKILLS SECTION
+   ======================================== */
+.skills-section {
+  margin-top: var(--space-16);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6) var(--space-10);
+}
+
+.skill-item {
+  padding: var(--space-1) 0;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.skill-name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+.skill-percent {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.skill-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: var(--color-primary-gradient);
+  border-radius: var(--radius-full);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media screen and (max-width: 768px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
   }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-content {
+    padding: 0 var(--space-4);
+  }
+}

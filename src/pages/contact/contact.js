@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./contact.css";
@@ -58,25 +58,33 @@ const Contact = () => {
       return;
     }
 
-    await handleSubmit(e);
-    if (!state.submitting && state.succeeded) {
-      toast.success("Message sent successfully!");
-      setMsg({ name: "", email: "", subject: "", message: "" });
-    } else if (state.errors && state.errors.length > 0) {
-      toast.error("Failed to send message");
+    try {
+      await handleSubmit(e);
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
     }
   };
 
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success("Message sent successfully!");
+      setMsg({ name: "", email: "", subject: "", message: "" });
+    }
+    if (state.errors && state.errors.length > 0) {
+      toast.error("Failed to send message. Please check the form.");
+    }
+  }, [state.succeeded, state.errors]);
+
   return (
     <AnimatedPage className="contactSection">
-      <button
+      {/* <button
         className="backBtn"
         onClick={() => navigate(-1)}
         aria-label="Go back"
       >
         <IoArrowBack size={22} />
         <span>Back</span>
-      </button>
+      </button> */}
 
       <Toaster position="top-center" richColors />
 

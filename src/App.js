@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import Navbar from './components/Navbar';
 import Homepage from './pages/homepage/home';
 
 const About = lazy(() => import('./pages/about/about'));
@@ -28,10 +29,12 @@ function App() {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
-      <Suspense fallback={<PageLoader />}>
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Homepage />} />
+    <>
+      <Navbar />
+      <AnimatePresence mode="wait">
+        <Suspense fallback={<PageLoader />}>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/resume" element={<Resume />} />
@@ -39,6 +42,7 @@ function App() {
         </Routes>
       </Suspense>
     </AnimatePresence>
+  </>
   );
 }
 

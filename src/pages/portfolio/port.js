@@ -65,10 +65,10 @@ const Portfolio = () => {
 
   return (
     <AnimatedPage className="portfolioSection">
-      <button className="backBtn" onClick={() => navigate(-1)} aria-label="Go back">
+      {/* <button className="backBtn" onClick={() => navigate(-1)} aria-label="Go back">
         <IoArrowBack size={22} />
         <span>Back</span>
-      </button>
+      </button> */}
 
       <motion.div
         className="section-header flex-center flex-column"

@@ -1,9 +1,8 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./resume.css";
-import { IoArrowBack } from "react-icons/io5";
-import AnimatedPage from '../../components/AnimatedPage';
+import Navigation from "../../components/Navigation";
+import AnimatedPage from "../../components/AnimatedPage";
 
 const education = [
   {
@@ -48,7 +47,11 @@ const skills = [
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
 };
 
 const staggerContainer = {
@@ -61,10 +64,7 @@ const Resume = () => {
 
   return (
     <AnimatedPage className="resumeSection">
-      <button className="backBtn" onClick={() => navigate(-1)} aria-label="Go back">
-        <IoArrowBack size={22} />
-        <span>Back</span>
-      </button>
+      <Navigation />
 
       <motion.div
         className="section-header flex-center flex-column"
@@ -89,10 +89,16 @@ const Resume = () => {
           >
             <h2 className="resume-column-title">Experience</h2>
             {experience.map((item, i) => (
-              <motion.div key={i} className="timeline-item card" variants={sectionVariants}>
+              <motion.div
+                key={i}
+                className="timeline-item card"
+                variants={sectionVariants}
+              >
                 <div className="timeline-dot"></div>
                 <h4>{item.title}</h4>
-                <span className="timeline-meta">{item.role} / {item.period}</span>
+                <span className="timeline-meta">
+                  {item.role} / {item.period}
+                </span>
                 <p>{item.desc}</p>
               </motion.div>
             ))}
@@ -108,10 +114,16 @@ const Resume = () => {
           >
             <h2 className="resume-column-title">Education</h2>
             {education.map((item, i) => (
-              <motion.div key={i} className="timeline-item card" variants={sectionVariants}>
+              <motion.div
+                key={i}
+                className="timeline-item card"
+                variants={sectionVariants}
+              >
                 <div className="timeline-dot"></div>
                 <h4>{item.title}</h4>
-                <span className="timeline-meta">{item.institution} / {item.period}</span>
+                <span className="timeline-meta">
+                  {item.institution} / {item.period}
+                </span>
                 <p>{item.desc}</p>
               </motion.div>
             ))}
@@ -130,7 +142,11 @@ const Resume = () => {
 
           <div className="skills-grid">
             {skills.map(({ name, level }, i) => (
-              <motion.div key={name} className="skill-item" variants={sectionVariants}>
+              <motion.div
+                key={name}
+                className="skill-item"
+                variants={sectionVariants}
+              >
                 <div className="skill-header">
                   <span className="skill-name">{name}</span>
                   <span className="skill-percent">{level}%</span>
@@ -141,7 +157,11 @@ const Resume = () => {
                     initial={{ width: 0 }}
                     whileInView={{ width: `${level}%` }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: i * 0.05 }}
+                    transition={{
+                      duration: 1,
+                      ease: [0.16, 1, 0.3, 1],
+                      delay: i * 0.05,
+                    }}
                   />
                 </div>
               </motion.div>

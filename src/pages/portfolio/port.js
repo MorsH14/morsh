@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "./port.css";
-import { IoArrowBack } from "react-icons/io5";
+import Navigation from "../../components/Navigation";
 import { FiExternalLink } from "react-icons/fi";
 import { HiChevronDown } from "react-icons/hi";
 import AnimatedPage from "../../components/AnimatedPage";
@@ -10,9 +10,18 @@ import AnimatedPage from "../../components/AnimatedPage";
 const projects = [
   {
     id: 1,
+    title: "CRM Dashboard",
+    image: "/assets/crm.png",
+    tech: ["Next.js"],
+    desc: "It’s designed to make tracking deals super easy from Discovery to Closed Won — giving sales teams a clear view of progress, deal value, and who’s responsible for each account.",
+    link: "https://www.1159realty.com/",
+    linkText: "Visit Website",
+  },
+  {
+    id: 1,
     title: "Real Estate Website",
     image: "/assets/1159.png",
-    tech: ["React", "Tailwind"],
+    tech: ["Next.js", "Mui emotions"],
     desc: "Built a mobile-first property platform using React and Tailwind. Features: dynamic filtering, pagination, lazy loading. Focus: performance, intuitive UX, clean UI.",
     link: "https://www.1159realty.com/",
     linkText: "Visit Website",
@@ -65,10 +74,7 @@ const Portfolio = () => {
 
   return (
     <AnimatedPage className="portfolioSection">
-      <button className="backBtn" onClick={() => navigate(-1)} aria-label="Go back">
-        <IoArrowBack size={22} />
-        <span>Back</span>
-      </button>
+      <Navigation />
 
       <motion.div
         className="section-header flex-center flex-column"
@@ -121,17 +127,22 @@ const Portfolio = () => {
             </div>
 
             <div className="projectInfo">
-              <div className="projectTitleRow" onClick={() => toggleDetails(project.id)}>
+              <div
+                className="projectTitleRow"
+                onClick={() => toggleDetails(project.id)}
+              >
                 <div>
                   <h3 className="projectTitle">{project.title}</h3>
                   <div className="techTags">
                     {project.tech.map((t) => (
-                      <span key={t} className="techTag">{t}</span>
+                      <span key={t} className="techTag">
+                        {t}
+                      </span>
                     ))}
                   </div>
                 </div>
                 <button
-                  className={`expandBtn ${showDetails === project.id ? 'expanded' : ''}`}
+                  className={`expandBtn ${showDetails === project.id ? "expanded" : ""}`}
                   aria-label="Toggle details"
                 >
                   <HiChevronDown size={22} />

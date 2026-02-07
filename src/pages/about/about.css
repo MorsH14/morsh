@@ -5,6 +5,28 @@
   background: var(--color-bg);
   padding-bottom: var(--space-20);
   overflow-y: auto;
+  padding-top: 60px;
+}
+
+/* ========================================
+   NAVIGATION ON ABOUT PAGE
+   ======================================== */
+.aboutSection .navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 200;
+  margin: 0;
+  max-width: 100%;
+}
+
+.aboutSection .navName {
+  font-size: var(--text-lg);
 }
 
 /* ========================================
@@ -12,7 +34,7 @@
    ======================================== */
 .backBtn {
   position: fixed;
-  top: var(--space-8);
+  top: calc(60px + var(--space-6));
   right: var(--space-10);
   display: flex;
   align-items: center;
@@ -156,7 +178,7 @@
 }
 
 .serviceCard::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;

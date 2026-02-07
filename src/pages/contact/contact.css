@@ -26,9 +26,6 @@
   margin-bottom: var(--space-10);
 }
 
-/* ========================================
-   FORM LAYOUT
-   ======================================== */
 .contactForm {
   display: flex;
   flex-direction: column;

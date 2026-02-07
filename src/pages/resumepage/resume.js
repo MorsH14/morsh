@@ -92,6 +92,13 @@ const Resume = () => {
       >
         <h1 className="heading-2">Experience</h1>
         <div className="hrLine"></div>
+        <a
+          href="/assets/Olamide_Alade_Resume.docx"
+          className="btn btn-primary resume-download-btn"
+          style={{ marginTop: "var(--space-6)" }}
+        >
+          Download Full CV
+        </a>
       </motion.div>
 
       <div className="resume-content">

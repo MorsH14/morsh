@@ -6,9 +6,6 @@
   overflow-y: auto;
 }
 
-/* ========================================
-   SPLIT LAYOUT
-   ======================================== */
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;

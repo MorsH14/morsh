@@ -1,8 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./about.css";
-import { IoArrowBack } from "react-icons/io5";
 import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
@@ -121,20 +119,8 @@ const staggerContainer = {
 };
 
 const About = () => {
-  const navigate = useNavigate();
-
   return (
     <AnimatedPage className="aboutSection">
-      {/* Back Button */}
-      <button
-        className="backBtn"
-        onClick={() => navigate(-1)}
-        aria-label="Go back"
-      >
-        <IoArrowBack size={22} />
-        <span>Back</span>
-      </button>
-
       {/* Header */}
       <motion.div
         className="section-header flex-center flex-column"

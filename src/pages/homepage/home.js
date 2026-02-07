@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./home.css";
@@ -14,7 +14,6 @@ import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
-import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { SiExpress, SiMui, SiTypescript } from "react-icons/si";
 import ParticleCanvas from "../../components/ParticleCanvas";
 
@@ -73,18 +72,6 @@ const itemVariants = {
 };
 
 const Homepage = () => {
-  const [showNav, setShowNav] = useState(false);
-
-  const closeNav = useCallback(() => setShowNav(false), []);
-
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    document.body.style.overflow = showNav ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [showNav]);
-
   return (
     <motion.div
       className="homeBodyContainer"
@@ -95,38 +82,6 @@ const Homepage = () => {
       <div className="homeMainContainer">
         <ParticleCanvas />
         
-        {/* Navigation */}
-        <motion.nav variants={itemVariants}>
-          <Link to="/" className="navName">
-            MorsHDEV
-          </Link>
-
-          <div className="listWrapper">
-            {/* Backdrop overlay */}
-            <div
-              className={`nav-overlay ${showNav ? "active" : ""}`}
-              onClick={closeNav}
-            />
-            <ul className={`navContainer ${showNav ? "navMedia" : ""}`}>
-              {navLinks.map(({ to, label }) => (
-                <li key={to}>
-                  <Link to={to} className="nav-link" onClick={closeNav}>
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <button
-            className="menuToggle"
-            onClick={() => setShowNav(!showNav)}
-            aria-label={showNav ? "Close menu" : "Open menu"}
-          >
-            {showNav ? <HiX size={28} /> : <HiMenuAlt3 size={28} />}
-          </button>
-        </motion.nav>
-
         {/* Hero Content */}
         <div className="centerWrapper flex-center flex-column">
           <motion.h1 variants={itemVariants} className="hero-title">

@@ -8,12 +8,20 @@
   padding: var(--space-6) var(--space-10);
   background: transparent;
   width: 100%;
-  max-width: 1200px;
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   z-index: 1000;
+  transition: all var(--transition-normal);
+  border-bottom: 1px solid transparent;
+}
+
+.global-nav.scrolled {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: var(--space-4) var(--space-10);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .navName {
@@ -56,11 +64,13 @@
   transform: translateX(-50%);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: var(--color-text);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 
@@ -80,6 +90,8 @@
 @media screen and (max-width: 768px) {
   .global-nav {
     padding: var(--space-4) var(--space-6);
+    background: var(--color-bg-card); /* Non-transparent on mobile */
+    border-bottom: 1px solid var(--color-border);
   }
 
   .menuToggle {
@@ -93,9 +105,9 @@
     display: block;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     z-index: 999;
     opacity: 0;
     pointer-events: none;
@@ -115,9 +127,7 @@
     width: 280px;
     height: 100vh;
     height: 100dvh;
-    background: rgba(10, 10, 10, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: #0a0a0a; /* Solid background */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -126,6 +136,7 @@
     transition: transform 0.4s var(--ease-out-expo);
     z-index: 1000;
     border-left: 1px solid var(--color-border);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
   }
 
   .navContainer.navMedia {
@@ -146,6 +157,9 @@
 
   .nav-link {
     font-size: var(--text-xl);
+    width: 100%;
+    text-align: center;
+    padding: var(--space-4);
   }
 }
 

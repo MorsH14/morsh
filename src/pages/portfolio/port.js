@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "./port.css";
-import { IoArrowBack } from "react-icons/io5";
 import { FiExternalLink } from "react-icons/fi";
 import { HiChevronDown } from "react-icons/hi";
 import AnimatedPage from "../../components/AnimatedPage";
@@ -56,7 +54,6 @@ const cardVariants = {
 };
 
 const Portfolio = () => {
-  const navigate = useNavigate();
   const [showDetails, setShowDetails] = useState(null);
 
   const toggleDetails = (index) => {
@@ -65,11 +62,6 @@ const Portfolio = () => {
 
   return (
     <AnimatedPage className="portfolioSection">
-      <button className="backBtn" onClick={() => navigate(-1)} aria-label="Go back">
-        <IoArrowBack size={22} />
-        <span>Back</span>
-      </button>
-
       <motion.div
         className="section-header flex-center flex-column"
         initial={{ opacity: 0, y: 20 }}

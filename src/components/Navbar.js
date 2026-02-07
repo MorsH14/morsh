@@ -14,7 +14,16 @@ const navLinks = [
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const closeNav = useCallback(() => setShowNav(false), []);
 
@@ -32,9 +41,9 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className="global-nav">
+    <nav className={`global-nav ${scrolled ? "scrolled" : ""}`}>
       <Link to="/" className="navName">
-        <span style={{ color: "white" }}>MorsH</span>DEV
+        <span>MorsH</span><span className="text-gradient">DEV</span>
       </Link>
 
       <div className="listWrapper">
@@ -46,7 +55,11 @@ const Navbar = () => {
         <ul className={`navContainer ${showNav ? "navMedia" : ""}`}>
           {navLinks.map(({ to, label }) => (
             <li key={to}>
-              <Link to={to} className="nav-link" onClick={closeNav}>
+              <Link
+                to={to}
+                className={`nav-link ${location.pathname === to ? "active" : ""}`}
+                onClick={closeNav}
+              >
                 {label}
               </Link>
             </li>

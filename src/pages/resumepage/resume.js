@@ -1,8 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./resume.css";
-import { IoArrowBack } from "react-icons/io5";
 import AnimatedPage from "../../components/AnimatedPage";
 
 const education = [
@@ -84,19 +82,8 @@ const staggerContainer = {
 };
 
 const Resume = () => {
-  const navigate = useNavigate();
-
   return (
     <AnimatedPage className="resumeSection">
-      <button
-        className="backBtn"
-        onClick={() => navigate(-1)}
-        aria-label="Go back"
-      >
-        <IoArrowBack size={22} />
-        <span>Back</span>
-      </button>
-
       <motion.div
         className="section-header flex-center flex-column"
         initial={{ opacity: 0, y: 20 }}

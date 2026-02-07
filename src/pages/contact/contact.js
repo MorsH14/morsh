@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./contact.css";
-import { IoArrowBack } from "react-icons/io5";
 import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
 import { FaTwitter, FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
@@ -35,7 +33,6 @@ const socialLinks = [
 ];
 
 const Contact = () => {
-  const navigate = useNavigate();
   const [state, handleSubmit] = useForm("xanjvppd");
   const [msg, setMsg] = useState({
     name: "",
@@ -77,15 +74,6 @@ const Contact = () => {
 
   return (
     <AnimatedPage className="contactSection">
-      <button
-        className="backBtn"
-        onClick={() => navigate(-1)}
-        aria-label="Go back"
-      >
-        <IoArrowBack size={22} />
-        <span>Back</span>
-      </button>
-
       <Toaster position="top-center" richColors />
 
       <div className="contact-wrapper">

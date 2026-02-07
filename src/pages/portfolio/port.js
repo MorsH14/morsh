@@ -18,7 +18,7 @@ const projects = [
     linkText: "Visit Website",
   },
   {
-    id: 1,
+    id: 2,
     title: "Real Estate Website",
     image: "/assets/1159.png",
     tech: ["Next.js", "Mui emotions"],
@@ -27,7 +27,7 @@ const projects = [
     linkText: "Visit Website",
   },
   {
-    id: 2,
+    id: 3,
     title: "Job Search Web App",
     image: "/assets/rana.png",
     tech: ["Next.js", "SSR"],
@@ -36,7 +36,7 @@ const projects = [
     linkText: "Visit Website",
   },
   {
-    id: 3,
+    id: 4,
     title: "Fashion Designer Portfolio",
     image: "/assets/image.png",
     tech: ["MUI", "Emotion"],
@@ -45,7 +45,7 @@ const projects = [
     linkText: "Visit Website",
   },
   {
-    id: 4,
+    id: 5,
     title: "Startup Landing Pages",
     image: "/assets/bb.png",
     tech: ["React"],

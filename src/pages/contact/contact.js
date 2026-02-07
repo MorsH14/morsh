@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./contact.css";
-import { IoArrowBack } from "react-icons/io5";
+import Navigation from "../../components/Navigation";
 import { Toaster, toast } from "sonner";
 import { useForm, ValidationError } from "@formspree/react";
 import AnimatedPage from "../../components/AnimatedPage";
@@ -42,10 +42,7 @@ const Contact = () => {
 
   return (
     <AnimatedPage className="contactSection">
-      <button className="backBtn" onClick={() => navigate(-1)} aria-label="Go back">
-        <IoArrowBack size={22} />
-        <span>Back</span>
-      </button>
+      <Navigation />
 
       <motion.div
         className="section-header flex-center flex-column"
@@ -65,12 +62,17 @@ const Contact = () => {
       >
         <h3 className="contact-subtitle">Let's work together</h3>
         <p className="contact-desc">
-          Have a project in mind or want to collaborate? Send me a message and I'll get back to you.
+          Have a project in mind or want to collaborate? Send me a message and
+          I'll get back to you.
         </p>
 
         <Toaster position="top-center" richColors />
 
-        <form onSubmit={customSubmit} className="contactForm" aria-label="Contact form">
+        <form
+          onSubmit={customSubmit}
+          className="contactForm"
+          aria-label="Contact form"
+        >
           <div className="form-row">
             <div className="form-group">
               <input
@@ -84,7 +86,9 @@ const Contact = () => {
                 required
                 aria-required="true"
               />
-              <label htmlFor="name" className="form-label">Name</label>
+              <label htmlFor="name" className="form-label">
+                Name
+              </label>
             </div>
 
             <div className="form-group">
@@ -99,8 +103,14 @@ const Contact = () => {
                 required
                 aria-required="true"
               />
-              <label htmlFor="email" className="form-label">Email</label>
-              <ValidationError prefix="Email" field="email" errors={state.errors} />
+              <label htmlFor="email" className="form-label">
+                Email
+              </label>
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
             </div>
           </div>
 
@@ -116,7 +126,9 @@ const Contact = () => {
               required
               aria-required="true"
             />
-            <label htmlFor="subject" className="form-label">Subject</label>
+            <label htmlFor="subject" className="form-label">
+              Subject
+            </label>
           </div>
 
           <div className="form-group">
@@ -130,8 +142,14 @@ const Contact = () => {
               required
               aria-required="true"
             />
-            <label htmlFor="message" className="form-label">Message</label>
-            <ValidationError prefix="Message" field="message" errors={state.errors} />
+            <label htmlFor="message" className="form-label">
+              Message
+            </label>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
           </div>
 
           <button

@@ -4,7 +4,26 @@
 .portfolioSection {
   background: var(--color-bg);
   padding-bottom: var(--space-16);
+  padding-top: 60px;
   overflow-y: auto;
+}
+
+.portfolioSection .navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 200;
+  margin: 0;
+  max-width: 100%;
+}
+
+.portfolioSection .navName {
+  font-size: var(--text-lg);
 }
 
 .portfolio-subtitle {
@@ -39,7 +58,9 @@
 
 .projectCard:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.4),
+    var(--shadow-glow);
   transform: translateY(-4px);
 }
 
@@ -157,6 +178,36 @@
 }
 
 /* ========================================
+   BACK BUTTON
+   ======================================== */
+.backBtn {
+  position: fixed;
+  top: calc(60px + var(--space-6));
+  right: var(--space-10);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-family: inherit;
+  cursor: pointer;
+  z-index: 100;
+  transition: all var(--transition-normal) var(--ease-out-expo);
+}
+
+.backBtn:hover {
+  color: var(--color-text);
+  border-color: var(--color-border-hover);
+  background: var(--color-bg-elevated);
+}
+
+/* ========================================
    RESPONSIVE
    ======================================== */
 @media screen and (max-width: 768px) {
@@ -174,5 +225,10 @@
 
   .projectTitle {
     font-size: var(--text-sm);
+  }
+
+  .backBtn {
+    top: calc(60px + var(--space-3));
+    right: var(--space-4);
   }
 }

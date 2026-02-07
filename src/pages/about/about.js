@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./about.css";
-import { IoArrowBack } from "react-icons/io5";
+import Navigation from "../../components/Navigation";
 import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
@@ -84,14 +84,26 @@ const testimonials = [
 
 const socialLinks = [
   { href: "https://x.com/midemorsh", Icon: FaTwitter, label: "Twitter" },
-  { href: "https://www.linkedin.com/in/alade-olamide-a86304360?", Icon: FaLinkedin, label: "LinkedIn" },
-  { href: "https://www.instagram.com/_midemorsh/", Icon: FaInstagram, label: "Instagram" },
+  {
+    href: "https://www.linkedin.com/in/alade-olamide-a86304360?",
+    Icon: FaLinkedin,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://www.instagram.com/_midemorsh/",
+    Icon: FaInstagram,
+    label: "Instagram",
+  },
   { href: "https://github.com/MorsH14", Icon: FaGithub, label: "GitHub" },
 ];
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
 };
 
 const staggerContainer = {
@@ -104,11 +116,8 @@ const About = () => {
 
   return (
     <AnimatedPage className="aboutSection">
-      {/* Back Button */}
-      <button className="backBtn" onClick={() => navigate(-1)} aria-label="Go back">
-        <IoArrowBack size={22} />
-        <span>Back</span>
-      </button>
+      {/* Navigation */}
+      <Navigation />
 
       {/* Header */}
       <motion.div
@@ -147,11 +156,11 @@ const About = () => {
               SEO-optimized, and responsive web applications. Over the last 3+
               years, I've worked on real-world projects across industries like
               real estate, job search platforms, and fashion portfolios. I'm
-              passionate about delivering clean code and smooth user
-              experiences using tools like React, Next.js, Tailwind, and MUI.
-              I enjoy turning complex problems into clean, user-friendly
-              designs, and I'm constantly seeking ways to improve my craft.
-              Let's work together and bring your ideas to life.
+              passionate about delivering clean code and smooth user experiences
+              using tools like React, Next.js, Tailwind, and MUI. I enjoy
+              turning complex problems into clean, user-friendly designs, and
+              I'm constantly seeking ways to improve my craft. Let's work
+              together and bring your ideas to life.
             </p>
           </motion.div>
 
@@ -202,7 +211,11 @@ const About = () => {
 
         <div className="servicesGrid">
           {services.map(({ Icon, title, desc }, i) => (
-            <motion.div key={i} className="serviceCard card" variants={sectionVariants}>
+            <motion.div
+              key={i}
+              className="serviceCard card"
+              variants={sectionVariants}
+            >
               <Icon className="serviceIcon" size={40} />
               <h3>{title}</h3>
               <p>{desc}</p>
@@ -240,7 +253,12 @@ const About = () => {
               <div key={i} className="testimonialCard card-glass">
                 <div className="testimonialHeader">
                   <div className="testimonialAuthor">
-                    <img src={img} alt={name} className="testImg" loading="lazy" />
+                    <img
+                      src={img}
+                      alt={name}
+                      className="testImg"
+                      loading="lazy"
+                    />
                     <div>
                       <h5>{name}</h5>
                       <span>{location}</span>

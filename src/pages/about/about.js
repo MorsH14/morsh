@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./about.css";
 import Navigation from "../../components/Navigation";
@@ -112,8 +111,6 @@ const staggerContainer = {
 };
 
 const About = () => {
-  const navigate = useNavigate();
-
   return (
     <AnimatedPage className="aboutSection">
       {/* Navigation */}

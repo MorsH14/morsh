@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./contact.css";
 import Navigation from "../../components/Navigation";
@@ -8,7 +7,6 @@ import { useForm, ValidationError } from "@formspree/react";
 import AnimatedPage from "../../components/AnimatedPage";
 
 const Contact = () => {
-  const navigate = useNavigate();
   const [state, handleSubmit] = useForm("xanjvppd");
   const [msg, setMsg] = useState({
     name: "",

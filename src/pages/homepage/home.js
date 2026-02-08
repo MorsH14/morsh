@@ -82,7 +82,7 @@ const Homepage = () => {
 
           <motion.div className="homeText" variants={itemVariants}>
             <p>
-              I am a <span className="text-gradient">Front-End Developer</span>
+              <span className="text-gradient">Frontend Engineer</span> building production applications with React
             </p>
           </motion.div>
 

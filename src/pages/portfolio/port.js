@@ -11,26 +11,26 @@ const projects = [
     id: 1,
     title: "CRM Dashboard",
     image: "/assets/crm.png",
-    tech: ["Next.js"],
-    desc: "It’s designed to make tracking deals super easy from Discovery to Closed Won — giving sales teams a clear view of progress, deal value, and who’s responsible for each account.",
+    tech: ["Next.js", "React", "Server Components"],
+    desc: "Built a sales pipeline dashboard for real estate teams to track deals from Discovery to Closed Won. Implemented drag-and-drop functionality, real-time deal value calculations, and role-based access. Improved sales team visibility and reduced time spent on status updates.",
     link: "https://www.1159realty.com/",
     linkText: "Visit Website",
   },
   {
     id: 2,
-    title: "Real Estate Website",
+    title: "Real Estate Platform",
     image: "/assets/1159.png",
-    tech: ["Next.js", "Mui emotions"],
-    desc: "Built a mobile-first property platform using React and Tailwind. Features: dynamic filtering, pagination, lazy loading. Focus: performance, intuitive UX, clean UI.",
+    tech: ["Next.js", "MUI", "Responsive Design"],
+    desc: "Developed a property listing platform with advanced filtering, pagination, and lazy loading for optimal performance. Mobile-first approach with focus on Core Web Vitals. Integrated Google Maps API for location-based search. Handles hundreds of listings with smooth UX.",
     link: "https://www.1159realty.com/",
     linkText: "Visit Website",
   },
   {
     id: 3,
-    title: "Job Search Web App",
+    title: "Job Search Application",
     image: "/assets/rana.png",
-    tech: ["Next.js", "SSR"],
-    desc: "Developed a searchable job board using Next.js with SSR. Features: search filters, job details modal, location sorting. Focus: speed, SEO, component reuse.",
+    tech: ["Next.js", "SSR", "SEO"],
+    desc: "Built a searchable job board with server-side rendering for SEO. Implemented dynamic filters, job detail modals, and location-based sorting. Optimized for fast load times and search engine visibility. Focused on reusable component architecture.",
     link: "https://rana-ochre.vercel.app",
     linkText: "Visit Website",
   },
@@ -38,8 +38,8 @@ const projects = [
     id: 4,
     title: "Fashion Designer Portfolio",
     image: "/assets/image.png",
-    tech: ["MUI", "Emotion"],
-    desc: "Designed an elegant brand site using MUI and Emotion. Features: contact form, gallery, modern animations. Focus: minimalist UX, storytelling, responsive layout.",
+    tech: ["React", "MUI", "Emotion"],
+    desc: "Created an elegant portfolio site for a fashion designer with image gallery, contact form, and smooth animations. Emphasized visual storytelling with minimalist layout. Implemented responsive design that showcases work beautifully on all devices.",
     link: "https://morshclothiers.vercel.app/",
     linkText: "Visit Website",
   },
@@ -47,8 +47,8 @@ const projects = [
     id: 5,
     title: "Startup Landing Pages",
     image: "/assets/bb.png",
-    tech: ["React"],
-    desc: "Delivered conversion-focused pages with React. Focus: strong CTAs, fast load times, responsive design. Used for demo projects and freelance showcases.",
+    tech: ["React", "Tailwind CSS"],
+    desc: "Designed and developed conversion-focused landing pages for early-stage startups. Strong CTAs, fast load times, and mobile-responsive layouts. Used for client projects and freelance work to help businesses establish online presence quickly.",
     link: "https://example.com",
     linkText: "See Demo",
   },
@@ -90,7 +90,7 @@ const Portfolio = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        Here are some of the websites I've worked on
+        Production applications I've built for real businesses and users
       </motion.p>
 
       <div className="projectsGrid">

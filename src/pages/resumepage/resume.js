@@ -23,22 +23,23 @@ const experience = [
     title: "Femtech IT Training",
     role: "Web Developer",
     period: "10/2023 - Current",
-    desc: "Used HTML, CSS, JavaScript and React.js for the Frontend, Node.js for server side and MySQL for database in building websites.",
+    desc: "Building full-stack web applications with React, Node.js, and MySQL. Delivered responsive interfaces that improved user engagement by focusing on performance and accessibility. Led frontend implementation for client projects across e-commerce and business platforms.",
   },
   {
     title: "ShowTech",
     role: "Junior Web Developer",
     period: "09/2023 - 10/2023",
-    desc: "Designed user interfaces using HTML, CSS, and JavaScript to create seamless interactions and visually appealing layouts.",
+    desc: "Developed user interfaces with modern JavaScript and React. Implemented responsive layouts that worked seamlessly across devices. Collaborated with design team to translate mockups into production code.",
   },
 ];
 
 const skills = [
-  { name: "HTML", level: 95 },
-  { name: "CSS", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "React", level: 85 },
-  { name: "Next.js", level: 75 },
+  { name: "HTML/CSS", level: 95 },
+  { name: "JavaScript", level: 90 },
+  { name: "TypeScript", level: 80 },
+  { name: "React", level: 90 },
+  { name: "Next.js", level: 80 },
+  { name: "Testing (Jest/RTL)", level: 75 },
   { name: "Node.js", level: 70 },
   { name: "Express", level: 70 },
   { name: "MySQL", level: 65 },
@@ -136,6 +137,14 @@ const Resume = () => {
           variants={staggerContainer}
         >
           <h2 className="heading-2 section-title">Skills</h2>
+
+          <motion.p
+            className="skills-intro"
+            variants={sectionVariants}
+          >
+            My core expertise is frontend development with the React ecosystem.
+            Backend skills support full-stack ownership when projects require it.
+          </motion.p>
 
           <div className="skills-grid">
             {skills.map(({ name, level }, i) => (

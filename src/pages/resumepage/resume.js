@@ -20,16 +20,25 @@ const education = [
 
 const experience = [
   {
-    title: "Femtech IT Training",
-    role: "Web Developer",
-    period: "10/2023 - Current",
-    desc: "Building full-stack web applications with React, Node.js, and MySQL. Delivered responsive interfaces that improved user engagement by focusing on performance and accessibility. Led frontend implementation for client projects across e-commerce and business platforms.",
+    title: "1159realty.Nig.Ltd",
+    location: "Ilorin, Nigeria",
+    role: "Front End Developer",
+    period: "08/2024 - Current",
+    desc: "Developed and documented reusable UI components in Next.js, reducing development time by 30% on future projects. Integrated RESTful APIs to enhance application functionality and performance. Collaborated with back-end developers and participated in daily standups to deliver features on schedule.",
   },
   {
-    title: "ShowTech",
-    role: "Junior Web Developer",
-    period: "09/2023 - 10/2023",
-    desc: "Developed user interfaces with modern JavaScript and React. Implemented responsive layouts that worked seamlessly across devices. Collaborated with design team to translate mockups into production code.",
+    title: "Codedbus",
+    location: "Ilorin, Nigeria",
+    role: "Website Developer",
+    period: "09/2024 - Current",
+    desc: "Designed responsive website layouts using Next.js, MUI, and modern libraries. Collaborated with team members to enhance user experience and site functionality. Implemented website updates and maintenance for optimal performance.",
+  },
+  {
+    title: "Rana",
+    location: "Ilorin, Nigeria",
+    role: "Front End Web Developer",
+    period: "10/2023 - 04/2024",
+    desc: "Implemented responsive web designs for mobile devices using HTML5, CSS3, JavaScript, jQuery, and Bootstrap. Collaborated with UX designers to enhance user experience and interface design. Conducted cross-browser testing and maintained code quality through Git version control.",
   },
 ];
 
@@ -93,7 +102,7 @@ const Resume = () => {
                 variants={sectionVariants}
               >
                 <div className="timeline-dot"></div>
-                <h4>{item.title}</h4>
+                <h4>{item.title}{item.location && ` | ${item.location}`}</h4>
                 <span className="timeline-meta">
                   {item.role} / {item.period}
                 </span>

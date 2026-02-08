@@ -18,33 +18,33 @@ import AnimatedPage from "../../components/AnimatedPage";
 const services = [
   {
     Icon: ImHtmlFive2,
-    title: "Front-end Development",
-    desc: "Building the user-facing part of websites using HTML, CSS, JavaScript and React. Ensuring that they are attractive and easy to use.",
+    title: "Frontend Development",
+    desc: "Building production-ready React and Next.js applications with focus on performance, SEO, and user experience. Specialized in component architecture and state management.",
   },
   {
     Icon: DiJavascript,
-    title: "UI/UX Design",
-    desc: "Creating intuitive and visually appealing user interfaces that provide an optimal user experience.",
+    title: "UI/UX Implementation",
+    desc: "Translating designs into pixel-perfect, accessible interfaces. Expert in CSS-in-JS, Tailwind, and MUI with attention to responsive behavior and interaction design.",
   },
   {
     Icon: FaReact,
-    title: "Responsive Web Design",
-    desc: "Ensuring that websites are optimized for all screen sizes, from desktop to mobile.",
+    title: "Performance Optimization",
+    desc: "Improving Core Web Vitals, reducing bundle sizes, implementing code splitting and lazy loading. Making fast sites that convert better.",
   },
   {
     Icon: SiWebflow,
-    title: "Back-end Development",
-    desc: "Developing the server-side of websites, ensuring that they are functional and secure. I work with Node.js and MySQL.",
+    title: "Full-Stack Development",
+    desc: "End-to-end ownership when needed. Building REST APIs, handling authentication, and database design with Node.js, Express, and MySQL.",
   },
   {
     Icon: FaNodeJs,
-    title: "API Development",
-    desc: "Server-side development with Node.js, including building back-end APIs, web applications, and microservices.",
+    title: "API Integration",
+    desc: "Connecting frontends to REST and GraphQL APIs. Implementing proper error handling, loading states, and data caching for better UX.",
   },
   {
     Icon: SiMysql,
-    title: "Database Management",
-    desc: "Managing and optimizing databases for websites, ensuring that data is stored and retrieved efficiently.",
+    title: "Testing & Quality",
+    desc: "Writing unit and integration tests with Jest and React Testing Library. Ensuring code reliability and catching bugs before production.",
   },
 ];
 
@@ -146,18 +146,22 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           >
-            <h3>My name is Olamide Alade, a Frontend Engineer.</h3>
+            <h3>Frontend Engineer with Full-Stack Capabilities</h3>
             <p>
-              I'm a creative and detail-oriented Front-End Developer based in
-              Nigeria, with a solid foundation in building scalable,
-              SEO-optimized, and responsive web applications. Over the last 3+
-              years, I've worked on real-world projects across industries like
-              real estate, job search platforms, and fashion portfolios. I'm
-              passionate about delivering clean code and smooth user experiences
-              using tools like React, Next.js, Tailwind, and MUI. I enjoy
-              turning complex problems into clean, user-friendly designs, and
-              I'm constantly seeking ways to improve my craft. Let's work
-              together and bring your ideas to life.
+              I'm Olamide Alade, a Frontend Engineer based in Nigeria with 3+ years of
+              production experience building scalable, SEO-optimized web applications.
+              I've delivered projects across real estate platforms, job search tools, and
+              e-commerce sites that handle real users and drive business outcomes.
+            </p>
+            <p>
+              My expertise centers on the React ecosystem — React, Next.js, TypeScript —
+              with a strong foundation in responsive design, performance optimization, and
+              accessibility. I also work comfortably on the backend with Node.js, Express,
+              and MySQL when full-stack ownership is needed.
+            </p>
+            <p>
+              I write clean, maintainable code and believe great interfaces balance user
+              needs with business goals. Let's build something that works.
             </p>
           </motion.div>
 

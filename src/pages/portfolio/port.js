@@ -125,10 +125,7 @@ const Portfolio = () => {
             </div>
 
             <div className="projectInfo">
-              <div
-                className="projectTitleRow"
-                onClick={() => toggleDetails(project.id)}
-              >
+              <div className="projectTitleRow">
                 <div>
                   <h3 className="projectTitle">{project.title}</h3>
                   <div className="techTags">
@@ -141,6 +138,7 @@ const Portfolio = () => {
                 </div>
                 <button
                   className={`expandBtn ${showDetails === project.id ? "expanded" : ""}`}
+                  onClick={() => toggleDetails(project.id)}
                   aria-label="Toggle details"
                 >
                   <HiChevronDown size={22} />

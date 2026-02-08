@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./resume.css";
 import Navigation from "../../components/Navigation";
@@ -60,8 +59,6 @@ const staggerContainer = {
 };
 
 const Resume = () => {
-  const navigate = useNavigate();
-
   return (
     <AnimatedPage className="resumeSection">
       <Navigation />

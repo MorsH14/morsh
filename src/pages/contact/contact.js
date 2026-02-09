@@ -39,8 +39,8 @@ const contactInfo = [
   {
     Icon: FiMail,
     label: "Email",
-    value: "olamidealade14@gmail.com",
-    href: "mailto:olamidealade14@gmail.com",
+    value: "midemorsh@gmail.com",
+    href: "mailto:midemorsh@gmail.com",
   },
   {
     Icon: FiMapPin,
@@ -144,7 +144,7 @@ const Contact = () => {
     if (hasErrors) {
       toast.error("Please fix the errors before submitting");
       const firstErrorField = Object.keys(newErrors).find(
-        (key) => newErrors[key]
+        (key) => newErrors[key],
       );
       document.getElementById(firstErrorField)?.focus();
       return;
@@ -313,7 +313,9 @@ const Contact = () => {
                         errors.email && touched.email ? "true" : "false"
                       }
                       aria-describedby={
-                        errors.email && touched.email ? "email-error" : undefined
+                        errors.email && touched.email
+                          ? "email-error"
+                          : undefined
                       }
                     />
                     <label htmlFor="email" className="form-label">

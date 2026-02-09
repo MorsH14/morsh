@@ -13,7 +13,7 @@ const projects = [
     image: "/assets/crm.png",
     tech: ["Next.js", "React", "Server Components"],
     desc: "Built a sales pipeline dashboard for real estate teams to track deals from Discovery to Closed Won. Implemented drag-and-drop functionality, real-time deal value calculations, and role-based access. Improved sales team visibility and reduced time spent on status updates.",
-    link: "https://www.1159realty.com/",
+    link: "v0-crm-frontend-build.vercel.app",
     linkText: "Visit Website",
   },
   {

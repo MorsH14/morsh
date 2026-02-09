@@ -25,54 +25,188 @@
   font-size: var(--text-lg);
 }
 
-.contact-content {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 var(--space-6);
+/* ========================================
+   HERO DESCRIPTION
+   ======================================== */
+.contact-hero-desc {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  max-width: 480px;
+  line-height: var(--leading-relaxed);
+  margin-top: var(--space-3);
 }
 
 /* ========================================
-   BACK BUTTON
+   TWO-COLUMN LAYOUT
    ======================================== */
-.backBtn {
-  position: fixed;
-  top: calc(60px + var(--space-6));
-  right: var(--space-10);
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  background: var(--color-bg-glass);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  color: var(--color-text-secondary);
-  font-size: var(--text-sm);
-  font-family: inherit;
-  cursor: pointer;
-  z-index: 100;
-  transition: all var(--transition-normal) var(--ease-out-expo);
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--space-8);
+  max-width: 960px;
+  margin: var(--space-10) auto 0;
+  padding: 0 var(--space-6);
+  align-items: start;
 }
 
-.backBtn:hover {
-  color: var(--color-text);
+/* ========================================
+   LEFT PANEL - CONTACT INFO
+   ======================================== */
+.contact-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.contact-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+}
+
+.contact-info-card:hover {
   border-color: var(--color-border-hover);
   background: var(--color-bg-elevated);
 }
 
-.contact-subtitle {
-  text-align: center;
-  font-size: var(--text-xl);
-  font-weight: var(--font-semibold);
-  margin-bottom: var(--space-2);
+.contact-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  flex-shrink: 0;
 }
 
-.contact-desc {
-  text-align: center;
+.contact-info-label {
+  display: block;
+  font-size: var(--text-xs);
   color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+}
+
+.contact-info-value {
+  display: block;
   font-size: var(--text-sm);
-  margin-bottom: var(--space-10);
+  color: var(--color-text);
+  font-weight: var(--font-medium);
+}
+
+.contact-link {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.contact-link:hover {
+  color: var(--color-primary-hover);
+}
+
+/* ========================================
+   AVAILABILITY BADGE
+   ======================================== */
+.contact-availability {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: rgba(34, 197, 94, 0.06);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+  }
+}
+
+/* ========================================
+   SOCIAL LINKS
+   ======================================== */
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contact-socials-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-socials-row {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.contact-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.contact-social-link:hover {
+  color: var(--color-text);
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   RIGHT PANEL - FORM
+   ======================================== */
+.contact-form-panel {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  min-height: 460px;
 }
 
 .contactForm {
@@ -97,7 +231,7 @@
 .form-input {
   width: 100%;
   padding: var(--space-4) var(--space-4) var(--space-2);
-  background: var(--color-bg-card);
+  background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   color: var(--color-text);
@@ -140,7 +274,7 @@
    TEXTAREA
    ======================================== */
 .form-textarea {
-  min-height: 160px;
+  min-height: 140px;
   resize: vertical;
 }
 
@@ -160,9 +294,13 @@
    SUBMIT BUTTON
    ======================================== */
 .submit-btn {
-  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  align-self: flex-start;
   min-width: 180px;
-  margin-top: var(--space-4);
+  margin-top: var(--space-2);
   padding: var(--space-4) var(--space-8);
   font-size: var(--text-base);
 }
@@ -172,13 +310,6 @@
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
-}
-
-.submit-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
 }
 
 /* ========================================
@@ -225,44 +356,84 @@
 }
 
 /* ========================================
-   SUCCESS MESSAGE
+   SUCCESS STATE (Full Panel)
    ======================================== */
-.success-message {
+.success-state {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-4);
-  margin-top: var(--space-4);
-  background: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  border-radius: var(--radius-md);
-  color: #22c55e;
-  font-size: var(--text-sm);
-  text-align: center;
   justify-content: center;
+  text-align: center;
+  min-height: 380px;
+  gap: var(--space-4);
+  padding: var(--space-8);
 }
 
-.success-icon {
-  width: 20px;
-  height: 20px;
+.success-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background: rgba(34, 197, 94, 0.1);
   color: #22c55e;
-  flex-shrink: 0;
+  margin-bottom: var(--space-2);
+}
+
+.success-state h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+}
+
+.success-state p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  max-width: 320px;
+  line-height: var(--leading-relaxed);
 }
 
 /* ========================================
    RESPONSIVE
    ======================================== */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    padding: 0 var(--space-4);
+    margin-top: var(--space-6);
+  }
+
+  .contact-info-panel {
+    order: 2;
+  }
+
+  .contact-form-panel {
+    order: 1;
+    padding: var(--space-6);
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
 
-  .contact-content {
-    padding: 0 var(--space-4);
+  .submit-btn {
+    align-self: stretch;
   }
 
-  .backBtn {
-    top: calc(60px + var(--space-3));
-    right: var(--space-4);
+  .success-state {
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-form-panel {
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+  }
+
+  .contact-info-card {
+    padding: var(--space-4);
   }
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import "./port.css";
 import Navigation from "../../components/Navigation";
 import { FiExternalLink } from "react-icons/fi";
@@ -145,28 +145,25 @@ const Portfolio = () => {
                 </button>
               </div>
 
-              <AnimatePresence>
-                {showDetails === project.id && (
-                  <motion.div
-                    className="projectDetails"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              {showDetails === project.id && (
+                <motion.div
+                  className="projectDetails"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <p>{project.desc}</p>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary projectLink"
                   >
-                    <p>{project.desc}</p>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-secondary projectLink"
-                    >
-                      {project.linkText}
-                      <FiExternalLink size={14} />
-                    </a>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                    {project.linkText}
+                    <FiExternalLink size={14} />
+                  </a>
+                </motion.div>
+              )}
             </div>
           </motion.div>
         ))}

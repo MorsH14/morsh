@@ -43,6 +43,7 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 var(--space-8);
+  align-items: start;
 }
 
 /* ========================================

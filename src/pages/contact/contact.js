@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./contact.css";
 import Navigation from "../../components/Navigation";
 import { Toaster, toast } from "sonner";
-import { useForm } from "@formspree/react";
 import AnimatedPage from "../../components/AnimatedPage";
 import { FiMail, FiMapPin, FiSend, FiCheckCircle } from "react-icons/fi";
 import { FaTwitter, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
@@ -74,7 +73,7 @@ const sectionVariants = {
 };
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("xanjvppd");
+  const [submitting, setSubmitting] = useState(false);
   const [msg, setMsg] = useState({
     name: "",
     email: "",
@@ -89,26 +88,6 @@ const Contact = () => {
   });
   const [touched, setTouched] = useState({});
   const [isSuccess, setIsSuccess] = useState(false);
-  const [hasSubmitted, setHasSubmitted] = useState(false);
-
-  // Watch for Formspree state changes (fixes async state issue)
-  useEffect(() => {
-    if (hasSubmitted && state.succeeded) {
-      setIsSuccess(true);
-      toast.success("Message sent successfully! I'll get back to you soon.");
-      setMsg({ name: "", email: "", subject: "", message: "" });
-      setTouched({});
-      setErrors({});
-      setHasSubmitted(false);
-
-      setTimeout(() => setIsSuccess(false), 5000);
-    }
-
-    if (hasSubmitted && state.errors && state.errors.length > 0) {
-      toast.error("Failed to send message. Please try again.");
-      setHasSubmitted(false);
-    }
-  }, [state.succeeded, state.errors, hasSubmitted]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -150,8 +129,30 @@ const Contact = () => {
       return;
     }
 
-    setHasSubmitted(true);
-    await handleSubmit(e);
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(msg),
+      });
+
+      if (res.ok) {
+        setIsSuccess(true);
+        toast.success("Message sent successfully! I'll get back to you soon.");
+        setMsg({ name: "", email: "", subject: "", message: "" });
+        setTouched({});
+        setErrors({});
+        setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        const data = await res.json();
+        toast.error(data.error || "Failed to send message. Please try again.");
+      }
+    } catch {
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -409,10 +410,10 @@ const Contact = () => {
                 <button
                   type="submit"
                   className="btn btn-primary submit-btn"
-                  disabled={state.submitting}
-                  aria-busy={state.submitting}
+                  disabled={submitting}
+                  aria-busy={submitting}
                 >
-                  {state.submitting ? (
+                  {submitting ? (
                     <>
                       <motion.div
                         className="spinner"

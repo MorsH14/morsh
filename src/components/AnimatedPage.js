@@ -28,7 +28,7 @@ const AnimatedPage = ({ children, className }) => (
     exit="exit"
     transition={pageTransition}
     className={className}
-    style={{ minHeight: '100vh', background: '#000' }}
+    style={{ minHeight: '100vh', position: 'relative', zIndex: 2 }}
   >
     {children}
   </motion.div>

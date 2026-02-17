@@ -2,7 +2,7 @@
    ABOUT PAGE
    ======================================== */
 .aboutSection {
-  background: var(--color-bg);
+  background: transparent;
   padding-bottom: var(--space-20);
   overflow-y: auto;
   padding-top: 60px;

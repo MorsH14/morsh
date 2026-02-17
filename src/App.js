@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Homepage from './pages/homepage/home';
+import ParticleBackground from './components/ParticleBackground';
 
 const About = lazy(() => import('./pages/about/about'));
 const Portfolio = lazy(() => import('./pages/portfolio/port'));
@@ -14,7 +15,7 @@ const PageLoader = () => (
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: '#000',
+    background: 'transparent',
   }}>
     <div className="page-loader">
       <div className="loader-dot"></div>
@@ -28,8 +29,10 @@ function App() {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
-      <Suspense fallback={<PageLoader />}>
+    <>
+      <ParticleBackground />
+      <AnimatePresence mode="wait">
+        <Suspense fallback={<PageLoader />}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
@@ -37,8 +40,9 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </Suspense>
-    </AnimatePresence>
+        </Suspense>
+      </AnimatePresence>
+    </>
   );
 }
 

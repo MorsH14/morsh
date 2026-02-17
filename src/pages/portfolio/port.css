@@ -2,7 +2,7 @@
    PORTFOLIO PAGE
    ======================================== */
 .portfolioSection {
-  background: var(--color-bg);
+  background: transparent;
   padding-bottom: var(--space-16);
   padding-top: 60px;
   overflow-y: auto;

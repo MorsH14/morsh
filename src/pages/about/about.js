@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import "./about.css";
 import Navigation from "../../components/Navigation";
@@ -12,7 +11,6 @@ import { FaReact } from "react-icons/fa6";
 import { FaNodeJs } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 import { SiWebflow } from "react-icons/si";
-import Marquee from "react-fast-marquee";
 import AnimatedPage from "../../components/AnimatedPage";
 
 const services = [
@@ -45,39 +43,6 @@ const services = [
     Icon: SiMysql,
     title: "Testing & Quality",
     desc: "Writing unit and integration tests with Jest and React Testing Library. Ensuring code reliability and catching bugs before production.",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Mary Herson",
-    location: "United States",
-    img: "/assets/r1.jpeg",
-    text: "Alade's technical skills are solid, and he delivered a well-coded website. However, his communication could use some improvement. There were times when it was difficult to get timely updates on the project's progress.",
-  },
-  {
-    name: "David H.",
-    location: "United States",
-    img: "/assets/r2.jpeg",
-    text: "Olamide exceeded our expectations with her web development skills. She created a sleek, modern site that performs exceptionally well. Her innovative approach and proactive problem-solving were impressive.",
-  },
-  {
-    name: "Fred Scott",
-    location: "New York",
-    img: "/assets/r3.jpeg",
-    text: "Alade is a talented developer with a knack for creating responsive and engaging websites. He was easy to work with and communicated well throughout the project.",
-  },
-  {
-    name: "Adebisi Susan",
-    location: "Nigeria",
-    img: "/assets/r4.jpeg",
-    text: "Olamide did a great job on our e-commerce platform. The new features he implemented increased our sales and improved user experience. We are very satisfied with the outcome.",
-  },
-  {
-    name: "Kate Gat.",
-    location: "South Africa",
-    img: "/assets/r5.jpeg",
-    text: "Olamide did an excellent creative job, addressing our request quickly, and also providing her own graphic insight, being open to feedback and changes. Highly recommended.",
   },
 ];
 
@@ -148,20 +113,23 @@ const About = () => {
           >
             <h3>Frontend Engineer with Full-Stack Capabilities</h3>
             <p>
-              I'm Olamide Alade, a Frontend Engineer based in Nigeria with 3+ years of
-              production experience building scalable, SEO-optimized web applications.
-              I've delivered projects across real estate platforms, job search tools, and
-              e-commerce sites that handle real users and drive business outcomes.
+              I'm Olamide Alade, a Frontend Engineer based in Nigeria with 3+
+              years of production experience building scalable, SEO-optimized
+              web applications. I've delivered projects across real estate
+              platforms, job search tools, and e-commerce sites that handle real
+              users and drive business outcomes.
             </p>
             <p>
-              My expertise centers on the React ecosystem — React, Next.js, TypeScript —
-              with a strong foundation in responsive design, performance optimization, and
-              accessibility. I also work comfortably on the backend with Node.js, Express,
-              and MySQL when full-stack ownership is needed.
+              My expertise centers on the React ecosystem — React, Next.js,
+              TypeScript — with a strong foundation in responsive design,
+              performance optimization, and accessibility. I also work
+              comfortably on the backend with Node.js, Express, and MySQL when
+              full-stack ownership is needed.
             </p>
             <p>
-              I write clean, maintainable code and believe great interfaces balance user
-              needs with business goals. Let's build something that works.
+              I write clean, maintainable code and believe great interfaces
+              balance user needs with business goals. Let's build something that
+              works.
             </p>
           </motion.div>
 
@@ -243,35 +211,6 @@ const About = () => {
           />
         </div>
       </motion.div>
-
-      {/* Testimonials */}
-      <div className="testimonialSection">
-        <h1 className="heading-2 section-title">Testimonials</h1>
-
-        <Marquee pauseOnHover speed={40} gradient={false}>
-          <div className="testimonialTrack">
-            {testimonials.map(({ name, location, img, text }, i) => (
-              <div key={i} className="testimonialCard card-glass">
-                <div className="testimonialHeader">
-                  <div className="testimonialAuthor">
-                    <img
-                      src={img}
-                      alt={name}
-                      className="testImg"
-                      loading="lazy"
-                    />
-                    <div>
-                      <h5>{name}</h5>
-                      <span>{location}</span>
-                    </div>
-                  </div>
-                </div>
-                <p className="testimonialText">{text}</p>
-              </div>
-            ))}
-          </div>
-        </Marquee>
-      </div>
     </AnimatedPage>
   );
 };

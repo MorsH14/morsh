@@ -2,55 +2,60 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import "./port.css";
 import Navigation from "../../components/Navigation";
-import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { HiChevronDown } from "react-icons/hi";
 import AnimatedPage from "../../components/AnimatedPage";
 
 const projects = [
   {
+    id: 6,
+    title: "Leads Generation Platform",
+    image: "/assets/l1.jpeg",
+    tech: ["Next.js", "TypeScript", "Vercel"],
+    desc: "A full-stack real estate lead management system built with Next.js and Supabase. The application captures and securely stores prospect inquiries in a PostgreSQL database, triggers instant email notifications for fast follow-ups, and delivers a clean, conversion-focused user experience designed to prevent lost leads.",
+    link: "https://leads-gen-orpin.vercel.app",
+    linkText: "Visit Website",
+    repo: "https://github.com/MorsH14/leads-automation",
+  },
+  {
+    id: 5,
+    title: "Genova – AI Job Assistant",
+    image: "/assets/gen.png",
+    tech: ["Next.js", "TypeScript", "Groq AI"],
+    desc: "A full-stack AI-powered job search assistant built with Next.js and TypeScript. The application manages applications through a visual pipeline from Saved to Offer, leverages the Groq API with Llama 3.3 70B to tailor resumes and generate cover letters on demand, and delivers secure per-account document storage with PDF export — designed to eliminate the friction of manual job tracking and application prep.",
+    link: "https://apply-ai.vercel.app",
+    linkText: "Visit Website",
+    repo: "https://github.com/MorsH14/apply-ai",
+  },
+  {
     id: 1,
     title: "CRM Dashboard",
     image: "/assets/crm.png",
     tech: ["Next.js", "React", "Server Components"],
-    desc: "Built a sales pipeline dashboard for real estate teams to track deals from Discovery to Closed Won. Implemented drag-and-drop functionality, real-time deal value calculations, and role-based access. Improved sales team visibility and reduced time spent on status updates.",
-    link: "v0-crm-frontend-build.vercel.app",
+    desc: "A full-featured CRM portal built with Next.js and React Server Components. The application tracks deals across pipeline stages from Discovery to Closed Won, enforces role-based access control with secure authentication, and delivers real-time value calculations designed to keep sales teams aligned and reduce time lost on manual status updates.",
+    link: "https://v0-crm-frontend-build.vercel.app",
     linkText: "Visit Website",
-  },
-  {
-    id: 2,
-    title: "Real Estate Platform",
-    image: "/assets/1159.png",
-    tech: ["Next.js", "MUI", "Responsive Design"],
-    desc: "Developed a property listing platform with advanced filtering, pagination, and lazy loading for optimal performance. Mobile-first approach with focus on Core Web Vitals. Integrated Google Maps API for location-based search. Handles hundreds of listings with smooth UX.",
-    link: "https://www.1159realty.com/",
-    linkText: "Visit Website",
+    repo: "https://github.com/MorsH14/CRM-Frontend",
   },
   {
     id: 3,
     title: "Job Search Application",
     image: "/assets/rana.png",
-    tech: ["Next.js", "SSR", "SEO"],
-    desc: "Built a searchable job board with server-side rendering for SEO. Implemented dynamic filters, job detail modals, and location-based sorting. Optimized for fast load times and search engine visibility. Focused on reusable component architecture.",
+    tech: ["Next.js", "React", "SSR"],
+    desc: "A full-featured job discovery platform built with Next.js and server-side rendering. The application serves curated listings from major employers with multi-layered filtering by schedule and employment type, renders detailed job views with company branding and pay rates, and delivers a mobile-first interface designed to serve both job seekers and recruiters in a single product.",
     link: "https://rana-ochre.vercel.app",
     linkText: "Visit Website",
+    repo: "https://github.com/MorsH14/rana-v3",
   },
   {
     id: 4,
-    title: "Fashion Designer Portfolio",
+    title: "Fashion Brand Website",
     image: "/assets/image.png",
     tech: ["React", "MUI", "Emotion"],
-    desc: "Created an elegant portfolio site for a fashion designer with image gallery, contact form, and smooth animations. Emphasized visual storytelling with minimalist layout. Implemented responsive design that showcases work beautifully on all devices.",
+    desc: "A brand identity website built with React and Material UI. The application presents MorsH Clothiers' aesthetic through a minimalist layout, smooth page animations, and a refined typographic system — designed to communicate the label's visual identity and establish a polished, professional presence on the web.",
     link: "https://morshclothiers.vercel.app/",
     linkText: "Visit Website",
-  },
-  {
-    id: 5,
-    title: "Startup Landing Pages",
-    image: "/assets/bb.png",
-    tech: ["React", "Tailwind CSS"],
-    desc: "Designed and developed conversion-focused landing pages for early-stage startups. Strong CTAs, fast load times, and mobile-responsive layouts. Used for client projects and freelance work to help businesses establish online presence quickly.",
-    link: "https://example.com",
-    linkText: "See Demo",
+    repo: null,
   },
 ];
 
@@ -121,6 +126,17 @@ const Portfolio = () => {
                   {project.linkText}
                   <FiExternalLink size={14} />
                 </a>
+                {project.repo && (
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary"
+                  >
+                    GitHub
+                    <FiGithub size={14} />
+                  </a>
+                )}
               </div>
             </div>
 
@@ -153,15 +169,28 @@ const Portfolio = () => {
                   transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <p>{project.desc}</p>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-secondary projectLink"
-                  >
-                    {project.linkText}
-                    <FiExternalLink size={14} />
-                  </a>
+                  <div className="projectLinks">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-secondary projectLink"
+                    >
+                      {project.linkText}
+                      <FiExternalLink size={14} />
+                    </a>
+                    {project.repo && (
+                      <a
+                        href={project.repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-secondary projectLink"
+                      >
+                        View on GitHub
+                        <FiGithub size={14} />
+                      </a>
+                    )}
+                  </div>
                 </motion.div>
               )}
             </div>

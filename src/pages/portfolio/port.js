@@ -18,6 +18,16 @@ const projects = [
     repo: "https://github.com/MorsH14/leads-automation",
   },
   {
+    id: 5,
+    title: "Genova – AI Job Assistant",
+    image: "/assets/gen.png",
+    tech: ["Next.js", "TypeScript", "Groq AI"],
+    desc: "A full-stack AI-powered job search assistant built with Next.js and TypeScript. The application manages applications through a visual pipeline from Saved to Offer, leverages the Groq API with Llama 3.3 70B to tailor resumes and generate cover letters on demand, and delivers secure per-account document storage with PDF export — designed to eliminate the friction of manual job tracking and application prep.",
+    link: "https://apply-ai.vercel.app",
+    linkText: "Visit Website",
+    repo: "https://github.com/MorsH14/apply-ai",
+  },
+  {
     id: 1,
     title: "CRM Dashboard",
     image: "/assets/crm.png",

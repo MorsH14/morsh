@@ -5,7 +5,7 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 import "./Navigation.css";
 
 const navLinks = [
-  { to: "/", label: "Home" },
+  // { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/portfolio", label: "Projects" },
   { to: "/resume", label: "Resume" },

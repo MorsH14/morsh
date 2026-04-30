@@ -5,16 +5,10 @@ import AnimatedPage from "../../components/AnimatedPage";
 
 const education = [
   {
-    title: "Computer Science",
+    title: "Bachelor of Science — Computer Science",
     institution: "Ladoke Akintola University",
-    period: "2018 - 2022",
-    desc: "Enrolled as a computer science student where I gained foundational knowledge of systems and software development.",
-  },
-  {
-    title: "SSCE",
-    institution: "BMHS",
-    period: "2016 - 2018",
-    desc: "Graduated from Baptist Model High School, based in Nigeria, Kwara State.",
+    period: "Oyo State, Nigeria",
+    desc: "Studied computer science with a focus on systems and software development, building the foundation for a professional engineering career.",
   },
 ];
 
@@ -23,35 +17,63 @@ const experience = [
     title: "1159realty.Nig.Ltd",
     location: "Ilorin, Nigeria",
     role: "Front End Developer",
-    period: "08/2024 - Current",
-    desc: "Developed and documented reusable UI components in Next.js, reducing development time by 30% on future projects. Integrated RESTful APIs to enhance application functionality and performance. Collaborated with back-end developers and participated in daily standups to deliver features on schedule.",
+    period: "08/2025 - Present",
+    bullets: [
+      "Led reusable UI component architecture in Next.js, reducing feature development time by 30%",
+      "Integrated multiple RESTful APIs to support dynamic property listings and real-time data updates",
+      "Optimized frontend performance through efficient state management and rendering strategies",
+      "Collaborated with backend engineers to define API contracts and improve data flow reliability",
+      "Participated in agile workflows including sprint planning, reviews, and technical discussions",
+    ],
   },
   {
     title: "Codedbus",
     location: "Ilorin, Nigeria",
     role: "Website Developer",
-    period: "09/2024 - Current",
-    desc: "Designed responsive website layouts using Next.js, MUI, and modern libraries. Collaborated with team members to enhance user experience and site functionality. Implemented website updates and maintenance for optimal performance.",
+    period: "09/2024 - Present",
+    bullets: [
+      "Designed and deployed responsive web applications using Next.js and modern UI libraries",
+      "Improved UX by refining layouts, accessibility, and interaction patterns",
+      "Maintained and updated production websites, ensuring stability and performance optimization",
+      "Worked cross-functionally to translate business requirements into technical implementations",
+    ],
   },
   {
     title: "Rana",
     location: "Ilorin, Nigeria",
     role: "Front End Web Developer",
     period: "10/2023 - 04/2024",
-    desc: "Implemented responsive web designs for mobile devices using HTML5, CSS3, JavaScript, jQuery, and Bootstrap. Collaborated with UX designers to enhance user experience and interface design. Conducted cross-browser testing and maintained code quality through Git version control.",
+    bullets: [
+      "Built responsive interfaces using HTML, CSS, JavaScript, and Bootstrap",
+      "Collaborated with designers to implement user-friendly UI/UX improvements",
+      "Conducted cross-browser testing and debugging to ensure consistent performance",
+      "Maintained clean, version-controlled codebases using Git",
+    ],
+  },
+  {
+    title: "Femteh IT",
+    location: "Ilorin, Nigeria",
+    role: "Software Development Intern",
+    period: "11/2022 - 05/2023",
+    bullets: [
+      "Supported development and testing of web applications",
+      "Assisted in debugging and improving application performance",
+      "Researched and evaluated emerging technologies for potential integration",
+      "Participated in agile team meetings and requirement discussions",
+    ],
   },
 ];
 
 const skills = [
   { name: "HTML/CSS", level: 95 },
-  { name: "JavaScript", level: 90 },
-  { name: "TypeScript", level: 80 },
-  { name: "React", level: 90 },
-  { name: "Next.js", level: 80 },
-  { name: "Testing (Jest/RTL)", level: 75 },
-  { name: "Node.js", level: 70 },
-  { name: "Express", level: 70 },
-  { name: "MySQL", level: 65 },
+  { name: "JavaScript (ES6+)", level: 92 },
+  { name: "TypeScript", level: 82 },
+  { name: "React", level: 92 },
+  { name: "Next.js", level: 85 },
+  { name: "Tailwind CSS", level: 85 },
+  { name: "Node.js / Express", level: 75 },
+  { name: "MongoDB", level: 72 },
+  { name: "REST APIs / JWT Auth", level: 88 },
 ];
 
 const sectionVariants = {
@@ -104,9 +126,13 @@ const Resume = () => {
                 <div className="timeline-dot"></div>
                 <h4>{item.title}{item.location && ` | ${item.location}`}</h4>
                 <span className="timeline-meta">
-                  {item.role} / {item.period}
+                  {item.role} · {item.period}
                 </span>
-                <p>{item.desc}</p>
+                <ul className="timeline-bullets">
+                  {item.bullets.map((b, j) => (
+                    <li key={j}>{b}</li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </motion.div>
@@ -129,7 +155,7 @@ const Resume = () => {
                 <div className="timeline-dot"></div>
                 <h4>{item.title}</h4>
                 <span className="timeline-meta">
-                  {item.institution} / {item.period}
+                  {item.institution} · {item.period}
                 </span>
                 <p>{item.desc}</p>
               </motion.div>
@@ -151,8 +177,8 @@ const Resume = () => {
             className="skills-intro"
             variants={sectionVariants}
           >
-            My core expertise is frontend development with the React ecosystem.
-            Backend skills support full-stack ownership when projects require it.
+            Specialized in the React / Next.js ecosystem with production-grade
+            full-stack experience using Node.js, Express, and MongoDB.
           </motion.p>
 
           <div className="skills-grid">

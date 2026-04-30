@@ -51,7 +51,7 @@ const contactInfo = [
 const socialLinks = [
   { href: "https://x.com/midemorsh", Icon: FaTwitter, label: "Twitter" },
   {
-    href: "https://www.linkedin.com/in/alade-olamide-a86304360",
+    href: "https://www.linkedin.com/in/olamide-alade-a86304360/",
     Icon: FaLinkedin,
     label: "LinkedIn",
   },

@@ -9,31 +9,37 @@ import {
   FaReact,
   FaTwitter,
 } from "react-icons/fa6";
-import { TbBrandMysql, TbBrandNextjs } from "react-icons/tb";
-import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io5";
+import { TbBrandNextjs } from "react-icons/tb";
+import { IoLogoJavascript } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
-import { SiExpress, SiMui, SiTypescript } from "react-icons/si";
+import {
+  SiExpress,
+  SiMongodb,
+  SiMui,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 const techIcons = [
   { Icon: FaHtml5, label: "HTML5" },
   { Icon: FaCss3Alt, label: "CSS3" },
   { Icon: IoLogoJavascript, label: "JavaScript" },
+  { Icon: SiTypescript, label: "TypeScript" },
   { Icon: FaReact, label: "React" },
+  { Icon: TbBrandNextjs, label: "Next.js" },
+  { Icon: SiTailwindcss, label: "Tailwind CSS" },
   { Icon: SiMui, label: "MUI" },
   { Icon: FaNodeJs, label: "Node.js" },
-  { Icon: TbBrandNextjs, label: "Next.js" },
-  { Icon: TbBrandMysql, label: "MySQL" },
-  { Icon: IoLogoNodejs, label: "Node" },
   { Icon: SiExpress, label: "Express" },
-  { Icon: SiTypescript, label: "TypeScript" },
+  { Icon: SiMongodb, label: "MongoDB" },
 ];
 
 const socialLinks = [
   { href: "https://x.com/midemorsh", Icon: FaTwitter, label: "Twitter" },
   {
-    href: "https://www.linkedin.com/in/alade-olamide-a86304360?",
+    href: "https://www.linkedin.com/in/olamide-alade-a86304360/",
     Icon: FaLinkedin,
     label: "LinkedIn",
   },
@@ -82,7 +88,8 @@ const Homepage = () => {
 
           <motion.div className="homeText" variants={itemVariants}>
             <p>
-              <span className="text-gradient">Frontend Engineer</span> building production applications with React
+              <span className="text-gradient">Full-Stack Developer</span> —
+              React, Next.js &amp; Node.js
             </p>
           </motion.div>
 

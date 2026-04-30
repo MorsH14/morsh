@@ -67,7 +67,7 @@
    ======================================== */
 .resume-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
   gap: var(--space-10);
   margin-top: var(--space-10);
 }
@@ -126,6 +126,23 @@
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   line-height: var(--leading-relaxed);
+}
+
+.timeline-bullets {
+  margin: 0;
+  padding-left: var(--space-5);
+  list-style: disc;
+}
+
+.timeline-bullets li {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-1);
+}
+
+.timeline-bullets li::marker {
+  color: var(--color-primary);
 }
 
 /* ========================================

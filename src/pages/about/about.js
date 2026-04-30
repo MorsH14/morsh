@@ -32,7 +32,7 @@ const services = [
   {
     Icon: SiWebflow,
     title: "Full-Stack Development",
-    desc: "End-to-end ownership when needed. Building REST APIs, handling authentication, and database design with Node.js, Express, and MySQL.",
+    desc: "End-to-end ownership when needed. Building REST APIs, handling JWT authentication, and database design with Node.js, Express, and MongoDB.",
   },
   {
     Icon: FaNodeJs,
@@ -49,7 +49,7 @@ const services = [
 const socialLinks = [
   { href: "https://x.com/midemorsh", Icon: FaTwitter, label: "Twitter" },
   {
-    href: "https://www.linkedin.com/in/alade-olamide-a86304360?",
+    href: "https://www.linkedin.com/in/olamide-alade-a86304360/",
     Icon: FaLinkedin,
     label: "LinkedIn",
   },
@@ -111,25 +111,27 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           >
-            <h3>Frontend Engineer with Full-Stack Capabilities</h3>
+            <h3>Frontend-focused Full-Stack Developer</h3>
             <p>
-              I'm Olamide Alade, a Frontend Engineer based in Nigeria with 3+
-              years of production experience building scalable, SEO-optimized
-              web applications. I've delivered projects across real estate
-              platforms, job search tools, and e-commerce sites that handle real
-              users and drive business outcomes.
+              I'm Olamide Alade — a Full-Stack Developer with 3+ years of
+              experience building scalable, production-ready web applications
+              using Next.js, React, and Node.js. I have a proven track record of
+              developing reusable component systems, integrating APIs, and
+              improving application performance across real estate platforms,
+              job search tools, and AI-powered products.
             </p>
             <p>
-              My expertise centers on the React ecosystem — React, Next.js,
-              TypeScript — with a strong foundation in responsive design,
-              performance optimization, and accessibility. I also work
-              comfortably on the backend with Node.js, Express, and MySQL when
-              full-stack ownership is needed.
+              My core stack is the React ecosystem — Next.js, TypeScript,
+              Tailwind CSS, and MUI — backed by solid backend experience with
+              Node.js, Express, and MongoDB. I've led component architecture
+              decisions that cut feature delivery time by 30%, and I'm
+              comfortable owning a feature end-to-end from API design to
+              deployment.
             </p>
             <p>
-              I write clean, maintainable code and believe great interfaces
-              balance user needs with business goals. Let's build something that
-              works.
+              I work well in cross-functional teams, thrive in agile
+              environments, and write clean, maintainable code that scales.
+              Let's build something that matters.
             </p>
           </motion.div>
 
